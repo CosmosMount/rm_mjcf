@@ -1,0 +1,1531 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mujoco model="rmuc2026_field">
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.002" gravity="0 0 -9.81" integrator="implicitfast"/>
+  <statistic center="0 0 0" extent="20"/>
+  <visual>
+    <global offwidth="1400" offheight="900"/>
+  </visual>
+  <default>
+    <default class="visual">
+      <geom contype="0" conaffinity="0" group="2"/>
+    </default>
+    <default class="collision">
+      <geom type="box" group="3" friction="0.8 0.01 0.001" solref="0.01 1" solimp="0.95 0.99 0.001" rgba="0 0 0 0"/>
+    </default>
+  </default>
+  <asset>
+    <mesh maxhullvert="4" name="visual_mesh_00" file="assets/visual_optimized/visual_999999FF_part00.msh"/>
+    <material name="visual_material_00" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_01" file="assets/launch_group_shift/visual_mesh_01_shift_clear.msh"/>
+    <material name="visual_material_01" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <material name="visual_material_02" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <material name="visual_material_03" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <material name="visual_material_04" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_05" file="assets/launch_highlands/visual_mesh_05_launch_cleared.msh"/>
+    <material name="visual_material_05" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_06" file="assets/visual_optimized/visual_999999FF_part06.msh"/>
+    <material name="visual_material_06" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_07" file="assets/launch_group_shift/visual_mesh_07_shift_clear.msh"/>
+    <material name="visual_material_07" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_08" file="assets/visual_optimized/visual_999999FF_part08.msh"/>
+    <material name="visual_material_08" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_09" file="assets/launch_group_shift/visual_mesh_09_shift_clear.msh"/>
+    <material name="visual_material_09" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_10" file="assets/visual_optimized/visual_333333FF_part00.msh"/>
+    <material name="visual_material_10" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_11" file="assets/launch_group_shift/visual_mesh_11_shift_clear.msh"/>
+    <material name="visual_material_11" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_12" file="assets/launch_highlands/visual_mesh_12_launch_cleared.msh"/>
+    <material name="visual_material_12" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <material name="visual_material_13" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <material name="visual_material_14" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_15" file="assets/launch_highlands/visual_mesh_15_launch_cleared.msh"/>
+    <material name="visual_material_15" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_16" file="assets/visual_optimized/visual_333333FF_part06.msh"/>
+    <material name="visual_material_16" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_17" file="assets/visual_optimized/visual_333333FF_part07.msh"/>
+    <material name="visual_material_17" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_18" file="assets/launch_group_shift/visual_mesh_18_shift_clear.msh"/>
+    <material name="visual_material_18" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_19" file="assets/launch_group_shift/visual_mesh_19_shift_clear.msh"/>
+    <material name="visual_material_19" rgba="1 0.662745098 1 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_20" file="assets/launch_group_shift/visual_mesh_20_shift_clear.msh"/>
+    <material name="visual_material_20" rgba="0 0.4 0.4 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_21" file="assets/launch_group_shift/visual_mesh_21_shift_clear.msh"/>
+    <material name="visual_material_21" rgba="0.670588235 0.839215686 0.62745098 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_22" file="assets/launch_group_shift/visual_mesh_22_shift_clear.msh"/>
+    <material name="visual_material_22" rgba="0.533333333 0.709803922 1 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_23" file="assets/launch_group_shift/visual_mesh_23_shift_clear.msh"/>
+    <material name="visual_material_23" rgba="0.4 0.4 0.4 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_24" file="assets/visual_optimized/visual_666666FF_part01.msh"/>
+    <material name="visual_material_24" rgba="0.4 0.4 0.4 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_25" file="assets/visual_optimized/visual_666666FF_part02.msh"/>
+    <material name="visual_material_25" rgba="0.4 0.4 0.4 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_26" file="assets/launch_group_shift/visual_mesh_26_shift_clear.msh"/>
+    <material name="visual_material_26" rgba="0.4 0.4 0.4 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_27" file="assets/launch_group_shift/visual_mesh_27_shift_clear.msh"/>
+    <material name="visual_material_27" rgba="0.82745098 0.737254902 0.670588235 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_28" file="assets/launch_group_shift/visual_mesh_28_shift_clear.msh"/>
+    <material name="visual_material_28" rgba="0.22745098 0.541176471 0.556862745 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_29" file="assets/launch_group_shift/visual_mesh_29_shift_clear.msh"/>
+    <material name="visual_material_29" rgba="1 0.792156863 0 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_30" file="assets/launch_group_shift/visual_mesh_30_shift_clear.msh"/>
+    <material name="visual_material_30" rgba="1 1 1 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_31" file="assets/launch_highlands/visual_mesh_31_launch_cleared.msh"/>
+    <material name="visual_material_31" rgba="0.490196078 0.490196078 0.490196078 1" specular="0.2" shininess="0.25"/>
+    <material name="visual_material_32" rgba="0.811764706 0.843137255 0.905882353 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_33" file="assets/launch_group_shift/visual_mesh_33_shift_clear.msh"/>
+    <material name="visual_material_33" rgba="0.298039216 0.298039216 0.298039216 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_34" file="assets/launch_group_shift/visual_mesh_34_shift_clear.msh"/>
+    <material name="visual_material_34" rgba="1 0 0 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_35" file="assets/visual_optimized/visual_FFEFA9FF.msh"/>
+    <material name="visual_material_35" rgba="1 0.937254902 0.662745098 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_36" file="assets/visual_optimized/visual_403731FF_part00.msh"/>
+    <material name="visual_material_36" rgba="0.250980392 0.215686275 0.192156863 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_37" file="assets/visual_optimized/visual_403731FF_part01.msh"/>
+    <material name="visual_material_37" rgba="0.250980392 0.215686275 0.192156863 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_38" file="assets/launch_group_shift/visual_mesh_38_shift_clear.msh"/>
+    <material name="visual_material_38" rgba="0.250980392 0.215686275 0.192156863 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_39" file="assets/visual_optimized/visual_006699FF.msh"/>
+    <material name="visual_material_39" rgba="0 0.4 0.6 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_40" file="assets/launch_group_shift/visual_mesh_40_shift_clear.msh"/>
+    <material name="visual_material_40" rgba="0.0470588235 0.0470588235 0.0470588235 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_41" file="assets/visual_optimized/visual_00FFFFFF.msh"/>
+    <material name="visual_material_41" rgba="0 1 1 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_42" file="assets/visual_optimized/visual_00FF00FF.msh"/>
+    <material name="visual_material_42" rgba="0 1 0 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_43" file="assets/visual_optimized/visual_B87351FF.msh"/>
+    <material name="visual_material_43" rgba="0.721568627 0.450980392 0.317647059 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_44" file="assets/visual_optimized/visual_BF2FA4FF.msh"/>
+    <material name="visual_material_44" rgba="0.749019608 0.184313725 0.643137255 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_45" file="assets/visual_optimized/visual_E1F4FFFF.msh"/>
+    <material name="visual_material_45" rgba="0.882352941 0.956862745 1 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_46" file="assets/visual_optimized/visual_0000FFFF.msh"/>
+    <material name="visual_material_46" rgba="0 0 1 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_47" file="assets/launch_group_shift/visual_mesh_47_shift_clear.msh"/>
+    <material name="visual_material_47" rgba="0.764705882 0.745098039 0.647058824 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_48" file="assets/visual_optimized/visual_DCEEECFF.msh"/>
+    <material name="visual_material_48" rgba="0.862745098 0.933333333 0.925490196 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_49" file="assets/visual_optimized/visual_282321FF.msh"/>
+    <material name="visual_material_49" rgba="0.156862745 0.137254902 0.129411765 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_50" file="assets/visual_optimized/visual_48442DFF.msh"/>
+    <material name="visual_material_50" rgba="0.282352941 0.266666667 0.176470588 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_51" file="assets/visual_optimized/visual_6D2C0AFF.msh"/>
+    <material name="visual_material_51" rgba="0.42745098 0.17254902 0.0392156863 1" specular="0.2" shininess="0.25"/>
+    <mesh maxhullvert="4" name="visual_mesh_52" file="assets/launch_group_shift/visual_mesh_52_shift_clear.msh"/>
+    <material name="visual_material_52" rgba="0 0 0.749019608 1" specular="0.2" shininess="0.25"/>
+    <!-- Reachable convex terrain proxies generated from the visual support shell; see tools/README.md. -->
+    <mesh name="terrain_proxy_0001" file="assets/collision_support/terrain_proxy_0001.msh"/>
+    <mesh name="terrain_proxy_0002" file="assets/collision_support/terrain_proxy_0002.msh"/>
+    <mesh name="terrain_proxy_0015" file="assets/collision_support/terrain_proxy_0015.msh"/>
+    <mesh name="terrain_proxy_0016" file="assets/collision_support/terrain_proxy_0016.msh"/>
+    <mesh name="terrain_proxy_0018" file="assets/collision_support/terrain_proxy_0018.msh"/>
+    <mesh name="terrain_proxy_0019" file="assets/collision_support/terrain_proxy_0019.msh"/>
+    <mesh name="terrain_proxy_0020" file="assets/collision_support/terrain_proxy_0020.msh"/>
+    <mesh name="terrain_proxy_0021" file="assets/collision_support/terrain_proxy_0021.msh"/>
+    <mesh name="terrain_proxy_0022" file="assets/collision_support/terrain_proxy_0022.msh"/>
+    <mesh name="terrain_proxy_0029" file="assets/collision_support/terrain_proxy_0029.msh"/>
+    <mesh name="terrain_proxy_0030" file="assets/collision_support/terrain_proxy_0030.msh"/>
+    <mesh name="terrain_proxy_0031" file="assets/collision_support/terrain_proxy_0031.msh"/>
+    <mesh name="terrain_proxy_0032" file="assets/collision_support/terrain_proxy_0032.msh"/>
+    <mesh name="terrain_proxy_0033" file="assets/collision_support/terrain_proxy_0033.msh"/>
+    <mesh name="terrain_proxy_0034" file="assets/collision_support/terrain_proxy_0034.msh"/>
+    <mesh name="terrain_proxy_0035" file="assets/collision_support/terrain_proxy_0035.msh"/>
+    <mesh name="terrain_proxy_0036" file="assets/collision_support/terrain_proxy_0036.msh"/>
+    <mesh name="terrain_proxy_0037" file="assets/collision_support/terrain_proxy_0037.msh"/>
+    <mesh name="terrain_proxy_0038" file="assets/collision_support/terrain_proxy_0038.msh"/>
+    <mesh name="terrain_proxy_0041" file="assets/collision_support/terrain_proxy_0041.msh"/>
+    <mesh name="terrain_proxy_0042" file="assets/collision_support/terrain_proxy_0042.msh"/>
+    <mesh name="terrain_proxy_0043" file="assets/collision_support/terrain_proxy_0043.msh"/>
+    <mesh name="terrain_proxy_0044" file="assets/collision_support/terrain_proxy_0044.msh"/>
+    <mesh name="terrain_proxy_0045" file="assets/collision_support/terrain_proxy_0045.msh"/>
+    <mesh name="terrain_proxy_0046" file="assets/collision_support/terrain_proxy_0046.msh"/>
+    <mesh name="terrain_proxy_0055" file="assets/collision_support/terrain_proxy_0055.msh"/>
+    <mesh name="terrain_proxy_0056" file="assets/collision_support/terrain_proxy_0056.msh"/>
+    <mesh name="terrain_proxy_0057" file="assets/collision_support/terrain_proxy_0057.msh"/>
+    <mesh name="terrain_proxy_0058" file="assets/collision_support/terrain_proxy_0058.msh"/>
+    <mesh name="terrain_proxy_0059" file="assets/collision_support/terrain_proxy_0059.msh"/>
+    <mesh name="terrain_proxy_0060" file="assets/collision_support/terrain_proxy_0060.msh"/>
+    <mesh name="terrain_proxy_0061" file="assets/collision_support/terrain_proxy_0061.msh"/>
+    <mesh name="terrain_proxy_0062" file="assets/collision_support/terrain_proxy_0062.msh"/>
+    <mesh name="terrain_proxy_0068" file="assets/collision_support/terrain_proxy_0068.msh"/>
+    <mesh name="terrain_proxy_0069" file="assets/collision_support/terrain_proxy_0069.msh"/>
+    <mesh name="terrain_proxy_0070" file="assets/collision_support/terrain_proxy_0070.msh"/>
+    <mesh name="terrain_proxy_0071" file="assets/collision_support/terrain_proxy_0071.msh"/>
+    <mesh name="barrier_shell_0002" file="assets/collision_barriers/barrier_shell_0002.msh"/>
+    <mesh name="barrier_shell_0003" file="assets/collision_barriers/barrier_shell_0003.msh"/>
+    <mesh name="barrier_shell_0004" file="assets/collision_barriers/barrier_shell_0004.msh"/>
+    <mesh name="barrier_shell_0005" file="assets/collision_barriers/barrier_shell_0005.msh"/>
+    <mesh name="barrier_shell_0006" file="assets/collision_barriers/barrier_shell_0006.msh"/>
+    <mesh name="barrier_shell_0007" file="assets/collision_barriers/barrier_shell_0007.msh"/>
+    <mesh name="barrier_shell_0008" file="assets/collision_barriers/barrier_shell_0008.msh"/>
+    <mesh name="barrier_shell_0009" file="assets/collision_barriers/barrier_shell_0009.msh"/>
+    <mesh name="barrier_shell_0010" file="assets/collision_barriers/barrier_shell_0010.msh"/>
+    <mesh name="barrier_shell_0011" file="assets/collision_barriers/barrier_shell_0011.msh"/>
+    <mesh name="barrier_shell_0012" file="assets/collision_barriers/barrier_shell_0012.msh"/>
+    <mesh name="barrier_shell_0013" file="assets/collision_barriers/barrier_shell_0013.msh"/>
+    <mesh name="barrier_shell_0014" file="assets/collision_barriers/barrier_shell_0014.msh"/>
+    <mesh name="barrier_shell_0015" file="assets/collision_barriers/barrier_shell_0015.msh"/>
+    <mesh name="barrier_shell_0016" file="assets/collision_barriers/barrier_shell_0016.msh"/>
+    <mesh name="barrier_shell_0017" file="assets/collision_barriers/barrier_shell_0017.msh"/>
+    <mesh name="barrier_shell_0018" file="assets/collision_barriers/barrier_shell_0018.msh"/>
+    <mesh name="barrier_shell_0019" file="assets/collision_barriers/barrier_shell_0019.msh"/>
+    <mesh name="barrier_shell_0020" file="assets/collision_barriers/barrier_shell_0020.msh"/>
+    <mesh name="barrier_shell_0021" file="assets/collision_barriers/barrier_shell_0021.msh"/>
+    <mesh name="barrier_shell_0022" file="assets/collision_barriers/barrier_shell_0022.msh"/>
+    <mesh name="barrier_shell_0023" file="assets/collision_barriers/barrier_shell_0023.msh"/>
+    <mesh name="barrier_shell_0028" file="assets/collision_barriers/barrier_shell_0028.msh"/>
+    <mesh name="barrier_shell_0029" file="assets/collision_barriers/barrier_shell_0029.msh"/>
+    <mesh name="barrier_shell_0030" file="assets/collision_barriers/barrier_shell_0030.msh"/>
+    <mesh name="barrier_shell_0031" file="assets/collision_barriers/barrier_shell_0031.msh"/>
+    <mesh name="barrier_shell_0033" file="assets/collision_barriers/barrier_shell_0033.msh"/>
+    <mesh name="barrier_shell_0034" file="assets/collision_barriers/barrier_shell_0034.msh"/>
+    <mesh name="barrier_shell_0040" file="assets/collision_barriers/barrier_shell_0040.msh"/>
+    <mesh name="barrier_shell_0043" file="assets/collision_barriers/barrier_shell_0043.msh"/>
+    <mesh name="barrier_shell_0044" file="assets/collision_barriers/barrier_shell_0044.msh"/>
+    <mesh name="barrier_shell_0045" file="assets/collision_barriers/barrier_shell_0045.msh"/>
+    <mesh name="barrier_shell_0046" file="assets/collision_barriers/barrier_shell_0046.msh"/>
+    <mesh name="barrier_shell_0047" file="assets/collision_barriers/barrier_shell_0047.msh"/>
+    <mesh name="barrier_shell_0048" file="assets/collision_barriers/barrier_shell_0048.msh"/>
+    <mesh name="barrier_shell_0049" file="assets/collision_barriers/barrier_shell_0049.msh"/>
+    <mesh name="barrier_shell_0050" file="assets/collision_barriers/barrier_shell_0050.msh"/>
+    <mesh name="barrier_shell_0051" file="assets/collision_barriers/barrier_shell_0051.msh"/>
+    <mesh name="barrier_shell_0052" file="assets/collision_barriers/barrier_shell_0052.msh"/>
+    <mesh name="barrier_shell_0053" file="assets/collision_barriers/barrier_shell_0053.msh"/>
+    <mesh name="barrier_shell_0054" file="assets/collision_barriers/barrier_shell_0054.msh"/>
+    <mesh name="barrier_shell_0055" file="assets/collision_barriers/barrier_shell_0055.msh"/>
+    <mesh name="barrier_shell_0056" file="assets/collision_barriers/barrier_shell_0056.msh"/>
+    <mesh name="barrier_shell_0057" file="assets/collision_barriers/barrier_shell_0057.msh"/>
+    <mesh name="barrier_shell_0058" file="assets/collision_barriers/barrier_shell_0058.msh"/>
+    <mesh name="barrier_shell_0059" file="assets/collision_barriers/barrier_shell_0059.msh"/>
+    <mesh name="barrier_shell_0060" file="assets/collision_barriers/barrier_shell_0060.msh"/>
+    <mesh name="barrier_shell_0061" file="assets/collision_barriers/barrier_shell_0061.msh"/>
+    <mesh name="barrier_shell_0062" file="assets/collision_barriers/barrier_shell_0062.msh"/>
+    <mesh name="barrier_shell_0063" file="assets/collision_barriers/barrier_shell_0063.msh"/>
+    <mesh name="barrier_shell_0064" file="assets/collision_barriers/barrier_shell_0064.msh"/>
+    <mesh name="barrier_shell_0067" file="assets/collision_barriers/barrier_shell_0067.msh"/>
+    <mesh name="barrier_shell_0068" file="assets/collision_barriers/barrier_shell_0068.msh"/>
+    <mesh name="barrier_shell_0069" file="assets/collision_barriers/barrier_shell_0069.msh"/>
+    <mesh name="barrier_shell_0070" file="assets/collision_barriers/barrier_shell_0070.msh"/>
+    <mesh name="barrier_shell_0071" file="assets/collision_barriers/barrier_shell_0071.msh"/>
+    <mesh name="barrier_shell_0072" file="assets/collision_barriers/barrier_shell_0072.msh"/>
+    <mesh name="barrier_shell_0073" file="assets/collision_barriers/barrier_shell_0073.msh"/>
+    <mesh name="barrier_shell_0074" file="assets/collision_barriers/barrier_shell_0074.msh"/>
+    <mesh name="barrier_shell_0075" file="assets/collision_barriers/barrier_shell_0075.msh"/>
+    <mesh name="barrier_shell_0076" file="assets/collision_barriers/barrier_shell_0076.msh"/>
+    <mesh name="barrier_shell_0077" file="assets/collision_barriers/barrier_shell_0077.msh"/>
+    <mesh name="barrier_shell_0078" file="assets/collision_barriers/barrier_shell_0078.msh"/>
+    <mesh name="barrier_shell_0079" file="assets/collision_barriers/barrier_shell_0079.msh"/>
+    <mesh name="barrier_shell_0080" file="assets/collision_barriers/barrier_shell_0080.msh"/>
+    <mesh name="barrier_shell_0081" file="assets/collision_barriers/barrier_shell_0081.msh"/>
+    <mesh name="barrier_shell_0082" file="assets/collision_barriers/barrier_shell_0082.msh"/>
+    <mesh name="barrier_shell_0083" file="assets/collision_barriers/barrier_shell_0083.msh"/>
+    <mesh name="barrier_shell_0084" file="assets/collision_barriers/barrier_shell_0084.msh"/>
+    <mesh name="barrier_shell_0085" file="assets/collision_barriers/barrier_shell_0085.msh"/>
+    <mesh name="barrier_shell_0086" file="assets/collision_barriers/barrier_shell_0086.msh"/>
+    <mesh name="barrier_shell_0087" file="assets/collision_barriers/barrier_shell_0087.msh"/>
+    <mesh name="barrier_shell_0088" file="assets/collision_barriers/barrier_shell_0088.msh"/>
+    <mesh name="barrier_shell_0091" file="assets/collision_barriers/barrier_shell_0091.msh"/>
+    <mesh name="barrier_shell_0092" file="assets/collision_barriers/barrier_shell_0092.msh"/>
+    <mesh name="barrier_shell_0093" file="assets/collision_barriers/barrier_shell_0093.msh"/>
+    <mesh name="barrier_shell_0094" file="assets/collision_barriers/barrier_shell_0094.msh"/>
+    <mesh name="barrier_shell_0095" file="assets/collision_barriers/barrier_shell_0095.msh"/>
+    <mesh name="barrier_shell_0096" file="assets/collision_barriers/barrier_shell_0096.msh"/>
+    <mesh name="barrier_shell_0097" file="assets/collision_barriers/barrier_shell_0097.msh"/>
+    <mesh name="barrier_shell_0098" file="assets/collision_barriers/barrier_shell_0098.msh"/>
+    <mesh name="barrier_shell_0099" file="assets/collision_barriers/barrier_shell_0099.msh"/>
+    <mesh name="barrier_shell_0100" file="assets/collision_barriers/barrier_shell_0100.msh"/>
+    <mesh name="barrier_shell_0101" file="assets/collision_barriers/barrier_shell_0101.msh"/>
+    <mesh name="barrier_shell_0102" file="assets/collision_barriers/barrier_shell_0102.msh"/>
+    <mesh name="barrier_shell_0106" file="assets/collision_barriers/barrier_shell_0106.msh"/>
+    <mesh name="barrier_shell_0107" file="assets/collision_barriers/barrier_shell_0107.msh"/>
+    <mesh name="barrier_shell_0108" file="assets/collision_barriers/barrier_shell_0108.msh"/>
+    <mesh name="barrier_shell_0109" file="assets/collision_barriers/barrier_shell_0109.msh"/>
+    <mesh name="barrier_shell_0110" file="assets/collision_barriers/barrier_shell_0110.msh"/>
+    <mesh name="barrier_shell_0111" file="assets/collision_barriers/barrier_shell_0111.msh"/>
+    <mesh name="barrier_shell_0112" file="assets/collision_barriers/barrier_shell_0112.msh"/>
+    <mesh name="barrier_shell_0113" file="assets/collision_barriers/barrier_shell_0113.msh"/>
+    <mesh name="barrier_shell_0114" file="assets/collision_barriers/barrier_shell_0114.msh"/>
+    <mesh name="barrier_shell_0115" file="assets/collision_barriers/barrier_shell_0115.msh"/>
+    <mesh name="barrier_shell_0116" file="assets/collision_barriers/barrier_shell_0116.msh"/>
+    <mesh name="barrier_shell_0117" file="assets/collision_barriers/barrier_shell_0117.msh"/>
+    <mesh name="barrier_shell_0118" file="assets/collision_barriers/barrier_shell_0118.msh"/>
+    <mesh name="barrier_shell_0119" file="assets/collision_barriers/barrier_shell_0119.msh"/>
+    <mesh name="barrier_shell_0120" file="assets/collision_barriers/barrier_shell_0120.msh"/>
+    <mesh name="barrier_shell_0121" file="assets/collision_barriers/barrier_shell_0121.msh"/>
+    <mesh name="barrier_shell_0122" file="assets/collision_barriers/barrier_shell_0122.msh"/>
+    <mesh name="barrier_shell_0123" file="assets/collision_barriers/barrier_shell_0123.msh"/>
+    <mesh name="barrier_shell_0124" file="assets/collision_barriers/barrier_shell_0124.msh"/>
+    <mesh name="barrier_shell_0125" file="assets/collision_barriers/barrier_shell_0125.msh"/>
+    <mesh name="barrier_shell_0126" file="assets/collision_barriers/barrier_shell_0126.msh"/>
+    <mesh name="barrier_shell_0127" file="assets/collision_barriers/barrier_shell_0127.msh"/>
+    <mesh name="barrier_shell_0128" file="assets/collision_barriers/barrier_shell_0128.msh"/>
+    <mesh name="barrier_shell_0129" file="assets/collision_barriers/barrier_shell_0129.msh"/>
+    <mesh name="barrier_shell_0130" file="assets/collision_barriers/barrier_shell_0130.msh"/>
+    <mesh name="barrier_shell_0131" file="assets/collision_barriers/barrier_shell_0131.msh"/>
+    <mesh name="barrier_shell_0132" file="assets/collision_barriers/barrier_shell_0132.msh"/>
+    <mesh name="barrier_shell_0135" file="assets/collision_barriers/barrier_shell_0135.msh"/>
+    <mesh name="barrier_shell_0136" file="assets/collision_barriers/barrier_shell_0136.msh"/>
+    <mesh name="barrier_shell_0137" file="assets/collision_barriers/barrier_shell_0137.msh"/>
+    <mesh name="barrier_shell_0138" file="assets/collision_barriers/barrier_shell_0138.msh"/>
+    <mesh name="barrier_shell_0139" file="assets/collision_barriers/barrier_shell_0139.msh"/>
+    <mesh name="barrier_shell_0140" file="assets/collision_barriers/barrier_shell_0140.msh"/>
+    <mesh name="barrier_shell_0141" file="assets/collision_barriers/barrier_shell_0141.msh"/>
+    <mesh name="barrier_shell_0142" file="assets/collision_barriers/barrier_shell_0142.msh"/>
+    <mesh name="barrier_shell_0143" file="assets/collision_barriers/barrier_shell_0143.msh"/>
+    <mesh name="barrier_shell_0144" file="assets/collision_barriers/barrier_shell_0144.msh"/>
+    <mesh name="barrier_shell_0145" file="assets/collision_barriers/barrier_shell_0145.msh"/>
+    <mesh name="barrier_shell_0146" file="assets/collision_barriers/barrier_shell_0146.msh"/>
+    <mesh name="barrier_shell_0147" file="assets/collision_barriers/barrier_shell_0147.msh"/>
+    <mesh name="barrier_shell_0148" file="assets/collision_barriers/barrier_shell_0148.msh"/>
+    <mesh name="barrier_shell_0149" file="assets/collision_barriers/barrier_shell_0149.msh"/>
+    <mesh name="barrier_shell_0150" file="assets/collision_barriers/barrier_shell_0150.msh"/>
+    <mesh name="barrier_shell_0151" file="assets/collision_barriers/barrier_shell_0151.msh"/>
+    <mesh name="barrier_shell_0152" file="assets/collision_barriers/barrier_shell_0152.msh"/>
+    <mesh name="barrier_shell_0153" file="assets/collision_barriers/barrier_shell_0153.msh"/>
+    <mesh name="barrier_shell_0154" file="assets/collision_barriers/barrier_shell_0154.msh"/>
+    <mesh name="barrier_shell_0156" file="assets/collision_barriers/barrier_shell_0156.msh"/>
+    <mesh name="barrier_shell_0159" file="assets/collision_barriers/barrier_shell_0159.msh"/>
+    <mesh name="barrier_shell_0161" file="assets/collision_barriers/barrier_shell_0161.msh"/>
+    <mesh name="barrier_shell_0162" file="assets/collision_barriers/barrier_shell_0162.msh"/>
+    <mesh name="barrier_shell_0163" file="assets/collision_barriers/barrier_shell_0163.msh"/>
+    <mesh name="barrier_shell_0165" file="assets/collision_barriers/barrier_shell_0165.msh"/>
+    <mesh name="barrier_shell_0166" file="assets/collision_barriers/barrier_shell_0166.msh"/>
+    <mesh name="barrier_shell_0169" file="assets/collision_barriers/barrier_shell_0169.msh"/>
+    <mesh name="barrier_shell_0170" file="assets/collision_barriers/barrier_shell_0170.msh"/>
+    <mesh name="barrier_shell_0171" file="assets/collision_barriers/barrier_shell_0171.msh"/>
+    <mesh name="barrier_shell_0172" file="assets/collision_barriers/barrier_shell_0172.msh"/>
+    <mesh name="barrier_shell_0173" file="assets/collision_barriers/barrier_shell_0173.msh"/>
+    <mesh name="barrier_shell_0174" file="assets/collision_barriers/barrier_shell_0174.msh"/>
+    <mesh name="barrier_shell_0175" file="assets/collision_barriers/barrier_shell_0175.msh"/>
+    <mesh name="barrier_shell_0176" file="assets/collision_barriers/barrier_shell_0176.msh"/>
+    <mesh name="barrier_shell_0177" file="assets/collision_barriers/barrier_shell_0177.msh"/>
+    <mesh name="barrier_shell_0178" file="assets/collision_barriers/barrier_shell_0178.msh"/>
+    <mesh name="barrier_shell_0179" file="assets/collision_barriers/barrier_shell_0179.msh"/>
+    <mesh name="barrier_shell_0180" file="assets/collision_barriers/barrier_shell_0180.msh"/>
+    <mesh name="barrier_shell_0181" file="assets/collision_barriers/barrier_shell_0181.msh"/>
+    <mesh name="barrier_shell_0182" file="assets/collision_barriers/barrier_shell_0182.msh"/>
+    <mesh name="barrier_shell_0183" file="assets/collision_barriers/barrier_shell_0183.msh"/>
+    <mesh name="barrier_shell_0184" file="assets/collision_barriers/barrier_shell_0184.msh"/>
+    <mesh name="barrier_shell_0185" file="assets/collision_barriers/barrier_shell_0185.msh"/>
+    <mesh name="barrier_shell_0186" file="assets/collision_barriers/barrier_shell_0186.msh"/>
+    <mesh name="barrier_shell_0187" file="assets/collision_barriers/barrier_shell_0187.msh"/>
+    <mesh name="barrier_shell_0188" file="assets/collision_barriers/barrier_shell_0188.msh"/>
+    <mesh name="barrier_shell_0189" file="assets/collision_barriers/barrier_shell_0189.msh"/>
+    <mesh name="barrier_shell_0190" file="assets/collision_barriers/barrier_shell_0190.msh"/>
+    <mesh name="center_black_hull_0000" file="assets/collision/collision_1110.msh"/>
+    <mesh name="center_black_hull_0001" file="assets/collision/collision_1111.msh"/>
+    <mesh name="center_black_hull_0002" file="assets/collision/collision_1112.msh"/>
+    <mesh name="center_black_hull_0003" file="assets/collision/collision_1114.msh"/>
+    <mesh name="center_black_hull_0004" file="assets/collision/collision_1115.msh"/>
+    <mesh name="center_black_hull_0005" file="assets/collision/collision_1116.msh"/>
+    <mesh name="center_black_hull_0006" file="assets/collision/collision_1117.msh"/>
+    <mesh name="center_black_hull_0007" file="assets/collision/collision_1118.msh"/>
+    <mesh name="center_black_hull_0008" file="assets/collision/collision_1119.msh"/>
+    <mesh name="center_black_hull_0009" file="assets/collision/collision_1120.msh"/>
+    <mesh name="center_black_hull_0010" file="assets/collision/collision_1121.msh"/>
+    <mesh name="center_black_hull_0011" file="assets/collision/collision_1122.msh"/>
+    <mesh name="center_black_hull_0012" file="assets/collision/collision_1124.msh"/>
+    <mesh name="center_black_hull_0013" file="assets/collision/collision_1125.msh"/>
+    <mesh name="center_black_hull_0014" file="assets/collision/collision_1126.msh"/>
+    <mesh name="center_black_hull_0015" file="assets/collision/collision_1127.msh"/>
+    <mesh name="center_black_hull_0016" file="assets/collision/collision_1129.msh"/>
+    <mesh name="center_black_hull_0017" file="assets/collision/collision_1130.msh"/>
+    <mesh name="center_black_hull_0018" file="assets/collision/collision_1131.msh"/>
+    <mesh name="center_black_hull_0019" file="assets/collision/collision_1132.msh"/>
+    <mesh name="center_black_hull_0020" file="assets/collision/collision_1133.msh"/>
+    <mesh name="center_black_hull_0021" file="assets/collision/collision_1134.msh"/>
+    <mesh name="center_black_hull_0022" file="assets/collision/collision_1135.msh"/>
+    <mesh name="center_black_hull_0023" file="assets/collision/collision_1136.msh"/>
+    <mesh name="center_black_hull_0024" file="assets/collision/collision_1137.msh"/>
+    <mesh name="center_black_hull_0025" file="assets/collision/collision_1138.msh"/>
+    <mesh name="center_dark_support_0000" file="assets/collision_center_dark/center_dark_support_0000.msh"/>
+    <mesh name="center_dark_support_0001" file="assets/collision_center_dark/center_dark_support_0001.msh"/>
+    <mesh name="center_dark_support_0002" file="assets/collision_center_dark/center_dark_support_0002.msh"/>
+    <mesh name="center_dark_support_0003" file="assets/collision_center_dark/center_dark_support_0003.msh"/>
+    <mesh name="center_dark_support_0004" file="assets/collision_center_dark/center_dark_support_0004.msh"/>
+    <mesh name="center_dark_support_0005" file="assets/collision_center_dark/center_dark_support_0005.msh"/>
+    <mesh name="center_dark_support_0006" file="assets/collision_center_dark/center_dark_support_0006.msh"/>
+    <mesh name="center_dark_support_0007" file="assets/collision_center_dark/center_dark_support_0007.msh"/>
+    <mesh name="center_dark_support_0008" file="assets/collision_center_dark/center_dark_support_0008.msh"/>
+    <mesh name="center_dark_support_0009" file="assets/collision_center_dark/center_dark_support_0009.msh"/>
+    <mesh name="center_dark_support_0010" file="assets/collision_center_dark/center_dark_support_0010.msh"/>
+    <mesh name="center_dark_support_0011" file="assets/collision_center_dark/center_dark_support_0011.msh"/>
+    <mesh name="center_dark_support_0012" file="assets/collision_center_dark/center_dark_support_0012.msh"/>
+    <mesh name="center_dark_support_0013" file="assets/collision_center_dark/center_dark_support_0013.msh"/>
+    <mesh name="center_dark_support_0014" file="assets/collision_center_dark/center_dark_support_0014.msh"/>
+    <mesh name="center_dark_support_0015" file="assets/collision_center_dark/center_dark_support_0015.msh"/>
+    <mesh name="center_dark_support_0016" file="assets/collision_center_dark/center_dark_support_0016.msh"/>
+    <mesh name="center_dark_support_0017" file="assets/collision_center_dark/center_dark_support_0017.msh"/>
+    <mesh name="center_dark_support_0018" file="assets/collision_center_dark/center_dark_support_0018.msh"/>
+    <mesh name="center_dark_support_0019" file="assets/collision_center_dark/center_dark_support_0019.msh"/>
+    <mesh name="center_dark_support_0020" file="assets/collision_center_dark/center_dark_support_0020.msh"/>
+    <mesh name="center_dark_support_0021" file="assets/collision_center_dark/center_dark_support_0021.msh"/>
+    <mesh name="center_dark_support_0022" file="assets/collision_center_dark/center_dark_support_0022.msh"/>
+    <mesh name="center_dark_support_0023" file="assets/collision_center_dark/center_dark_support_0023.msh"/>
+    <mesh name="center_dark_support_0024" file="assets/collision_center_dark/center_dark_support_0024.msh"/>
+    <mesh name="center_dark_support_0025" file="assets/collision_center_dark/center_dark_support_0025.msh"/>
+    <mesh name="center_dark_support_0026" file="assets/collision_center_dark/center_dark_support_0026.msh"/>
+    <mesh name="center_dark_support_0027" file="assets/collision_center_dark/center_dark_support_0027.msh"/>
+    <mesh name="center_dark_support_0028" file="assets/collision_center_dark/center_dark_support_0028.msh"/>
+    <mesh name="center_dark_support_0029" file="assets/collision_center_dark/center_dark_support_0029.msh"/>
+    <mesh name="center_dark_support_0030" file="assets/collision_center_dark/center_dark_support_0030.msh"/>
+    <mesh name="center_dark_support_0031" file="assets/collision_center_dark/center_dark_support_0031.msh"/>
+    <mesh name="center_dark_support_0032" file="assets/collision_center_dark/center_dark_support_0032.msh"/>
+    <mesh name="center_dark_support_0033" file="assets/collision_center_dark/center_dark_support_0033.msh"/>
+    <mesh name="center_dark_support_0034" file="assets/collision_center_dark/center_dark_support_0034.msh"/>
+    <mesh name="center_dark_support_0035" file="assets/collision_center_dark/center_dark_support_0035.msh"/>
+    <mesh name="center_dark_support_0036" file="assets/collision_center_dark/center_dark_support_0036.msh"/>
+    <mesh name="center_dark_support_0037" file="assets/collision_center_dark/center_dark_support_0037.msh"/>
+    <mesh name="ramp_side_barrier_0000" file="assets/collision_ramp_side_barriers/ramp_side_barrier_0000.msh"/>
+    <mesh name="ramp_side_barrier_0001" file="assets/collision_ramp_side_barriers/ramp_side_barrier_0001.msh"/>
+    <mesh name="ramp_side_barrier_0002" file="assets/collision_ramp_side_barriers/ramp_side_barrier_0002.msh"/>
+    <mesh name="ramp_side_barrier_0003" file="assets/collision_ramp_side_barriers/ramp_side_barrier_0003.msh"/>
+    <mesh name="undulating_crest" file="assets/undulating_road/crest.msh"/>
+    <material name="undulating_rubber" rgba="0.16 0.16 0.16 1" specular="0.15" shininess="0.15"/>
+    <material name="ch_concrete" rgba="0.48 0.49 0.42 1"/>
+    <material name="ch_deck" rgba="0.22 0.23 0.24 1"/>
+    <material name="ch_red" rgba="0.9 0.02 0.02 1"/>
+    <material name="ch_ground" rgba="0.13 0.15 0.17 1"/>
+    <material name="ch_blue" rgba="0.02 0.08 0.9 1"/>
+    <mesh name="terrain_proxy_0010_step_clear_01" file="assets/commanding_height/terrain_proxy_0010_step_clear_01.msh"/>
+    <mesh name="terrain_proxy_0010_step_clear_02" file="assets/commanding_height/terrain_proxy_0010_step_clear_02.msh"/>
+    <mesh name="terrain_proxy_0010_step_clear_03" file="assets/commanding_height/terrain_proxy_0010_step_clear_03.msh"/>
+    <mesh name="terrain_proxy_0012_step_clear_03" file="assets/commanding_height/terrain_proxy_0012_step_clear_03.msh"/>
+    <mesh name="terrain_proxy_0000_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0000_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0000_tunnel_cut_1" file="assets/tunnels/terrain_proxy_0000_tunnel_cut_1.msh"/>
+    <mesh name="terrain_proxy_0003_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0003_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0003_tunnel_cut_1" file="assets/tunnels/terrain_proxy_0003_tunnel_cut_1.msh"/>
+    <mesh name="terrain_proxy_0004_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0004_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0006_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0006_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0008_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0008_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0008_tunnel_cut_1" file="assets/tunnels/terrain_proxy_0008_tunnel_cut_1.msh"/>
+    <mesh name="terrain_proxy_0009_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0009_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0011_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0011_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0013_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0013_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0013_tunnel_cut_1" file="assets/tunnels/terrain_proxy_0013_tunnel_cut_1.msh"/>
+    <mesh name="terrain_proxy_0014_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0014_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0014_tunnel_cut_1" file="assets/tunnels/terrain_proxy_0014_tunnel_cut_1.msh"/>
+    <mesh name="terrain_proxy_0017_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0017_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0017_tunnel_cut_1" file="assets/tunnels/terrain_proxy_0017_tunnel_cut_1.msh"/>
+    <mesh name="terrain_proxy_0065_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0065_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0066_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0066_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0067_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0067_tunnel_cut_0.msh"/>
+    <mesh name="terrain_proxy_0072_tunnel_cut_0" file="assets/tunnels/terrain_proxy_0072_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0024_tunnel_cut_0" file="assets/tunnels/barrier_shell_0024_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0025_tunnel_cut_0" file="assets/tunnels/barrier_shell_0025_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0042_tunnel_cut_0" file="assets/tunnels/barrier_shell_0042_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0089_tunnel_cut_0" file="assets/tunnels/barrier_shell_0089_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0155_tunnel_cut_0" file="assets/tunnels/barrier_shell_0155_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0157_tunnel_cut_0" file="assets/tunnels/barrier_shell_0157_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0158_tunnel_cut_0" file="assets/tunnels/barrier_shell_0158_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0160_tunnel_cut_0" file="assets/tunnels/barrier_shell_0160_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0164_tunnel_cut_0" file="assets/tunnels/barrier_shell_0164_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0167_tunnel_cut_0" file="assets/tunnels/barrier_shell_0167_tunnel_cut_0.msh"/>
+    <mesh name="barrier_shell_0168_tunnel_cut_0" file="assets/tunnels/barrier_shell_0168_tunnel_cut_0.msh"/>
+    <mesh name="launch_station_1_1" file="assets/launch_highlands/launch_station_1_1.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_2" file="assets/launch_highlands/launch_station_1_2.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_3" file="assets/launch_highlands/launch_station_1_3.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_3" file="assets/launch_highlands/launch_station_-1_3.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_4" file="assets/launch_highlands/launch_station_-1_4.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_5" file="assets/launch_highlands/launch_station_-1_5.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_12" file="assets/launch_highlands/launch_station_1_12.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_13" file="assets/launch_highlands/launch_station_1_13.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_13" file="assets/launch_highlands/launch_station_-1_13.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_14" file="assets/launch_highlands/launch_station_-1_14.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_15" file="assets/launch_highlands/launch_station_-1_15.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_27" file="assets/launch_highlands/launch_station_1_27.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_27" file="assets/launch_highlands/launch_station_-1_27.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_30" file="assets/launch_highlands/launch_station_1_30.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_30" file="assets/launch_highlands/launch_station_-1_30.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_31" file="assets/launch_highlands/launch_station_1_31.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_31" file="assets/launch_highlands/launch_station_-1_31.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_32" file="assets/launch_highlands/launch_station_1_32.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_32" file="assets/launch_highlands/launch_station_-1_32.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_33" file="assets/launch_highlands/launch_station_1_33.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_33" file="assets/launch_highlands/launch_station_-1_33.msh" maxhullvert="4"/>
+    <mesh name="launch_station_1_34" file="assets/launch_highlands/launch_station_1_34.msh" maxhullvert="4"/>
+    <mesh name="launch_station_-1_34" file="assets/launch_highlands/launch_station_-1_34.msh" maxhullvert="4"/>
+    <mesh name="barrier_shell_0000_launch_cut_0" file="assets/launch_highlands/barrier_shell_0000_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0001_launch_cut_0" file="assets/launch_highlands/barrier_shell_0001_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0026_launch_cut_0" file="assets/launch_highlands/barrier_shell_0026_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0027_launch_cut_0" file="assets/launch_highlands/barrier_shell_0027_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0036_launch_cut_0" file="assets/launch_highlands/barrier_shell_0036_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0037_launch_cut_0" file="assets/launch_highlands/barrier_shell_0037_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0038_launch_cut_0" file="assets/launch_highlands/barrier_shell_0038_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0038_launch_cut_1" file="assets/launch_highlands/barrier_shell_0038_launch_cut_1.msh"/>
+    <mesh name="barrier_shell_0039_launch_cut_0" file="assets/launch_highlands/barrier_shell_0039_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0039_launch_cut_1" file="assets/launch_highlands/barrier_shell_0039_launch_cut_1.msh"/>
+    <mesh name="barrier_shell_0041_launch_cut_0" file="assets/launch_highlands/barrier_shell_0041_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0041_launch_cut_1" file="assets/launch_highlands/barrier_shell_0041_launch_cut_1.msh"/>
+    <mesh name="barrier_shell_0065_launch_cut_0" file="assets/launch_highlands/barrier_shell_0065_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0066_launch_cut_0" file="assets/launch_highlands/barrier_shell_0066_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0090_launch_cut_0" file="assets/launch_highlands/barrier_shell_0090_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0090_launch_cut_1" file="assets/launch_highlands/barrier_shell_0090_launch_cut_1.msh"/>
+    <mesh name="barrier_shell_0103_launch_cut_0" file="assets/launch_highlands/barrier_shell_0103_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0104_launch_cut_0" file="assets/launch_highlands/barrier_shell_0104_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0105_launch_cut_0" file="assets/launch_highlands/barrier_shell_0105_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0134_launch_cut_0" file="assets/launch_highlands/barrier_shell_0134_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0134_launch_cut_1" file="assets/launch_highlands/barrier_shell_0134_launch_cut_1.msh"/>
+    <mesh name="barrier_shell_0191_launch_cut_0" file="assets/launch_highlands/barrier_shell_0191_launch_cut_0.msh"/>
+    <mesh name="barrier_shell_0191_launch_cut_1" file="assets/launch_highlands/barrier_shell_0191_launch_cut_1.msh"/>
+    <mesh name="restored_road_northwest_0_0" file="assets/launch_highlands/restored_road_northwest_0_0.msh"/>
+    <mesh name="restored_road_northwest_1_0" file="assets/launch_highlands/restored_road_northwest_1_0.msh"/>
+    <mesh name="restored_road_southeast_0_0" file="assets/launch_highlands/restored_road_southeast_0_0.msh"/>
+    <mesh name="launch_platform_mesh" vertex="1 0.6 0 0.6 1 0 -0.6 1 0 -1 0.6 0 -1 -0.6 0 -0.6 -1 0 0.6 -1 0 1 -0.6 0 1 0.6 0.8 0.6 1 0.8 -0.6 1 0.8 -1 0.6 0.8 -1 -0.6 0.8 -0.6 -1 0.8 0.6 -1 0.8 1 -0.6 0.8"/>
+    <mesh name="launch_guard_0_0_mesh" vertex="1 0.6 0 0.6 1 0 1.344 0.78064 0 0.78064 1.344 0 1 0.6 1.1 0.6 1 1.1 1.2 0.697 1.1 0.697 1.2 1.1"/>
+    <mesh name="launch_guard_1_0_mesh" vertex="0.6 1 0 -0.6 1 0 0.78064 1.344 0 -0.78064 1.344 0 0.6 1 1.1 -0.6 1 1.1 0.697 1.2 1.1 -0.697 1.2 1.1"/>
+    <mesh name="launch_guard_2_0_mesh" vertex="-0.6 1 0 -1 0.6 0 -0.78064 1.344 0 -1.344 0.78064 0 -0.6 1 1.1 -1 0.6 1.1 -0.697 1.2 1.1 -1.2 0.697 1.1"/>
+    <mesh name="launch_guard_4_0_mesh" vertex="-1 -0.6 0 -0.6 -1 0 -1.344 -0.78064 0 -0.78064 -1.344 0 -1 -0.6 1.1 -0.6 -1 1.1 -1.2 -0.697 1.1 -0.697 -1.2 1.1"/>
+    <mesh name="launch_guard_6_0_mesh" vertex="0.6 -1 0 1 -0.6 0 0.78064 -1.344 0 1.344 -0.78064 0 0.6 -1 1.1 1 -0.6 1.1 0.697 -1.2 1.1 1.2 -0.697 1.1"/>
+    <mesh name="launch_guard_7_0_mesh" vertex="1 -0.6 0 1 0.6 0 1.344 -0.78064 0 1.344 0.78064 0 1 -0.6 1.1 1 0.6 1.1 1.2 -0.697 1.1 1.2 0.697 1.1"/>
+    <mesh name="launch_station_blue_shell_000" file="assets/launch_highlands/launch_station_blue_shell_000.msh"/>
+    <mesh name="launch_station_blue_shell_001" file="assets/launch_highlands/launch_station_blue_shell_001.msh"/>
+    <mesh name="launch_station_blue_shell_002" file="assets/launch_highlands/launch_station_blue_shell_002.msh"/>
+    <mesh name="launch_station_blue_shell_003" file="assets/launch_highlands/launch_station_blue_shell_003.msh"/>
+    <mesh name="launch_station_blue_shell_004" file="assets/launch_highlands/launch_station_blue_shell_004.msh"/>
+    <mesh name="launch_station_blue_shell_005" file="assets/launch_highlands/launch_station_blue_shell_005.msh"/>
+    <mesh name="launch_station_blue_shell_006" file="assets/launch_highlands/launch_station_blue_shell_006.msh"/>
+    <mesh name="launch_station_blue_shell_007" file="assets/launch_highlands/launch_station_blue_shell_007.msh"/>
+    <mesh name="launch_station_blue_shell_008" file="assets/launch_highlands/launch_station_blue_shell_008.msh"/>
+    <mesh name="launch_station_blue_shell_009" file="assets/launch_highlands/launch_station_blue_shell_009.msh"/>
+    <mesh name="launch_station_blue_shell_010" file="assets/launch_highlands/launch_station_blue_shell_010.msh"/>
+    <mesh name="launch_station_blue_shell_011" file="assets/launch_highlands/launch_station_blue_shell_011.msh"/>
+    <mesh name="launch_station_blue_shell_012" file="assets/launch_highlands/launch_station_blue_shell_012.msh"/>
+    <mesh name="launch_station_blue_shell_013" file="assets/launch_highlands/launch_station_blue_shell_013.msh"/>
+    <mesh name="launch_station_blue_shell_014" file="assets/launch_highlands/launch_station_blue_shell_014.msh"/>
+    <mesh name="launch_station_blue_shell_015" file="assets/launch_highlands/launch_station_blue_shell_015.msh"/>
+    <mesh name="launch_station_blue_shell_016" file="assets/launch_highlands/launch_station_blue_shell_016.msh"/>
+    <mesh name="launch_station_blue_shell_017" file="assets/launch_highlands/launch_station_blue_shell_017.msh"/>
+    <mesh name="launch_station_blue_shell_018" file="assets/launch_highlands/launch_station_blue_shell_018.msh"/>
+    <mesh name="launch_station_blue_shell_019" file="assets/launch_highlands/launch_station_blue_shell_019.msh"/>
+    <mesh name="launch_station_blue_shell_020" file="assets/launch_highlands/launch_station_blue_shell_020.msh"/>
+    <mesh name="launch_station_blue_shell_021" file="assets/launch_highlands/launch_station_blue_shell_021.msh"/>
+    <mesh name="launch_station_blue_shell_022" file="assets/launch_highlands/launch_station_blue_shell_022.msh"/>
+    <mesh name="launch_station_blue_shell_023" file="assets/launch_highlands/launch_station_blue_shell_023.msh"/>
+    <mesh name="launch_station_blue_shell_024" file="assets/launch_highlands/launch_station_blue_shell_024.msh"/>
+    <mesh name="launch_station_blue_shell_025" file="assets/launch_highlands/launch_station_blue_shell_025.msh"/>
+    <mesh name="launch_station_blue_shell_026" file="assets/launch_highlands/launch_station_blue_shell_026.msh"/>
+    <mesh name="launch_station_blue_shell_027" file="assets/launch_highlands/launch_station_blue_shell_027.msh"/>
+    <mesh name="launch_station_blue_shell_028" file="assets/launch_highlands/launch_station_blue_shell_028.msh"/>
+    <mesh name="launch_station_blue_shell_029" file="assets/launch_highlands/launch_station_blue_shell_029.msh"/>
+    <mesh name="launch_station_blue_shell_030" file="assets/launch_highlands/launch_station_blue_shell_030.msh"/>
+    <mesh name="launch_station_blue_shell_031" file="assets/launch_highlands/launch_station_blue_shell_031.msh"/>
+    <mesh name="launch_station_blue_shell_032" file="assets/launch_highlands/launch_station_blue_shell_032.msh"/>
+    <mesh name="launch_station_blue_shell_033" file="assets/launch_highlands/launch_station_blue_shell_033.msh"/>
+    <mesh name="launch_station_blue_shell_034" file="assets/launch_highlands/launch_station_blue_shell_034.msh"/>
+    <mesh name="launch_station_blue_shell_035" file="assets/launch_highlands/launch_station_blue_shell_035.msh"/>
+    <mesh name="launch_station_blue_shell_036" file="assets/launch_highlands/launch_station_blue_shell_036.msh"/>
+    <mesh name="launch_station_blue_shell_037" file="assets/launch_highlands/launch_station_blue_shell_037.msh"/>
+    <mesh name="launch_station_blue_shell_038" file="assets/launch_highlands/launch_station_blue_shell_038.msh"/>
+    <mesh name="launch_station_blue_shell_039" file="assets/launch_highlands/launch_station_blue_shell_039.msh"/>
+    <mesh name="launch_station_blue_shell_040" file="assets/launch_highlands/launch_station_blue_shell_040.msh"/>
+    <mesh name="launch_station_blue_shell_041" file="assets/launch_highlands/launch_station_blue_shell_041.msh"/>
+    <mesh name="launch_station_blue_shell_042" file="assets/launch_highlands/launch_station_blue_shell_042.msh"/>
+    <mesh name="launch_station_blue_shell_043" file="assets/launch_highlands/launch_station_blue_shell_043.msh"/>
+    <mesh name="launch_station_blue_shell_044" file="assets/launch_highlands/launch_station_blue_shell_044.msh"/>
+    <mesh name="launch_station_blue_shell_045" file="assets/launch_highlands/launch_station_blue_shell_045.msh"/>
+    <mesh name="launch_station_blue_shell_046" file="assets/launch_highlands/launch_station_blue_shell_046.msh"/>
+    <mesh name="launch_station_blue_shell_047" file="assets/launch_highlands/launch_station_blue_shell_047.msh"/>
+    <mesh name="launch_station_blue_shell_048" file="assets/launch_highlands/launch_station_blue_shell_048.msh"/>
+    <mesh name="launch_station_blue_shell_049" file="assets/launch_highlands/launch_station_blue_shell_049.msh"/>
+    <mesh name="launch_station_blue_shell_050" file="assets/launch_highlands/launch_station_blue_shell_050.msh"/>
+    <mesh name="launch_station_blue_shell_051" file="assets/launch_highlands/launch_station_blue_shell_051.msh"/>
+    <mesh name="launch_station_blue_shell_052" file="assets/launch_highlands/launch_station_blue_shell_052.msh"/>
+    <mesh name="launch_station_blue_shell_053" file="assets/launch_highlands/launch_station_blue_shell_053.msh"/>
+    <mesh name="launch_station_blue_shell_054" file="assets/launch_highlands/launch_station_blue_shell_054.msh"/>
+    <mesh name="launch_station_blue_shell_055" file="assets/launch_highlands/launch_station_blue_shell_055.msh"/>
+    <mesh name="launch_station_blue_shell_056" file="assets/launch_highlands/launch_station_blue_shell_056.msh"/>
+    <mesh name="launch_station_blue_shell_057" file="assets/launch_highlands/launch_station_blue_shell_057.msh"/>
+    <mesh name="launch_station_blue_shell_058" file="assets/launch_highlands/launch_station_blue_shell_058.msh"/>
+    <mesh name="launch_station_blue_shell_059" file="assets/launch_highlands/launch_station_blue_shell_059.msh"/>
+    <mesh name="launch_station_blue_shell_060" file="assets/launch_highlands/launch_station_blue_shell_060.msh"/>
+    <mesh name="launch_station_blue_shell_061" file="assets/launch_highlands/launch_station_blue_shell_061.msh"/>
+    <mesh name="launch_station_blue_shell_062" file="assets/launch_highlands/launch_station_blue_shell_062.msh"/>
+    <mesh name="launch_station_blue_shell_063" file="assets/launch_highlands/launch_station_blue_shell_063.msh"/>
+    <mesh name="launch_station_blue_shell_064" file="assets/launch_highlands/launch_station_blue_shell_064.msh"/>
+    <mesh name="launch_station_blue_shell_065" file="assets/launch_highlands/launch_station_blue_shell_065.msh"/>
+    <mesh name="launch_station_blue_shell_066" file="assets/launch_highlands/launch_station_blue_shell_066.msh"/>
+    <mesh name="launch_station_blue_shell_067" file="assets/launch_highlands/launch_station_blue_shell_067.msh"/>
+    <mesh name="launch_station_blue_shell_068" file="assets/launch_highlands/launch_station_blue_shell_068.msh"/>
+    <mesh name="launch_station_blue_shell_069" file="assets/launch_highlands/launch_station_blue_shell_069.msh"/>
+    <mesh name="launch_station_blue_shell_070" file="assets/launch_highlands/launch_station_blue_shell_070.msh"/>
+    <mesh name="launch_station_blue_shell_071" file="assets/launch_highlands/launch_station_blue_shell_071.msh"/>
+    <mesh name="launch_station_blue_shell_072" file="assets/launch_highlands/launch_station_blue_shell_072.msh"/>
+    <mesh name="launch_station_blue_shell_073" file="assets/launch_highlands/launch_station_blue_shell_073.msh"/>
+    <mesh name="launch_station_blue_shell_074" file="assets/launch_highlands/launch_station_blue_shell_074.msh"/>
+    <mesh name="launch_station_blue_shell_075" file="assets/launch_highlands/launch_station_blue_shell_075.msh"/>
+    <mesh name="launch_station_blue_shell_076" file="assets/launch_highlands/launch_station_blue_shell_076.msh"/>
+    <mesh name="launch_station_blue_shell_077" file="assets/launch_highlands/launch_station_blue_shell_077.msh"/>
+    <mesh name="launch_station_blue_shell_078" file="assets/launch_highlands/launch_station_blue_shell_078.msh"/>
+    <mesh name="launch_station_blue_shell_079" file="assets/launch_highlands/launch_station_blue_shell_079.msh"/>
+    <mesh name="launch_station_blue_shell_080" file="assets/launch_highlands/launch_station_blue_shell_080.msh"/>
+    <mesh name="launch_station_blue_shell_081" file="assets/launch_highlands/launch_station_blue_shell_081.msh"/>
+    <mesh name="launch_station_blue_shell_082" file="assets/launch_highlands/launch_station_blue_shell_082.msh"/>
+    <mesh name="launch_station_blue_shell_083" file="assets/launch_highlands/launch_station_blue_shell_083.msh"/>
+    <mesh name="launch_station_blue_shell_084" file="assets/launch_highlands/launch_station_blue_shell_084.msh"/>
+    <mesh name="launch_station_blue_shell_085" file="assets/launch_highlands/launch_station_blue_shell_085.msh"/>
+    <mesh name="launch_station_blue_shell_086" file="assets/launch_highlands/launch_station_blue_shell_086.msh"/>
+    <mesh name="launch_station_blue_shell_087" file="assets/launch_highlands/launch_station_blue_shell_087.msh"/>
+    <mesh name="launch_station_blue_shell_088" file="assets/launch_highlands/launch_station_blue_shell_088.msh"/>
+    <mesh name="launch_station_blue_shell_089" file="assets/launch_highlands/launch_station_blue_shell_089.msh"/>
+    <mesh name="launch_station_blue_shell_090" file="assets/launch_highlands/launch_station_blue_shell_090.msh"/>
+    <mesh name="launch_station_blue_shell_091" file="assets/launch_highlands/launch_station_blue_shell_091.msh"/>
+    <mesh name="launch_station_blue_shell_092" file="assets/launch_highlands/launch_station_blue_shell_092.msh"/>
+    <mesh name="launch_station_blue_shell_093" file="assets/launch_highlands/launch_station_blue_shell_093.msh"/>
+    <mesh name="launch_station_blue_shell_094" file="assets/launch_highlands/launch_station_blue_shell_094.msh"/>
+    <mesh name="launch_station_blue_shell_095" file="assets/launch_highlands/launch_station_blue_shell_095.msh"/>
+    <mesh name="launch_station_blue_shell_096" file="assets/launch_highlands/launch_station_blue_shell_096.msh"/>
+    <mesh name="launch_station_blue_shell_097" file="assets/launch_highlands/launch_station_blue_shell_097.msh"/>
+    <mesh name="launch_station_red_shell_000" file="assets/launch_highlands/launch_station_red_shell_000.msh"/>
+    <mesh name="launch_station_red_shell_001" file="assets/launch_highlands/launch_station_red_shell_001.msh"/>
+    <mesh name="launch_station_red_shell_002" file="assets/launch_highlands/launch_station_red_shell_002.msh"/>
+    <mesh name="launch_station_red_shell_003" file="assets/launch_highlands/launch_station_red_shell_003.msh"/>
+    <mesh name="launch_station_red_shell_004" file="assets/launch_highlands/launch_station_red_shell_004.msh"/>
+    <mesh name="launch_station_red_shell_005" file="assets/launch_highlands/launch_station_red_shell_005.msh"/>
+    <mesh name="launch_station_red_shell_006" file="assets/launch_highlands/launch_station_red_shell_006.msh"/>
+    <mesh name="launch_station_red_shell_007" file="assets/launch_highlands/launch_station_red_shell_007.msh"/>
+    <mesh name="launch_station_red_shell_008" file="assets/launch_highlands/launch_station_red_shell_008.msh"/>
+    <mesh name="launch_station_red_shell_009" file="assets/launch_highlands/launch_station_red_shell_009.msh"/>
+    <mesh name="launch_station_red_shell_010" file="assets/launch_highlands/launch_station_red_shell_010.msh"/>
+    <mesh name="launch_station_red_shell_011" file="assets/launch_highlands/launch_station_red_shell_011.msh"/>
+    <mesh name="launch_station_red_shell_012" file="assets/launch_highlands/launch_station_red_shell_012.msh"/>
+    <mesh name="launch_station_red_shell_013" file="assets/launch_highlands/launch_station_red_shell_013.msh"/>
+    <mesh name="launch_station_red_shell_014" file="assets/launch_highlands/launch_station_red_shell_014.msh"/>
+    <mesh name="launch_station_red_shell_015" file="assets/launch_highlands/launch_station_red_shell_015.msh"/>
+    <mesh name="launch_station_red_shell_016" file="assets/launch_highlands/launch_station_red_shell_016.msh"/>
+    <mesh name="launch_station_red_shell_017" file="assets/launch_highlands/launch_station_red_shell_017.msh"/>
+    <mesh name="launch_station_red_shell_018" file="assets/launch_highlands/launch_station_red_shell_018.msh"/>
+    <mesh name="launch_station_red_shell_019" file="assets/launch_highlands/launch_station_red_shell_019.msh"/>
+    <mesh name="launch_station_red_shell_020" file="assets/launch_highlands/launch_station_red_shell_020.msh"/>
+    <mesh name="launch_station_red_shell_021" file="assets/launch_highlands/launch_station_red_shell_021.msh"/>
+    <mesh name="launch_station_red_shell_022" file="assets/launch_highlands/launch_station_red_shell_022.msh"/>
+    <mesh name="launch_station_red_shell_023" file="assets/launch_highlands/launch_station_red_shell_023.msh"/>
+    <mesh name="launch_station_red_shell_024" file="assets/launch_highlands/launch_station_red_shell_024.msh"/>
+    <mesh name="launch_station_red_shell_025" file="assets/launch_highlands/launch_station_red_shell_025.msh"/>
+    <mesh name="launch_station_red_shell_026" file="assets/launch_highlands/launch_station_red_shell_026.msh"/>
+    <mesh name="launch_station_red_shell_027" file="assets/launch_highlands/launch_station_red_shell_027.msh"/>
+    <mesh name="launch_station_red_shell_028" file="assets/launch_highlands/launch_station_red_shell_028.msh"/>
+    <mesh name="launch_station_red_shell_029" file="assets/launch_highlands/launch_station_red_shell_029.msh"/>
+    <mesh name="launch_station_red_shell_030" file="assets/launch_highlands/launch_station_red_shell_030.msh"/>
+    <mesh name="launch_station_red_shell_031" file="assets/launch_highlands/launch_station_red_shell_031.msh"/>
+    <mesh name="launch_station_red_shell_032" file="assets/launch_highlands/launch_station_red_shell_032.msh"/>
+    <mesh name="launch_station_red_shell_033" file="assets/launch_highlands/launch_station_red_shell_033.msh"/>
+    <mesh name="launch_station_red_shell_034" file="assets/launch_highlands/launch_station_red_shell_034.msh"/>
+    <mesh name="launch_station_red_shell_035" file="assets/launch_highlands/launch_station_red_shell_035.msh"/>
+    <mesh name="launch_station_red_shell_036" file="assets/launch_highlands/launch_station_red_shell_036.msh"/>
+    <mesh name="launch_station_red_shell_037" file="assets/launch_highlands/launch_station_red_shell_037.msh"/>
+    <mesh name="launch_station_red_shell_038" file="assets/launch_highlands/launch_station_red_shell_038.msh"/>
+    <mesh name="launch_station_red_shell_039" file="assets/launch_highlands/launch_station_red_shell_039.msh"/>
+    <mesh name="launch_station_red_shell_040" file="assets/launch_highlands/launch_station_red_shell_040.msh"/>
+    <mesh name="launch_station_red_shell_041" file="assets/launch_highlands/launch_station_red_shell_041.msh"/>
+    <mesh name="launch_station_red_shell_042" file="assets/launch_highlands/launch_station_red_shell_042.msh"/>
+    <mesh name="launch_station_red_shell_043" file="assets/launch_highlands/launch_station_red_shell_043.msh"/>
+    <mesh name="launch_station_red_shell_044" file="assets/launch_highlands/launch_station_red_shell_044.msh"/>
+    <mesh name="launch_station_red_shell_045" file="assets/launch_highlands/launch_station_red_shell_045.msh"/>
+    <mesh name="launch_station_red_shell_046" file="assets/launch_highlands/launch_station_red_shell_046.msh"/>
+    <mesh name="launch_station_red_shell_047" file="assets/launch_highlands/launch_station_red_shell_047.msh"/>
+    <mesh name="launch_station_red_shell_048" file="assets/launch_highlands/launch_station_red_shell_048.msh"/>
+    <mesh name="launch_station_red_shell_049" file="assets/launch_highlands/launch_station_red_shell_049.msh"/>
+    <mesh name="launch_station_red_shell_050" file="assets/launch_highlands/launch_station_red_shell_050.msh"/>
+    <mesh name="launch_station_red_shell_051" file="assets/launch_highlands/launch_station_red_shell_051.msh"/>
+    <mesh name="launch_station_red_shell_052" file="assets/launch_highlands/launch_station_red_shell_052.msh"/>
+    <mesh name="launch_station_red_shell_053" file="assets/launch_highlands/launch_station_red_shell_053.msh"/>
+    <mesh name="launch_station_red_shell_054" file="assets/launch_highlands/launch_station_red_shell_054.msh"/>
+    <mesh name="launch_station_red_shell_055" file="assets/launch_highlands/launch_station_red_shell_055.msh"/>
+    <mesh name="launch_station_red_shell_056" file="assets/launch_highlands/launch_station_red_shell_056.msh"/>
+    <mesh name="launch_station_red_shell_057" file="assets/launch_highlands/launch_station_red_shell_057.msh"/>
+    <mesh name="launch_station_red_shell_058" file="assets/launch_highlands/launch_station_red_shell_058.msh"/>
+    <mesh name="launch_station_red_shell_059" file="assets/launch_highlands/launch_station_red_shell_059.msh"/>
+    <mesh name="launch_station_red_shell_060" file="assets/launch_highlands/launch_station_red_shell_060.msh"/>
+    <mesh name="launch_station_red_shell_061" file="assets/launch_highlands/launch_station_red_shell_061.msh"/>
+    <mesh name="launch_station_red_shell_062" file="assets/launch_highlands/launch_station_red_shell_062.msh"/>
+    <mesh name="launch_station_red_shell_063" file="assets/launch_highlands/launch_station_red_shell_063.msh"/>
+    <mesh name="launch_station_red_shell_064" file="assets/launch_highlands/launch_station_red_shell_064.msh"/>
+    <mesh name="launch_station_red_shell_065" file="assets/launch_highlands/launch_station_red_shell_065.msh"/>
+    <mesh name="launch_station_red_shell_066" file="assets/launch_highlands/launch_station_red_shell_066.msh"/>
+    <mesh name="launch_station_red_shell_067" file="assets/launch_highlands/launch_station_red_shell_067.msh"/>
+    <mesh name="launch_station_red_shell_068" file="assets/launch_highlands/launch_station_red_shell_068.msh"/>
+    <mesh name="launch_station_red_shell_069" file="assets/launch_highlands/launch_station_red_shell_069.msh"/>
+    <mesh name="launch_station_red_shell_070" file="assets/launch_highlands/launch_station_red_shell_070.msh"/>
+    <mesh name="launch_station_red_shell_071" file="assets/launch_highlands/launch_station_red_shell_071.msh"/>
+    <mesh name="launch_station_red_shell_072" file="assets/launch_highlands/launch_station_red_shell_072.msh"/>
+    <mesh name="launch_station_red_shell_073" file="assets/launch_highlands/launch_station_red_shell_073.msh"/>
+    <mesh name="launch_station_red_shell_074" file="assets/launch_highlands/launch_station_red_shell_074.msh"/>
+    <mesh name="launch_station_red_shell_075" file="assets/launch_highlands/launch_station_red_shell_075.msh"/>
+    <mesh name="launch_station_red_shell_076" file="assets/launch_highlands/launch_station_red_shell_076.msh"/>
+    <mesh name="launch_station_red_shell_077" file="assets/launch_highlands/launch_station_red_shell_077.msh"/>
+    <mesh name="launch_station_red_shell_078" file="assets/launch_highlands/launch_station_red_shell_078.msh"/>
+    <mesh name="launch_station_red_shell_079" file="assets/launch_highlands/launch_station_red_shell_079.msh"/>
+    <mesh name="launch_station_red_shell_080" file="assets/launch_highlands/launch_station_red_shell_080.msh"/>
+    <mesh name="launch_station_red_shell_081" file="assets/launch_highlands/launch_station_red_shell_081.msh"/>
+    <mesh name="launch_station_red_shell_082" file="assets/launch_highlands/launch_station_red_shell_082.msh"/>
+    <mesh name="launch_station_red_shell_083" file="assets/launch_highlands/launch_station_red_shell_083.msh"/>
+    <mesh name="launch_station_red_shell_084" file="assets/launch_highlands/launch_station_red_shell_084.msh"/>
+    <mesh name="launch_station_red_shell_085" file="assets/launch_highlands/launch_station_red_shell_085.msh"/>
+    <mesh name="launch_station_red_shell_086" file="assets/launch_highlands/launch_station_red_shell_086.msh"/>
+    <mesh name="launch_station_red_shell_087" file="assets/launch_highlands/launch_station_red_shell_087.msh"/>
+    <mesh name="launch_station_red_shell_088" file="assets/launch_highlands/launch_station_red_shell_088.msh"/>
+    <mesh name="launch_station_red_shell_089" file="assets/launch_highlands/launch_station_red_shell_089.msh"/>
+    <mesh name="launch_station_red_shell_090" file="assets/launch_highlands/launch_station_red_shell_090.msh"/>
+    <mesh name="launch_station_red_shell_091" file="assets/launch_highlands/launch_station_red_shell_091.msh"/>
+    <mesh name="launch_station_red_shell_092" file="assets/launch_highlands/launch_station_red_shell_092.msh"/>
+    <mesh name="launch_station_red_shell_093" file="assets/launch_highlands/launch_station_red_shell_093.msh"/>
+    <mesh name="launch_station_red_shell_094" file="assets/launch_highlands/launch_station_red_shell_094.msh"/>
+    <mesh name="launch_station_red_shell_095" file="assets/launch_highlands/launch_station_red_shell_095.msh"/>
+    <mesh name="launch_station_red_shell_096" file="assets/launch_highlands/launch_station_red_shell_096.msh"/>
+    <mesh name="terrain_proxy_0005_filled_0" file="assets/side_road_fill/terrain_proxy_0005_filled_0.msh"/>
+    <mesh name="terrain_proxy_0007_filled_0" file="assets/side_road_fill/terrain_proxy_0007_filled_0.msh"/>
+    <mesh name="terrain_proxy_0007_filled_1" file="assets/side_road_fill/terrain_proxy_0007_filled_1.msh"/>
+    <mesh name="terrain_proxy_0007_filled_2" file="assets/side_road_fill/terrain_proxy_0007_filled_2.msh"/>
+    <mesh name="terrain_proxy_0039_filled_0" file="assets/side_road_fill/terrain_proxy_0039_filled_0.msh"/>
+    <mesh name="terrain_proxy_0040_filled_0" file="assets/side_road_fill/terrain_proxy_0040_filled_0.msh"/>
+    <mesh name="terrain_proxy_0010_step_clear_00_filled_0" file="assets/side_road_fill/terrain_proxy_0010_step_clear_00_filled_0.msh"/>
+    <mesh name="terrain_proxy_0012_step_clear_00_filled_0" file="assets/side_road_fill/terrain_proxy_0012_step_clear_00_filled_0.msh"/>
+    <mesh name="terrain_proxy_0012_step_clear_00_filled_1" file="assets/side_road_fill/terrain_proxy_0012_step_clear_00_filled_1.msh"/>
+    <mesh name="terrain_proxy_0012_step_clear_01_filled_0" file="assets/side_road_fill/terrain_proxy_0012_step_clear_01_filled_0.msh"/>
+    <mesh name="terrain_proxy_0012_step_clear_01_filled_1" file="assets/side_road_fill/terrain_proxy_0012_step_clear_01_filled_1.msh"/>
+    <mesh name="terrain_proxy_0012_step_clear_02_filled_0" file="assets/side_road_fill/terrain_proxy_0012_step_clear_02_filled_0.msh"/>
+    <mesh name="terrain_proxy_0027_launch_cut_1_filled_0" file="assets/side_road_fill/terrain_proxy_0027_launch_cut_1_filled_0.msh"/>
+    <mesh name="terrain_proxy_0025_step_clear_01_launch_cut_1_filled_0" file="assets/side_road_fill/terrain_proxy_0025_step_clear_01_launch_cut_1_filled_0.msh"/>
+    <mesh name="side_road_blue_deck" file="assets/side_road_fill/side_road_blue_deck.msh"/>
+    <mesh name="side_road_blue_ramp" file="assets/side_road_fill/side_road_blue_ramp.msh"/>
+    <mesh name="side_road_red_deck" file="assets/side_road_fill/side_road_red_deck.msh"/>
+    <mesh name="side_road_red_ramp" file="assets/side_road_fill/side_road_red_ramp.msh"/>
+    <mesh name="barrier_shell_0026_launch_cut_0_shift_clear_0" file="assets/launch_group_shift/barrier_shell_0026_launch_cut_0_shift_clear_0.msh"/>
+    <mesh name="barrier_shell_0027_launch_cut_0_shift_clear_0" file="assets/launch_group_shift/barrier_shell_0027_launch_cut_0_shift_clear_0.msh"/>
+    <mesh name="barrier_shell_0134_launch_cut_1_shift_clear_0" file="assets/launch_group_shift/barrier_shell_0134_launch_cut_1_shift_clear_0.msh"/>
+    <mesh name="barrier_shell_0191_launch_cut_0_shift_clear_0" file="assets/launch_group_shift/barrier_shell_0191_launch_cut_0_shift_clear_0.msh"/>
+    <mesh name="terrain_proxy_0027_launch_cut_1_filled_0_shift_clear_1" file="assets/launch_group_shift/terrain_proxy_0027_launch_cut_1_filled_0_shift_clear_1.msh"/>
+    <mesh name="terrain_proxy_0025_step_clear_01_launch_cut_1_filled_0_shift_clear_1" file="assets/launch_group_shift/terrain_proxy_0025_step_clear_01_launch_cut_1_filled_0_shift_clear_1.msh"/>
+  </asset>
+  <worldbody>
+    <light name="key" pos="0 0 18" dir="0 0 -1" directional="true"/>
+    <light name="fill" pos="10 -8 10" dir="-1 1 -1" directional="true" diffuse="0.5 0.5 0.5"/>
+    <camera name="overview_top" pos="0 0 32" xyaxes="1 0 0 0 1 0" fovy="50"/>
+    <body name="rmuc2026_field" pos="-0.02 -1.624344 1.641344">
+      <site name="solidworks_origin" pos="0 0 0" size="0.03" rgba="1 1 0 1"/>
+      <geom name="field__visual__00" class="visual" type="mesh" mesh="visual_mesh_00" material="visual_material_00" contype="0" conaffinity="0"/>
+      <geom name="field__visual__01" class="visual" type="mesh" mesh="visual_mesh_01" material="visual_material_01" contype="0" conaffinity="0"/>
+      <geom name="field__visual__05" class="visual" type="mesh" mesh="visual_mesh_05" material="visual_material_05" contype="0" conaffinity="0"/>
+      <geom name="field__visual__06" class="visual" type="mesh" mesh="visual_mesh_06" material="visual_material_06" contype="0" conaffinity="0"/>
+      <geom name="field__visual__07" class="visual" type="mesh" mesh="visual_mesh_07" material="visual_material_07" contype="0" conaffinity="0"/>
+      <geom name="field__visual__08" class="visual" type="mesh" mesh="visual_mesh_08" material="visual_material_08" contype="0" conaffinity="0"/>
+      <geom name="field__visual__09" class="visual" type="mesh" mesh="visual_mesh_09" material="visual_material_09" contype="0" conaffinity="0"/>
+      <geom name="field__visual__10" class="visual" type="mesh" mesh="visual_mesh_10" material="visual_material_10" contype="0" conaffinity="0"/>
+      <geom name="field__visual__11" class="visual" type="mesh" mesh="visual_mesh_11" material="visual_material_11" contype="0" conaffinity="0"/>
+      <geom name="field__visual__12" class="visual" type="mesh" mesh="visual_mesh_12" material="visual_material_12" contype="0" conaffinity="0"/>
+      <geom name="field__visual__15" class="visual" type="mesh" mesh="visual_mesh_15" material="visual_material_15" contype="0" conaffinity="0"/>
+      <geom name="field__visual__16" class="visual" type="mesh" mesh="visual_mesh_16" material="visual_material_16" contype="0" conaffinity="0"/>
+      <geom name="field__visual__17" class="visual" type="mesh" mesh="visual_mesh_17" material="visual_material_17" contype="0" conaffinity="0"/>
+      <geom name="field__visual__18" class="visual" type="mesh" mesh="visual_mesh_18" material="visual_material_18" contype="0" conaffinity="0"/>
+      <geom name="field__visual__19" class="visual" type="mesh" mesh="visual_mesh_19" material="visual_material_19" contype="0" conaffinity="0"/>
+      <geom name="field__visual__20" class="visual" type="mesh" mesh="visual_mesh_20" material="visual_material_20" contype="0" conaffinity="0"/>
+      <geom name="field__visual__21" class="visual" type="mesh" mesh="visual_mesh_21" material="visual_material_21" contype="0" conaffinity="0"/>
+      <geom name="field__visual__22" class="visual" type="mesh" mesh="visual_mesh_22" material="visual_material_22" contype="0" conaffinity="0"/>
+      <geom name="field__visual__23" class="visual" type="mesh" mesh="visual_mesh_23" material="visual_material_23" contype="0" conaffinity="0"/>
+      <geom name="field__visual__24" class="visual" type="mesh" mesh="visual_mesh_24" material="visual_material_24" contype="0" conaffinity="0"/>
+      <geom name="field__visual__25" class="visual" type="mesh" mesh="visual_mesh_25" material="visual_material_25" contype="0" conaffinity="0"/>
+      <geom name="field__visual__26" class="visual" type="mesh" mesh="visual_mesh_26" material="visual_material_26" contype="0" conaffinity="0"/>
+      <geom name="field__visual__27" class="visual" type="mesh" mesh="visual_mesh_27" material="visual_material_27" contype="0" conaffinity="0"/>
+      <geom name="field__visual__28" class="visual" type="mesh" mesh="visual_mesh_28" material="visual_material_28" contype="0" conaffinity="0"/>
+      <geom name="field__visual__29" class="visual" type="mesh" mesh="visual_mesh_29" material="visual_material_29" contype="0" conaffinity="0"/>
+      <geom name="field__visual__30" class="visual" type="mesh" mesh="visual_mesh_30" material="visual_material_30" contype="0" conaffinity="0"/>
+      <geom name="field__visual__31" class="visual" type="mesh" mesh="visual_mesh_31" material="visual_material_31" contype="0" conaffinity="0"/>
+      <geom name="field__visual__33" class="visual" type="mesh" mesh="visual_mesh_33" material="visual_material_33" contype="0" conaffinity="0"/>
+      <geom name="field__visual__34" class="visual" type="mesh" mesh="visual_mesh_34" material="visual_material_34" contype="0" conaffinity="0"/>
+      <geom name="field__visual__35" class="visual" type="mesh" mesh="visual_mesh_35" material="visual_material_35" contype="0" conaffinity="0"/>
+      <geom name="field__visual__36" class="visual" type="mesh" mesh="visual_mesh_36" material="visual_material_36" contype="0" conaffinity="0"/>
+      <geom name="field__visual__37" class="visual" type="mesh" mesh="visual_mesh_37" material="visual_material_37" contype="0" conaffinity="0"/>
+      <geom name="field__visual__38" class="visual" type="mesh" mesh="visual_mesh_38" material="visual_material_38" contype="0" conaffinity="0"/>
+      <geom name="field__visual__39" class="visual" type="mesh" mesh="visual_mesh_39" material="visual_material_39" contype="0" conaffinity="0"/>
+      <geom name="field__visual__40" class="visual" type="mesh" mesh="visual_mesh_40" material="visual_material_40" contype="0" conaffinity="0"/>
+      <geom name="field__visual__41" class="visual" type="mesh" mesh="visual_mesh_41" material="visual_material_41" contype="0" conaffinity="0"/>
+      <geom name="field__visual__42" class="visual" type="mesh" mesh="visual_mesh_42" material="visual_material_42" contype="0" conaffinity="0"/>
+      <geom name="field__visual__43" class="visual" type="mesh" mesh="visual_mesh_43" material="visual_material_43" contype="0" conaffinity="0"/>
+      <geom name="field__visual__44" class="visual" type="mesh" mesh="visual_mesh_44" material="visual_material_44" contype="0" conaffinity="0"/>
+      <geom name="field__visual__45" class="visual" type="mesh" mesh="visual_mesh_45" material="visual_material_45" contype="0" conaffinity="0"/>
+      <geom name="field__visual__46" class="visual" type="mesh" mesh="visual_mesh_46" material="visual_material_46" contype="0" conaffinity="0"/>
+      <geom name="field__visual__47" class="visual" type="mesh" mesh="visual_mesh_47" material="visual_material_47" contype="0" conaffinity="0"/>
+      <geom name="field__visual__48" class="visual" type="mesh" mesh="visual_mesh_48" material="visual_material_48" contype="0" conaffinity="0"/>
+      <geom name="field__visual__49" class="visual" type="mesh" mesh="visual_mesh_49" material="visual_material_49" contype="0" conaffinity="0"/>
+      <geom name="field__visual__50" class="visual" type="mesh" mesh="visual_mesh_50" material="visual_material_50" contype="0" conaffinity="0"/>
+      <geom name="field__visual__51" class="visual" type="mesh" mesh="visual_mesh_51" material="visual_material_51" contype="0" conaffinity="0"/>
+      <geom name="field__visual__52" class="visual" type="mesh" mesh="visual_mesh_52" material="visual_material_52" contype="0" conaffinity="0"/>
+      <geom name="field__collision__ground" type="box" pos="0.02 1.624344 -1.741344" size="14.525 8.025 0.1" class="collision"/>
+      <geom name="field__collision__planar_0001" type="mesh" mesh="terrain_proxy_0001" class="collision"/>
+      <geom name="field__collision__planar_0002" type="mesh" mesh="terrain_proxy_0002" class="collision"/>
+      <geom name="field__collision__planar_0015" type="mesh" mesh="terrain_proxy_0015" class="collision"/>
+      <geom name="field__collision__planar_0016" type="mesh" mesh="terrain_proxy_0016" class="collision"/>
+      <geom name="field__collision__planar_0018" type="mesh" mesh="terrain_proxy_0018" class="collision"/>
+      <geom name="field__collision__planar_0019" type="mesh" mesh="terrain_proxy_0019" class="collision"/>
+      <geom name="field__collision__planar_0020" type="mesh" mesh="terrain_proxy_0020" class="collision"/>
+      <geom name="field__collision__planar_0021" type="mesh" mesh="terrain_proxy_0021" class="collision"/>
+      <geom name="field__collision__planar_0022" type="mesh" mesh="terrain_proxy_0022" class="collision"/>
+      <geom name="field__collision__planar_0029" type="mesh" mesh="terrain_proxy_0029" class="collision"/>
+      <geom name="field__collision__planar_0030" type="mesh" mesh="terrain_proxy_0030" class="collision"/>
+      <geom name="field__collision__planar_0031" type="mesh" mesh="terrain_proxy_0031" class="collision"/>
+      <geom name="field__collision__planar_0032" type="mesh" mesh="terrain_proxy_0032" class="collision"/>
+      <geom name="field__collision__planar_0033" type="mesh" mesh="terrain_proxy_0033" class="collision"/>
+      <geom name="field__collision__planar_0034" type="mesh" mesh="terrain_proxy_0034" class="collision"/>
+      <geom name="field__collision__planar_0035" type="mesh" mesh="terrain_proxy_0035" class="collision"/>
+      <geom name="field__collision__planar_0036" type="mesh" mesh="terrain_proxy_0036" class="collision"/>
+      <geom name="field__collision__planar_0037" type="mesh" mesh="terrain_proxy_0037" class="collision"/>
+      <geom name="field__collision__planar_0038" type="mesh" mesh="terrain_proxy_0038" class="collision"/>
+      <geom name="field__collision__planar_0041" type="mesh" mesh="terrain_proxy_0041" class="collision"/>
+      <geom name="field__collision__planar_0042" type="mesh" mesh="terrain_proxy_0042" class="collision"/>
+      <geom name="field__collision__planar_0043" type="mesh" mesh="terrain_proxy_0043" class="collision"/>
+      <geom name="field__collision__planar_0044" type="mesh" mesh="terrain_proxy_0044" class="collision"/>
+      <geom name="field__collision__planar_0045" type="mesh" mesh="terrain_proxy_0045" class="collision"/>
+      <geom name="field__collision__planar_0046" type="mesh" mesh="terrain_proxy_0046" class="collision"/>
+      <geom name="field__collision__planar_0055" type="mesh" mesh="terrain_proxy_0055" class="collision"/>
+      <geom name="field__collision__planar_0056" type="mesh" mesh="terrain_proxy_0056" class="collision"/>
+      <geom name="field__collision__planar_0057" type="mesh" mesh="terrain_proxy_0057" class="collision"/>
+      <geom name="field__collision__planar_0058" type="mesh" mesh="terrain_proxy_0058" class="collision"/>
+      <geom name="field__collision__planar_0059" type="mesh" mesh="terrain_proxy_0059" class="collision"/>
+      <geom name="field__collision__planar_0060" type="mesh" mesh="terrain_proxy_0060" class="collision"/>
+      <geom name="field__collision__planar_0061" type="mesh" mesh="terrain_proxy_0061" class="collision"/>
+      <geom name="field__collision__planar_0062" type="mesh" mesh="terrain_proxy_0062" class="collision"/>
+      <geom name="field__collision__planar_0068" type="mesh" mesh="terrain_proxy_0068" class="collision"/>
+      <geom name="field__collision__planar_0069" type="mesh" mesh="terrain_proxy_0069" class="collision"/>
+      <geom name="field__collision__planar_0070" type="mesh" mesh="terrain_proxy_0070" class="collision"/>
+      <geom name="field__collision__planar_0071" type="mesh" mesh="terrain_proxy_0071" class="collision"/>
+      <geom name="field__collision__barrier_0002" type="mesh" mesh="barrier_shell_0002" class="collision"/>
+      <geom name="field__collision__barrier_0003" type="mesh" mesh="barrier_shell_0003" class="collision"/>
+      <geom name="field__collision__barrier_0004" type="mesh" mesh="barrier_shell_0004" class="collision"/>
+      <geom name="field__collision__barrier_0005" type="mesh" mesh="barrier_shell_0005" class="collision"/>
+      <geom name="field__collision__barrier_0006" type="mesh" mesh="barrier_shell_0006" class="collision"/>
+      <geom name="field__collision__barrier_0007" type="mesh" mesh="barrier_shell_0007" class="collision"/>
+      <geom name="field__collision__barrier_0008" type="mesh" mesh="barrier_shell_0008" class="collision"/>
+      <geom name="field__collision__barrier_0009" type="mesh" mesh="barrier_shell_0009" class="collision"/>
+      <geom name="field__collision__barrier_0010" type="mesh" mesh="barrier_shell_0010" class="collision"/>
+      <geom name="field__collision__barrier_0011" type="mesh" mesh="barrier_shell_0011" class="collision"/>
+      <geom name="field__collision__barrier_0012" type="mesh" mesh="barrier_shell_0012" class="collision"/>
+      <geom name="field__collision__barrier_0013" type="mesh" mesh="barrier_shell_0013" class="collision"/>
+      <geom name="field__collision__barrier_0014" type="mesh" mesh="barrier_shell_0014" class="collision"/>
+      <geom name="field__collision__barrier_0015" type="mesh" mesh="barrier_shell_0015" class="collision"/>
+      <geom name="field__collision__barrier_0016" type="mesh" mesh="barrier_shell_0016" class="collision"/>
+      <geom name="field__collision__barrier_0017" type="mesh" mesh="barrier_shell_0017" class="collision"/>
+      <geom name="field__collision__barrier_0018" type="mesh" mesh="barrier_shell_0018" class="collision"/>
+      <geom name="field__collision__barrier_0019" type="mesh" mesh="barrier_shell_0019" class="collision"/>
+      <geom name="field__collision__barrier_0020" type="mesh" mesh="barrier_shell_0020" class="collision"/>
+      <geom name="field__collision__barrier_0021" type="mesh" mesh="barrier_shell_0021" class="collision"/>
+      <geom name="field__collision__barrier_0022" type="mesh" mesh="barrier_shell_0022" class="collision"/>
+      <geom name="field__collision__barrier_0023" type="mesh" mesh="barrier_shell_0023" class="collision"/>
+      <geom name="field__collision__barrier_0028" type="mesh" mesh="barrier_shell_0028" class="collision"/>
+      <geom name="field__collision__barrier_0029" type="mesh" mesh="barrier_shell_0029" class="collision"/>
+      <geom name="field__collision__barrier_0030" type="mesh" mesh="barrier_shell_0030" class="collision"/>
+      <geom name="field__collision__barrier_0031" type="mesh" mesh="barrier_shell_0031" class="collision"/>
+      <geom name="field__collision__barrier_0033" type="mesh" mesh="barrier_shell_0033" class="collision"/>
+      <geom name="field__collision__barrier_0034" type="mesh" mesh="barrier_shell_0034" class="collision"/>
+      <geom name="field__collision__barrier_0040" type="mesh" mesh="barrier_shell_0040" class="collision"/>
+      <geom name="field__collision__barrier_0043" type="mesh" mesh="barrier_shell_0043" class="collision"/>
+      <geom name="field__collision__barrier_0044" type="mesh" mesh="barrier_shell_0044" class="collision"/>
+      <geom name="field__collision__barrier_0045" type="mesh" mesh="barrier_shell_0045" class="collision"/>
+      <geom name="field__collision__barrier_0046" type="mesh" mesh="barrier_shell_0046" class="collision"/>
+      <geom name="field__collision__barrier_0047" type="mesh" mesh="barrier_shell_0047" class="collision"/>
+      <geom name="field__collision__barrier_0048" type="mesh" mesh="barrier_shell_0048" class="collision"/>
+      <geom name="field__collision__barrier_0049" type="mesh" mesh="barrier_shell_0049" class="collision"/>
+      <geom name="field__collision__barrier_0050" type="mesh" mesh="barrier_shell_0050" class="collision"/>
+      <geom name="field__collision__barrier_0051" type="mesh" mesh="barrier_shell_0051" class="collision"/>
+      <geom name="field__collision__barrier_0052" type="mesh" mesh="barrier_shell_0052" class="collision"/>
+      <geom name="field__collision__barrier_0053" type="mesh" mesh="barrier_shell_0053" class="collision"/>
+      <geom name="field__collision__barrier_0054" type="mesh" mesh="barrier_shell_0054" class="collision"/>
+      <geom name="field__collision__barrier_0055" type="mesh" mesh="barrier_shell_0055" class="collision"/>
+      <geom name="field__collision__barrier_0056" type="mesh" mesh="barrier_shell_0056" class="collision"/>
+      <geom name="field__collision__barrier_0057" type="mesh" mesh="barrier_shell_0057" class="collision"/>
+      <geom name="field__collision__barrier_0058" type="mesh" mesh="barrier_shell_0058" class="collision"/>
+      <geom name="field__collision__barrier_0059" type="mesh" mesh="barrier_shell_0059" class="collision"/>
+      <geom name="field__collision__barrier_0060" type="mesh" mesh="barrier_shell_0060" class="collision"/>
+      <geom name="field__collision__barrier_0061" type="mesh" mesh="barrier_shell_0061" class="collision"/>
+      <geom name="field__collision__barrier_0062" type="mesh" mesh="barrier_shell_0062" class="collision"/>
+      <geom name="field__collision__barrier_0063" type="mesh" mesh="barrier_shell_0063" class="collision"/>
+      <geom name="field__collision__barrier_0064" type="mesh" mesh="barrier_shell_0064" class="collision"/>
+      <geom name="field__collision__barrier_0067" type="mesh" mesh="barrier_shell_0067" class="collision"/>
+      <geom name="field__collision__barrier_0068" type="mesh" mesh="barrier_shell_0068" class="collision"/>
+      <geom name="field__collision__barrier_0069" type="mesh" mesh="barrier_shell_0069" class="collision"/>
+      <geom name="field__collision__barrier_0070" type="mesh" mesh="barrier_shell_0070" class="collision"/>
+      <geom name="field__collision__barrier_0071" type="mesh" mesh="barrier_shell_0071" class="collision"/>
+      <geom name="field__collision__barrier_0072" type="mesh" mesh="barrier_shell_0072" class="collision"/>
+      <geom name="field__collision__barrier_0073" type="mesh" mesh="barrier_shell_0073" class="collision"/>
+      <geom name="field__collision__barrier_0074" type="mesh" mesh="barrier_shell_0074" class="collision"/>
+      <geom name="field__collision__barrier_0075" type="mesh" mesh="barrier_shell_0075" class="collision"/>
+      <geom name="field__collision__barrier_0076" type="mesh" mesh="barrier_shell_0076" class="collision"/>
+      <geom name="field__collision__barrier_0077" type="mesh" mesh="barrier_shell_0077" class="collision"/>
+      <geom name="field__collision__barrier_0078" type="mesh" mesh="barrier_shell_0078" class="collision"/>
+      <geom name="field__collision__barrier_0079" type="mesh" mesh="barrier_shell_0079" class="collision"/>
+      <geom name="field__collision__barrier_0080" type="mesh" mesh="barrier_shell_0080" class="collision"/>
+      <geom name="field__collision__barrier_0081" type="mesh" mesh="barrier_shell_0081" class="collision"/>
+      <geom name="field__collision__barrier_0082" type="mesh" mesh="barrier_shell_0082" class="collision"/>
+      <geom name="field__collision__barrier_0083" type="mesh" mesh="barrier_shell_0083" class="collision"/>
+      <geom name="field__collision__barrier_0084" type="mesh" mesh="barrier_shell_0084" class="collision"/>
+      <geom name="field__collision__barrier_0085" type="mesh" mesh="barrier_shell_0085" class="collision"/>
+      <geom name="field__collision__barrier_0086" type="mesh" mesh="barrier_shell_0086" class="collision"/>
+      <geom name="field__collision__barrier_0087" type="mesh" mesh="barrier_shell_0087" class="collision"/>
+      <geom name="field__collision__barrier_0088" type="mesh" mesh="barrier_shell_0088" class="collision"/>
+      <geom name="field__collision__barrier_0091" type="mesh" mesh="barrier_shell_0091" class="collision"/>
+      <geom name="field__collision__barrier_0092" type="mesh" mesh="barrier_shell_0092" class="collision"/>
+      <geom name="field__collision__barrier_0093" type="mesh" mesh="barrier_shell_0093" class="collision"/>
+      <geom name="field__collision__barrier_0094" type="mesh" mesh="barrier_shell_0094" class="collision"/>
+      <geom name="field__collision__barrier_0095" type="mesh" mesh="barrier_shell_0095" class="collision"/>
+      <geom name="field__collision__barrier_0096" type="mesh" mesh="barrier_shell_0096" class="collision"/>
+      <geom name="field__collision__barrier_0097" type="mesh" mesh="barrier_shell_0097" class="collision"/>
+      <geom name="field__collision__barrier_0098" type="mesh" mesh="barrier_shell_0098" class="collision"/>
+      <geom name="field__collision__barrier_0099" type="mesh" mesh="barrier_shell_0099" class="collision"/>
+      <geom name="field__collision__barrier_0100" type="mesh" mesh="barrier_shell_0100" class="collision"/>
+      <geom name="field__collision__barrier_0101" type="mesh" mesh="barrier_shell_0101" class="collision"/>
+      <geom name="field__collision__barrier_0102" type="mesh" mesh="barrier_shell_0102" class="collision"/>
+      <geom name="field__collision__barrier_0106" type="mesh" mesh="barrier_shell_0106" class="collision"/>
+      <geom name="field__collision__barrier_0107" type="mesh" mesh="barrier_shell_0107" class="collision"/>
+      <geom name="field__collision__barrier_0108" type="mesh" mesh="barrier_shell_0108" class="collision"/>
+      <geom name="field__collision__barrier_0109" type="mesh" mesh="barrier_shell_0109" class="collision"/>
+      <geom name="field__collision__barrier_0110" type="mesh" mesh="barrier_shell_0110" class="collision"/>
+      <geom name="field__collision__barrier_0111" type="mesh" mesh="barrier_shell_0111" class="collision"/>
+      <geom name="field__collision__barrier_0112" type="mesh" mesh="barrier_shell_0112" class="collision"/>
+      <geom name="field__collision__barrier_0113" type="mesh" mesh="barrier_shell_0113" class="collision"/>
+      <geom name="field__collision__barrier_0114" type="mesh" mesh="barrier_shell_0114" class="collision"/>
+      <geom name="field__collision__barrier_0115" type="mesh" mesh="barrier_shell_0115" class="collision"/>
+      <geom name="field__collision__barrier_0116" type="mesh" mesh="barrier_shell_0116" class="collision"/>
+      <geom name="field__collision__barrier_0117" type="mesh" mesh="barrier_shell_0117" class="collision"/>
+      <geom name="field__collision__barrier_0118" type="mesh" mesh="barrier_shell_0118" class="collision"/>
+      <geom name="field__collision__barrier_0119" type="mesh" mesh="barrier_shell_0119" class="collision"/>
+      <geom name="field__collision__barrier_0120" type="mesh" mesh="barrier_shell_0120" class="collision"/>
+      <geom name="field__collision__barrier_0121" type="mesh" mesh="barrier_shell_0121" class="collision"/>
+      <geom name="field__collision__barrier_0122" type="mesh" mesh="barrier_shell_0122" class="collision"/>
+      <geom name="field__collision__barrier_0123" type="mesh" mesh="barrier_shell_0123" class="collision"/>
+      <geom name="field__collision__barrier_0124" type="mesh" mesh="barrier_shell_0124" class="collision"/>
+      <geom name="field__collision__barrier_0125" type="mesh" mesh="barrier_shell_0125" class="collision"/>
+      <geom name="field__collision__barrier_0126" type="mesh" mesh="barrier_shell_0126" class="collision"/>
+      <geom name="field__collision__barrier_0127" type="mesh" mesh="barrier_shell_0127" class="collision"/>
+      <geom name="field__collision__barrier_0128" type="mesh" mesh="barrier_shell_0128" class="collision"/>
+      <geom name="field__collision__barrier_0129" type="mesh" mesh="barrier_shell_0129" class="collision"/>
+      <geom name="field__collision__barrier_0130" type="mesh" mesh="barrier_shell_0130" class="collision"/>
+      <geom name="field__collision__barrier_0131" type="mesh" mesh="barrier_shell_0131" class="collision"/>
+      <geom name="field__collision__barrier_0132" type="mesh" mesh="barrier_shell_0132" class="collision"/>
+      <geom name="field__collision__barrier_0135" type="mesh" mesh="barrier_shell_0135" class="collision"/>
+      <geom name="field__collision__barrier_0136" type="mesh" mesh="barrier_shell_0136" class="collision"/>
+      <geom name="field__collision__barrier_0137" type="mesh" mesh="barrier_shell_0137" class="collision"/>
+      <geom name="field__collision__barrier_0138" type="mesh" mesh="barrier_shell_0138" class="collision"/>
+      <geom name="field__collision__barrier_0139" type="mesh" mesh="barrier_shell_0139" class="collision"/>
+      <geom name="field__collision__barrier_0140" type="mesh" mesh="barrier_shell_0140" class="collision"/>
+      <geom name="field__collision__barrier_0141" type="mesh" mesh="barrier_shell_0141" class="collision"/>
+      <geom name="field__collision__barrier_0142" type="mesh" mesh="barrier_shell_0142" class="collision"/>
+      <geom name="field__collision__barrier_0143" type="mesh" mesh="barrier_shell_0143" class="collision"/>
+      <geom name="field__collision__barrier_0144" type="mesh" mesh="barrier_shell_0144" class="collision"/>
+      <geom name="field__collision__barrier_0145" type="mesh" mesh="barrier_shell_0145" class="collision"/>
+      <geom name="field__collision__barrier_0146" type="mesh" mesh="barrier_shell_0146" class="collision"/>
+      <geom name="field__collision__barrier_0147" type="mesh" mesh="barrier_shell_0147" class="collision"/>
+      <geom name="field__collision__barrier_0148" type="mesh" mesh="barrier_shell_0148" class="collision"/>
+      <geom name="field__collision__barrier_0149" type="mesh" mesh="barrier_shell_0149" class="collision"/>
+      <geom name="field__collision__barrier_0150" type="mesh" mesh="barrier_shell_0150" class="collision"/>
+      <geom name="field__collision__barrier_0151" type="mesh" mesh="barrier_shell_0151" class="collision"/>
+      <geom name="field__collision__barrier_0152" type="mesh" mesh="barrier_shell_0152" class="collision"/>
+      <geom name="field__collision__barrier_0153" type="mesh" mesh="barrier_shell_0153" class="collision"/>
+      <geom name="field__collision__barrier_0154" type="mesh" mesh="barrier_shell_0154" class="collision"/>
+      <geom name="field__collision__barrier_0156" type="mesh" mesh="barrier_shell_0156" class="collision"/>
+      <geom name="field__collision__barrier_0159" type="mesh" mesh="barrier_shell_0159" class="collision"/>
+      <geom name="field__collision__barrier_0161" type="mesh" mesh="barrier_shell_0161" class="collision"/>
+      <geom name="field__collision__barrier_0162" type="mesh" mesh="barrier_shell_0162" class="collision"/>
+      <geom name="field__collision__barrier_0163" type="mesh" mesh="barrier_shell_0163" class="collision"/>
+      <geom name="field__collision__barrier_0165" type="mesh" mesh="barrier_shell_0165" class="collision"/>
+      <geom name="field__collision__barrier_0166" type="mesh" mesh="barrier_shell_0166" class="collision"/>
+      <geom name="field__collision__barrier_0169" type="mesh" mesh="barrier_shell_0169" class="collision"/>
+      <geom name="field__collision__barrier_0170" type="mesh" mesh="barrier_shell_0170" class="collision"/>
+      <geom name="field__collision__barrier_0171" type="mesh" mesh="barrier_shell_0171" class="collision"/>
+      <geom name="field__collision__barrier_0172" type="mesh" mesh="barrier_shell_0172" class="collision"/>
+      <geom name="field__collision__barrier_0173" type="mesh" mesh="barrier_shell_0173" class="collision"/>
+      <geom name="field__collision__barrier_0174" type="mesh" mesh="barrier_shell_0174" class="collision"/>
+      <geom name="field__collision__barrier_0175" type="mesh" mesh="barrier_shell_0175" class="collision"/>
+      <geom name="field__collision__barrier_0176" type="mesh" mesh="barrier_shell_0176" class="collision"/>
+      <geom name="field__collision__barrier_0177" type="mesh" mesh="barrier_shell_0177" class="collision"/>
+      <geom name="field__collision__barrier_0178" type="mesh" mesh="barrier_shell_0178" class="collision"/>
+      <geom name="field__collision__barrier_0179" type="mesh" mesh="barrier_shell_0179" class="collision"/>
+      <geom name="field__collision__barrier_0180" type="mesh" mesh="barrier_shell_0180" class="collision"/>
+      <geom name="field__collision__barrier_0181" type="mesh" mesh="barrier_shell_0181" class="collision"/>
+      <geom name="field__collision__barrier_0182" type="mesh" mesh="barrier_shell_0182" class="collision"/>
+      <geom name="field__collision__barrier_0183" type="mesh" mesh="barrier_shell_0183" class="collision"/>
+      <geom name="field__collision__barrier_0184" type="mesh" mesh="barrier_shell_0184" class="collision"/>
+      <geom name="field__collision__barrier_0185" type="mesh" mesh="barrier_shell_0185" class="collision"/>
+      <geom name="field__collision__barrier_0186" type="mesh" mesh="barrier_shell_0186" class="collision"/>
+      <geom name="field__collision__barrier_0187" type="mesh" mesh="barrier_shell_0187" class="collision"/>
+      <geom name="field__collision__barrier_0188" type="mesh" mesh="barrier_shell_0188" class="collision"/>
+      <geom name="field__collision__barrier_0189" type="mesh" mesh="barrier_shell_0189" class="collision"/>
+      <geom name="field__collision__barrier_0190" type="mesh" mesh="barrier_shell_0190" class="collision"/>
+      <geom name="field__collision__center_black_0000" type="mesh" mesh="center_black_hull_0000" class="collision"/>
+      <geom name="field__collision__center_black_0001" type="mesh" mesh="center_black_hull_0001" class="collision"/>
+      <geom name="field__collision__center_black_0002" type="mesh" mesh="center_black_hull_0002" class="collision"/>
+      <geom name="field__collision__center_black_0003" type="mesh" mesh="center_black_hull_0003" class="collision"/>
+      <geom name="field__collision__center_black_0004" type="mesh" mesh="center_black_hull_0004" class="collision"/>
+      <geom name="field__collision__center_black_0005" type="mesh" mesh="center_black_hull_0005" class="collision"/>
+      <geom name="field__collision__center_black_0006" type="mesh" mesh="center_black_hull_0006" class="collision"/>
+      <geom name="field__collision__center_black_0007" type="mesh" mesh="center_black_hull_0007" class="collision"/>
+      <geom name="field__collision__center_black_0008" type="mesh" mesh="center_black_hull_0008" class="collision"/>
+      <geom name="field__collision__center_black_0009" type="mesh" mesh="center_black_hull_0009" class="collision"/>
+      <geom name="field__collision__center_black_0010" type="mesh" mesh="center_black_hull_0010" class="collision"/>
+      <geom name="field__collision__center_black_0011" type="mesh" mesh="center_black_hull_0011" class="collision"/>
+      <geom name="field__collision__center_black_0012" type="mesh" mesh="center_black_hull_0012" class="collision"/>
+      <geom name="field__collision__center_black_0013" type="mesh" mesh="center_black_hull_0013" class="collision"/>
+      <geom name="field__collision__center_black_0014" type="mesh" mesh="center_black_hull_0014" class="collision"/>
+      <geom name="field__collision__center_black_0015" type="mesh" mesh="center_black_hull_0015" class="collision"/>
+      <geom name="field__collision__center_black_0016" type="mesh" mesh="center_black_hull_0016" class="collision"/>
+      <geom name="field__collision__center_black_0017" type="mesh" mesh="center_black_hull_0017" class="collision"/>
+      <geom name="field__collision__center_black_0018" type="mesh" mesh="center_black_hull_0018" class="collision"/>
+      <geom name="field__collision__center_black_0019" type="mesh" mesh="center_black_hull_0019" class="collision"/>
+      <geom name="field__collision__center_black_0020" type="mesh" mesh="center_black_hull_0020" class="collision"/>
+      <geom name="field__collision__center_black_0021" type="mesh" mesh="center_black_hull_0021" class="collision"/>
+      <geom name="field__collision__center_black_0022" type="mesh" mesh="center_black_hull_0022" class="collision"/>
+      <geom name="field__collision__center_black_0023" type="mesh" mesh="center_black_hull_0023" class="collision"/>
+      <geom name="field__collision__center_black_0024" type="mesh" mesh="center_black_hull_0024" class="collision"/>
+      <geom name="field__collision__center_black_0025" type="mesh" mesh="center_black_hull_0025" class="collision"/>
+      <geom name="field__collision__center_black_base_0000" type="box" pos="-0.958837188 1.01713996 -1.34284395" size="0.0600002968 0.0175001528 0.00249999762" quat="0.923879393 0 0 0.382683769" class="collision"/>
+      <geom name="field__collision__center_black_base_0001" type="box" pos="-0.627204031 0.68550697 -1.34284395" size="0.0600445629 0.0176532163 0.00249999762" quat="0.923389862 0 0 0.383863469" class="collision"/>
+      <geom name="field__collision__center_black_base_0002" type="box" pos="0.62720336 2.60318048 -1.34284395" size="0.0600441433 0.0176522749 0.00249999762" quat="0.923391934 0 0 0.383858484" class="collision"/>
+      <geom name="field__collision__center_black_base_0003" type="box" pos="0.958836377 2.27154744 -1.34284395" size="0.0600005824 0.0175011072 0.00249999762" quat="-0.382673639 0 0 0.923883589" class="collision"/>
+      <geom name="field__collision__center_dark_support_0000" type="mesh" mesh="center_dark_support_0000" class="collision"/>
+      <geom name="field__collision__center_dark_support_0001" type="mesh" mesh="center_dark_support_0001" class="collision"/>
+      <geom name="field__collision__center_dark_support_0002" type="mesh" mesh="center_dark_support_0002" class="collision"/>
+      <geom name="field__collision__center_dark_support_0003" type="mesh" mesh="center_dark_support_0003" class="collision"/>
+      <geom name="field__collision__center_dark_support_0004" type="mesh" mesh="center_dark_support_0004" class="collision"/>
+      <geom name="field__collision__center_dark_support_0005" type="mesh" mesh="center_dark_support_0005" class="collision"/>
+      <geom name="field__collision__center_dark_support_0006" type="mesh" mesh="center_dark_support_0006" class="collision"/>
+      <geom name="field__collision__center_dark_support_0007" type="mesh" mesh="center_dark_support_0007" class="collision"/>
+      <geom name="field__collision__center_dark_support_0008" type="mesh" mesh="center_dark_support_0008" class="collision"/>
+      <geom name="field__collision__center_dark_support_0009" type="mesh" mesh="center_dark_support_0009" class="collision"/>
+      <geom name="field__collision__center_dark_support_0010" type="mesh" mesh="center_dark_support_0010" class="collision"/>
+      <geom name="field__collision__center_dark_support_0011" type="mesh" mesh="center_dark_support_0011" class="collision"/>
+      <geom name="field__collision__center_dark_support_0012" type="mesh" mesh="center_dark_support_0012" class="collision"/>
+      <geom name="field__collision__center_dark_support_0013" type="mesh" mesh="center_dark_support_0013" class="collision"/>
+      <geom name="field__collision__center_dark_support_0014" type="mesh" mesh="center_dark_support_0014" class="collision"/>
+      <geom name="field__collision__center_dark_support_0015" type="mesh" mesh="center_dark_support_0015" class="collision"/>
+      <geom name="field__collision__center_dark_support_0016" type="mesh" mesh="center_dark_support_0016" class="collision"/>
+      <geom name="field__collision__center_dark_support_0017" type="mesh" mesh="center_dark_support_0017" class="collision"/>
+      <geom name="field__collision__center_dark_support_0018" type="mesh" mesh="center_dark_support_0018" class="collision"/>
+      <geom name="field__collision__center_dark_support_0019" type="mesh" mesh="center_dark_support_0019" class="collision"/>
+      <geom name="field__collision__center_dark_support_0020" type="mesh" mesh="center_dark_support_0020" class="collision"/>
+      <geom name="field__collision__center_dark_support_0021" type="mesh" mesh="center_dark_support_0021" class="collision"/>
+      <geom name="field__collision__center_dark_support_0022" type="mesh" mesh="center_dark_support_0022" class="collision"/>
+      <geom name="field__collision__center_dark_support_0023" type="mesh" mesh="center_dark_support_0023" class="collision"/>
+      <geom name="field__collision__center_dark_support_0024" type="mesh" mesh="center_dark_support_0024" class="collision"/>
+      <geom name="field__collision__center_dark_support_0025" type="mesh" mesh="center_dark_support_0025" class="collision"/>
+      <geom name="field__collision__center_dark_support_0026" type="mesh" mesh="center_dark_support_0026" class="collision"/>
+      <geom name="field__collision__center_dark_support_0027" type="mesh" mesh="center_dark_support_0027" class="collision"/>
+      <geom name="field__collision__center_dark_support_0028" type="mesh" mesh="center_dark_support_0028" class="collision"/>
+      <geom name="field__collision__center_dark_support_0029" type="mesh" mesh="center_dark_support_0029" class="collision"/>
+      <geom name="field__collision__center_dark_support_0030" type="mesh" mesh="center_dark_support_0030" class="collision"/>
+      <geom name="field__collision__center_dark_support_0031" type="mesh" mesh="center_dark_support_0031" class="collision"/>
+      <geom name="field__collision__center_dark_support_0032" type="mesh" mesh="center_dark_support_0032" class="collision"/>
+      <geom name="field__collision__center_dark_support_0033" type="mesh" mesh="center_dark_support_0033" class="collision"/>
+      <geom name="field__collision__center_dark_support_0034" type="mesh" mesh="center_dark_support_0034" class="collision"/>
+      <geom name="field__collision__center_dark_support_0035" type="mesh" mesh="center_dark_support_0035" class="collision"/>
+      <geom name="field__collision__center_dark_support_0036" type="mesh" mesh="center_dark_support_0036" class="collision"/>
+      <geom name="field__collision__center_dark_support_0037" type="mesh" mesh="center_dark_support_0037" class="collision"/>
+      <geom name="field__collision__ramp_side_barrier_0000" type="mesh" mesh="ramp_side_barrier_0000" class="collision"/>
+      <geom name="field__collision__ramp_side_barrier_0001" type="mesh" mesh="ramp_side_barrier_0001" class="collision"/>
+      <geom name="field__collision__ramp_side_barrier_0002" type="mesh" mesh="ramp_side_barrier_0002" class="collision"/>
+      <geom name="field__collision__ramp_side_barrier_0003" type="mesh" mesh="ramp_side_barrier_0003" class="collision"/>
+      <geom name="field__visual__undulating_red_00" class="visual" type="mesh" mesh="undulating_crest" pos="6.520000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_00" class="collision" type="mesh" mesh="undulating_crest" pos="6.520000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_01" class="visual" type="mesh" mesh="undulating_crest" pos="6.760000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_01" class="collision" type="mesh" mesh="undulating_crest" pos="6.760000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_02" class="visual" type="mesh" mesh="undulating_crest" pos="7.000000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_02" class="collision" type="mesh" mesh="undulating_crest" pos="7.000000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_03" class="visual" type="mesh" mesh="undulating_crest" pos="7.240000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_03" class="collision" type="mesh" mesh="undulating_crest" pos="7.240000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_04" class="visual" type="mesh" mesh="undulating_crest" pos="7.480000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_04" class="collision" type="mesh" mesh="undulating_crest" pos="7.480000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_05" class="visual" type="mesh" mesh="undulating_crest" pos="7.720000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_05" class="collision" type="mesh" mesh="undulating_crest" pos="7.720000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_06" class="visual" type="mesh" mesh="undulating_crest" pos="7.960000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_06" class="collision" type="mesh" mesh="undulating_crest" pos="7.960000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_07" class="visual" type="mesh" mesh="undulating_crest" pos="8.200000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_07" class="collision" type="mesh" mesh="undulating_crest" pos="8.200000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_08" class="visual" type="mesh" mesh="undulating_crest" pos="8.440000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_08" class="collision" type="mesh" mesh="undulating_crest" pos="8.440000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_red_09" class="visual" type="mesh" mesh="undulating_crest" pos="8.680000 8.144344 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_red_09" class="collision" type="mesh" mesh="undulating_crest" pos="8.680000 8.144344 -1.441344"/>
+      <geom name="field__visual__undulating_blue_00" class="visual" type="mesh" mesh="undulating_crest" pos="-6.520000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_00" class="collision" type="mesh" mesh="undulating_crest" pos="-6.520000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_01" class="visual" type="mesh" mesh="undulating_crest" pos="-6.760000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_01" class="collision" type="mesh" mesh="undulating_crest" pos="-6.760000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_02" class="visual" type="mesh" mesh="undulating_crest" pos="-7.000000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_02" class="collision" type="mesh" mesh="undulating_crest" pos="-7.000000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_03" class="visual" type="mesh" mesh="undulating_crest" pos="-7.240000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_03" class="collision" type="mesh" mesh="undulating_crest" pos="-7.240000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_04" class="visual" type="mesh" mesh="undulating_crest" pos="-7.480000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_04" class="collision" type="mesh" mesh="undulating_crest" pos="-7.480000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_05" class="visual" type="mesh" mesh="undulating_crest" pos="-7.720000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_05" class="collision" type="mesh" mesh="undulating_crest" pos="-7.720000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_06" class="visual" type="mesh" mesh="undulating_crest" pos="-7.960000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_06" class="collision" type="mesh" mesh="undulating_crest" pos="-7.960000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_07" class="visual" type="mesh" mesh="undulating_crest" pos="-8.200000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_07" class="collision" type="mesh" mesh="undulating_crest" pos="-8.200000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_08" class="visual" type="mesh" mesh="undulating_crest" pos="-8.440000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_08" class="collision" type="mesh" mesh="undulating_crest" pos="-8.440000 -4.855656 -1.441344"/>
+      <geom name="field__visual__undulating_blue_09" class="visual" type="mesh" mesh="undulating_crest" pos="-8.680000 -4.855656 -1.441344" material="visual_material_38"/>
+      <geom name="field__collision__undulating_blue_09" class="collision" type="mesh" mesh="undulating_crest" pos="-8.680000 -4.855656 -1.441344"/>
+      <geom name="field__collision__planar_0010_step_clear_01" type="mesh" mesh="terrain_proxy_0010_step_clear_01" class="collision"/>
+      <geom name="field__collision__planar_0010_step_clear_02" type="mesh" mesh="terrain_proxy_0010_step_clear_02" class="collision"/>
+      <geom name="field__collision__planar_0010_step_clear_03" type="mesh" mesh="terrain_proxy_0010_step_clear_03" class="collision"/>
+      <geom name="field__collision__planar_0012_step_clear_03" type="mesh" mesh="terrain_proxy_0012_step_clear_03" class="collision"/>
+      <geom name="field__collision__planar_0000_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0000_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0000_tunnel_cut_1" type="mesh" mesh="terrain_proxy_0000_tunnel_cut_1" class="collision"/>
+      <geom name="field__collision__planar_0003_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0003_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0003_tunnel_cut_1" type="mesh" mesh="terrain_proxy_0003_tunnel_cut_1" class="collision"/>
+      <geom name="field__collision__planar_0004_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0004_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0006_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0006_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0008_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0008_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0008_tunnel_cut_1" type="mesh" mesh="terrain_proxy_0008_tunnel_cut_1" class="collision"/>
+      <geom name="field__collision__planar_0009_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0009_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0011_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0011_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0013_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0013_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0013_tunnel_cut_1" type="mesh" mesh="terrain_proxy_0013_tunnel_cut_1" class="collision"/>
+      <geom name="field__collision__planar_0014_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0014_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0014_tunnel_cut_1" type="mesh" mesh="terrain_proxy_0014_tunnel_cut_1" class="collision"/>
+      <geom name="field__collision__planar_0017_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0017_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0017_tunnel_cut_1" type="mesh" mesh="terrain_proxy_0017_tunnel_cut_1" class="collision"/>
+      <geom name="field__collision__planar_0065_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0065_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0066_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0066_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0067_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0067_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__planar_0072_tunnel_cut_0" type="mesh" mesh="terrain_proxy_0072_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0024_tunnel_cut_0" type="mesh" mesh="barrier_shell_0024_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0025_tunnel_cut_0" type="mesh" mesh="barrier_shell_0025_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0042_tunnel_cut_0" type="mesh" mesh="barrier_shell_0042_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0089_tunnel_cut_0" type="mesh" mesh="barrier_shell_0089_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0155_tunnel_cut_0" type="mesh" mesh="barrier_shell_0155_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0157_tunnel_cut_0" type="mesh" mesh="barrier_shell_0157_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0158_tunnel_cut_0" type="mesh" mesh="barrier_shell_0158_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0160_tunnel_cut_0" type="mesh" mesh="barrier_shell_0160_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0164_tunnel_cut_0" type="mesh" mesh="barrier_shell_0164_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0167_tunnel_cut_0" type="mesh" mesh="barrier_shell_0167_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0168_tunnel_cut_0" type="mesh" mesh="barrier_shell_0168_tunnel_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0000_launch_cut_0" type="mesh" mesh="barrier_shell_0000_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0001_launch_cut_0" type="mesh" mesh="barrier_shell_0001_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0036_launch_cut_0" type="mesh" mesh="barrier_shell_0036_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0037_launch_cut_0" type="mesh" mesh="barrier_shell_0037_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0038_launch_cut_0" type="mesh" mesh="barrier_shell_0038_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0038_launch_cut_1" type="mesh" mesh="barrier_shell_0038_launch_cut_1" class="collision"/>
+      <geom name="field__collision__barrier_0039_launch_cut_0" type="mesh" mesh="barrier_shell_0039_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0039_launch_cut_1" type="mesh" mesh="barrier_shell_0039_launch_cut_1" class="collision"/>
+      <geom name="field__collision__barrier_0041_launch_cut_0" type="mesh" mesh="barrier_shell_0041_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0041_launch_cut_1" type="mesh" mesh="barrier_shell_0041_launch_cut_1" class="collision"/>
+      <geom name="field__collision__barrier_0065_launch_cut_0" type="mesh" mesh="barrier_shell_0065_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0066_launch_cut_0" type="mesh" mesh="barrier_shell_0066_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0090_launch_cut_0" type="mesh" mesh="barrier_shell_0090_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0090_launch_cut_1" type="mesh" mesh="barrier_shell_0090_launch_cut_1" class="collision"/>
+      <geom name="field__collision__barrier_0103_launch_cut_0" type="mesh" mesh="barrier_shell_0103_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0104_launch_cut_0" type="mesh" mesh="barrier_shell_0104_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0105_launch_cut_0" type="mesh" mesh="barrier_shell_0105_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0134_launch_cut_0" type="mesh" mesh="barrier_shell_0134_launch_cut_0" class="collision"/>
+      <geom name="field__collision__barrier_0191_launch_cut_1" type="mesh" mesh="barrier_shell_0191_launch_cut_1" class="collision"/>
+      <geom name="field__collision__planar_0005_filled_0" type="mesh" mesh="terrain_proxy_0005_filled_0" class="collision"/>
+      <geom name="field__collision__planar_0007_filled_0" type="mesh" mesh="terrain_proxy_0007_filled_0" class="collision"/>
+      <geom name="field__collision__planar_0007_filled_1" type="mesh" mesh="terrain_proxy_0007_filled_1" class="collision"/>
+      <geom name="field__collision__planar_0007_filled_2" type="mesh" mesh="terrain_proxy_0007_filled_2" class="collision"/>
+      <geom name="field__collision__planar_0039_filled_0" type="mesh" mesh="terrain_proxy_0039_filled_0" class="collision"/>
+      <geom name="field__collision__planar_0040_filled_0" type="mesh" mesh="terrain_proxy_0040_filled_0" class="collision"/>
+      <geom name="field__collision__planar_0010_step_clear_00_filled_0" type="mesh" mesh="terrain_proxy_0010_step_clear_00_filled_0" class="collision"/>
+      <geom name="field__collision__planar_0012_step_clear_00_filled_0" type="mesh" mesh="terrain_proxy_0012_step_clear_00_filled_0" class="collision"/>
+      <geom name="field__collision__planar_0012_step_clear_00_filled_1" type="mesh" mesh="terrain_proxy_0012_step_clear_00_filled_1" class="collision"/>
+      <geom name="field__collision__planar_0012_step_clear_01_filled_0" type="mesh" mesh="terrain_proxy_0012_step_clear_01_filled_0" class="collision"/>
+      <geom name="field__collision__planar_0012_step_clear_01_filled_1" type="mesh" mesh="terrain_proxy_0012_step_clear_01_filled_1" class="collision"/>
+      <geom name="field__collision__planar_0012_step_clear_02_filled_0" type="mesh" mesh="terrain_proxy_0012_step_clear_02_filled_0" class="collision"/>
+      <geom name="field__collision__barrier_0026_launch_cut_0_shift_clear_0" type="mesh" mesh="barrier_shell_0026_launch_cut_0_shift_clear_0" class="collision"/>
+      <geom name="field__collision__barrier_0027_launch_cut_0_shift_clear_0" type="mesh" mesh="barrier_shell_0027_launch_cut_0_shift_clear_0" class="collision"/>
+      <geom name="field__collision__barrier_0134_launch_cut_1_shift_clear_0" type="mesh" mesh="barrier_shell_0134_launch_cut_1_shift_clear_0" class="collision"/>
+      <geom name="field__collision__barrier_0191_launch_cut_0_shift_clear_0" type="mesh" mesh="barrier_shell_0191_launch_cut_0_shift_clear_0" class="collision"/>
+      <geom name="field__collision__planar_0027_launch_cut_1_filled_0_shift_clear_1" type="mesh" mesh="terrain_proxy_0027_launch_cut_1_filled_0_shift_clear_1" class="collision"/>
+      <geom name="field__collision__planar_0025_step_clear_01_launch_cut_1_filled_0_shift_clear_1" type="mesh" mesh="terrain_proxy_0025_step_clear_01_launch_cut_1_filled_0_shift_clear_1" class="collision"/>
+    </body>
+    <body name="tunnel_north" pos="-0.07126900000000003 6.949999999999999 0">
+      <geom name="tunnel_north_road__visual" type="box" pos="0 0 0.1" size="1.45 0.57 0.1" class="visual" material="visual_material_38"/>
+      <geom name="tunnel_north_road__collision" type="box" pos="0 0 0.1" size="1.45 0.57 0.1" class="collision"/>
+      <geom name="tunnel_north_wall_-1__visual" type="box" pos="0 -0.485 0.3" size="1.45 0.085 0.1" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_north_wall_-1__collision" type="box" pos="0 -0.485 0.3" size="1.45 0.085 0.1" class="collision"/>
+      <geom name="tunnel_north_wall_1__visual" type="box" pos="0 0.485 0.3" size="1.45 0.085 0.1" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_north_wall_1__collision" type="box" pos="0 0.485 0.3" size="1.45 0.085 0.1" class="collision"/>
+      <geom name="tunnel_north_pier_-1__visual" type="box" pos="0 -0.485 0.425" size="0.175 0.085 0.025" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_north_pier_-1__collision" type="box" pos="0 -0.485 0.425" size="0.175 0.085 0.025" class="collision"/>
+      <geom name="tunnel_north_pier_1__visual" type="box" pos="0 0.485 0.425" size="0.175 0.085 0.025" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_north_pier_1__collision" type="box" pos="0 0.485 0.425" size="0.175 0.085 0.025" class="collision"/>
+      <geom name="tunnel_north_roof__visual" type="box" pos="0 0 0.46" size="0.175 0.57 0.01" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_north_roof__collision" type="box" pos="0 0 0.46" size="0.175 0.57 0.01" class="collision"/>
+      <geom name="tunnel_north_line_-1" type="box" pos="-1.0 0 .2006" size=".02 .35 .0005" rgba="1 1 1 1" class="visual"/>
+      <geom name="tunnel_north_line_1" type="box" pos="1.0 0 .2006" size=".02 .35 .0005" rgba="1 1 1 1" class="visual"/>
+    </body>
+    <body name="tunnel_south" pos="0.03126899999999999 -6.91 0">
+      <geom name="tunnel_south_road__visual" type="box" pos="0 0 0.1" size="1.45 0.57 0.1" class="visual" material="visual_material_38"/>
+      <geom name="tunnel_south_road__collision" type="box" pos="0 0 0.1" size="1.45 0.57 0.1" class="collision"/>
+      <geom name="tunnel_south_wall_-1__visual" type="box" pos="0 -0.485 0.3" size="1.45 0.085 0.1" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_south_wall_-1__collision" type="box" pos="0 -0.485 0.3" size="1.45 0.085 0.1" class="collision"/>
+      <geom name="tunnel_south_wall_1__visual" type="box" pos="0 0.485 0.3" size="1.45 0.085 0.1" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_south_wall_1__collision" type="box" pos="0 0.485 0.3" size="1.45 0.085 0.1" class="collision"/>
+      <geom name="tunnel_south_pier_-1__visual" type="box" pos="0 -0.485 0.425" size="0.175 0.085 0.025" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_south_pier_-1__collision" type="box" pos="0 -0.485 0.425" size="0.175 0.085 0.025" class="collision"/>
+      <geom name="tunnel_south_pier_1__visual" type="box" pos="0 0.485 0.425" size="0.175 0.085 0.025" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_south_pier_1__collision" type="box" pos="0 0.485 0.425" size="0.175 0.085 0.025" class="collision"/>
+      <geom name="tunnel_south_roof__visual" type="box" pos="0 0 0.46" size="0.175 0.57 0.01" class="visual" rgba="0.54 0.54 0.48 1"/>
+      <geom name="tunnel_south_roof__collision" type="box" pos="0 0 0.46" size="0.175 0.57 0.01" class="collision"/>
+      <geom name="tunnel_south_line_-1" type="box" pos="-1.0 0 .2006" size=".02 .35 .0005" rgba="1 1 1 1" class="visual"/>
+      <geom name="tunnel_south_line_1" type="box" pos="1.0 0 .2006" size=".02 .35 .0005" rgba="1 1 1 1" class="visual"/>
+    </body>
+    <body name="center_hangar_red" pos="0.651751442 1.186726189 .4" euler="0 0 0.7853981633974483">
+      <geom name="field__visual__hangar_red_column" class="visual" type="box" pos="0 0 0.57" size="0.2 0.2 0.57" rgba="0.48 0.48 0.42 1"/>
+      <geom name="field__collision__hangar_red_column" class="collision" type="box" pos="0 0 0.57" size="0.2 0.2 0.57"/>
+      <geom name="field__visual__hangar_red_top_plate" class="visual" type="box" pos="0 0 1.16" size="0.2 0.2 0.02" rgba="0.57 0.57 0.50 1"/>
+      <geom name="field__collision__hangar_red_top_plate" class="collision" type="box" pos="0 0 1.16" size="0.2 0.2 0.02"/>
+      <geom name="field__visual__hangar_red_landing_panel" class="visual" type="box" pos="0 0 1.1805" size="0.16 0.16 0.0005" rgba="0.28 0.28 0.28 1"/>
+      <geom name="field__visual__hangar_red_border_x_-1" class="visual" type="box" pos="-0.154 0 1.1812" size="0.006 0.16 0.0005" rgba="0.85 0.015 0.015 1"/>
+      <geom name="field__visual__hangar_red_border_y_-1" class="visual" type="box" pos="0 -0.154 1.1812" size="0.148 0.006 0.0005" rgba="0.85 0.015 0.015 1"/>
+      <geom name="field__visual__hangar_red_H_leg_-1" class="visual" type="box" pos="-0.07 0 1.1824" size="0.015 0.1 0.0005" rgba="1 1 1 1"/>
+      <geom name="field__visual__hangar_red_border_x_1" class="visual" type="box" pos="0.154 0 1.1812" size="0.006 0.16 0.0005" rgba="0.85 0.015 0.015 1"/>
+      <geom name="field__visual__hangar_red_border_y_1" class="visual" type="box" pos="0 0.154 1.1812" size="0.148 0.006 0.0005" rgba="0.85 0.015 0.015 1"/>
+      <geom name="field__visual__hangar_red_H_leg_1" class="visual" type="box" pos="0.07 0 1.1824" size="0.015 0.1 0.0005" rgba="1 1 1 1"/>
+      <geom name="field__visual__hangar_red_H_cross" class="visual" type="box" pos="0 0 1.1824" size="0.055 0.015 0.0005" rgba="1 1 1 1"/>
+    </body>
+    <body name="center_hangar_blue" pos="-0.691751442 -1.146726189 .4" euler="0 0 0.7853981633974483">
+      <geom name="field__visual__hangar_blue_column" class="visual" type="box" pos="0 0 0.57" size="0.2 0.2 0.57" rgba="0.48 0.48 0.42 1"/>
+      <geom name="field__collision__hangar_blue_column" class="collision" type="box" pos="0 0 0.57" size="0.2 0.2 0.57"/>
+      <geom name="field__visual__hangar_blue_top_plate" class="visual" type="box" pos="0 0 1.16" size="0.2 0.2 0.02" rgba="0.57 0.57 0.50 1"/>
+      <geom name="field__collision__hangar_blue_top_plate" class="collision" type="box" pos="0 0 1.16" size="0.2 0.2 0.02"/>
+      <geom name="field__visual__hangar_blue_landing_panel" class="visual" type="box" pos="0 0 1.1805" size="0.16 0.16 0.0005" rgba="0.28 0.28 0.28 1"/>
+      <geom name="field__visual__hangar_blue_border_x_-1" class="visual" type="box" pos="-0.154 0 1.1812" size="0.006 0.16 0.0005" rgba="0.015 0.035 0.85 1"/>
+      <geom name="field__visual__hangar_blue_border_y_-1" class="visual" type="box" pos="0 -0.154 1.1812" size="0.148 0.006 0.0005" rgba="0.015 0.035 0.85 1"/>
+      <geom name="field__visual__hangar_blue_H_leg_-1" class="visual" type="box" pos="-0.07 0 1.1824" size="0.015 0.1 0.0005" rgba="1 1 1 1"/>
+      <geom name="field__visual__hangar_blue_border_x_1" class="visual" type="box" pos="0.154 0 1.1812" size="0.006 0.16 0.0005" rgba="0.015 0.035 0.85 1"/>
+      <geom name="field__visual__hangar_blue_border_y_1" class="visual" type="box" pos="0 0.154 1.1812" size="0.148 0.006 0.0005" rgba="0.015 0.035 0.85 1"/>
+      <geom name="field__visual__hangar_blue_H_leg_1" class="visual" type="box" pos="0.07 0 1.1824" size="0.015 0.1 0.0005" rgba="1 1 1 1"/>
+      <geom name="field__visual__hangar_blue_H_cross" class="visual" type="box" pos="0 0 1.1824" size="0.055 0.015 0.0005" rgba="1 1 1 1"/>
+    </body>
+    <body name="launch_ground_blue">
+      <geom name="launch_ground_blue__visual" type="box" pos="-12.632000000000001 4.455 -.01" size="1.3929999999999998 3.066 .01" material="visual_material_38" class="visual"/>
+    </body>
+    <body name="launch_ground_red">
+      <geom name="launch_ground_red__visual" type="box" pos="12.592000000000002 -4.415 -.01" size="1.3929999999999998 3.066 .01" material="visual_material_38" class="visual"/>
+    </body>
+    <body name="restored_road_northwest">
+      <geom name="field__visual__restored_road_northwest_0_0" class="visual" type="mesh" mesh="restored_road_northwest_0_0" material="visual_material_38"/>
+      <geom name="field__collision__restored_road_northwest_0_0" class="collision" type="mesh" mesh="restored_road_northwest_0_0"/>
+      <geom name="field__visual__restored_road_northwest_1_0" class="visual" type="mesh" mesh="restored_road_northwest_1_0" material="visual_material_38"/>
+      <geom name="field__collision__restored_road_northwest_1_0" class="collision" type="mesh" mesh="restored_road_northwest_1_0"/>
+    </body>
+    <body name="restored_road_southeast">
+      <geom name="field__visual__restored_road_southeast_0_0" class="visual" type="mesh" mesh="restored_road_southeast_0_0" material="visual_material_38"/>
+      <geom name="field__collision__restored_road_southeast_0_0" class="collision" type="mesh" mesh="restored_road_southeast_0_0"/>
+    </body>
+    <body name="launch_highland_blue" pos="-12.6305 3.89 0" euler="0 0 1.5707963267948966">
+      <geom class="visual" name="field__visual__launch_blue_platform" type="mesh" mesh="launch_platform_mesh" material="visual_material_38"/>
+      <geom class="collision" name="field__collision__launch_blue_platform" type="mesh" mesh="launch_platform_mesh"/>
+      <geom class="visual" name="field__visual__launch_blue_guard_0_0" type="mesh" mesh="launch_guard_0_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_guard_0_0" type="mesh" mesh="launch_guard_0_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_blue_guard_1_0" type="mesh" mesh="launch_guard_1_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_guard_1_0" type="mesh" mesh="launch_guard_1_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_blue_guard_2_0" type="mesh" mesh="launch_guard_2_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_guard_2_0" type="mesh" mesh="launch_guard_2_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_blue_guard_4_0" type="mesh" mesh="launch_guard_4_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_guard_4_0" type="mesh" mesh="launch_guard_4_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_blue_guard_6_0" type="mesh" mesh="launch_guard_6_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_guard_6_0" type="mesh" mesh="launch_guard_6_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_blue_guard_7_0" type="mesh" mesh="launch_guard_7_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_guard_7_0" type="mesh" mesh="launch_guard_7_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_blue_west_step_1" type="box" pos="-1.75 0 0.1" size="0.15 0.6 0.1" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_west_step_1" type="box" pos="-1.75 0 0.1" size="0.15 0.6 0.1"/>
+      <geom class="visual" name="field__visual__launch_blue_west_step_2" type="box" pos="-1.45 0 0.2" size="0.15 0.6 0.2" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_west_step_2" type="box" pos="-1.45 0 0.2" size="0.15 0.6 0.2"/>
+      <geom class="visual" name="field__visual__launch_blue_west_step_3" type="box" pos="-1.15 0 0.3" size="0.15 0.6 0.3" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_west_step_3" type="box" pos="-1.15 0 0.3" size="0.15 0.6 0.3"/>
+      <geom class="visual" name="field__visual__launch_blue_south_step_1" type="box" pos="0 -1.75 0.1" size="0.6 0.15 0.1" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_south_step_1" type="box" pos="0 -1.75 0.1" size="0.6 0.15 0.1"/>
+      <geom class="visual" name="field__visual__launch_blue_south_step_2" type="box" pos="0 -1.45 0.2" size="0.6 0.15 0.2" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_south_step_2" type="box" pos="0 -1.45 0.2" size="0.6 0.15 0.2"/>
+      <geom class="visual" name="field__visual__launch_blue_south_step_3" type="box" pos="0 -1.15 0.3" size="0.6 0.15 0.3" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_blue_south_step_3" type="box" pos="0 -1.15 0.3" size="0.6 0.15 0.3"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_0_0" type="box" material="ch_blue" pos="0.74 0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 2.356194490192345"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_1_0" type="box" material="ch_blue" pos="0.0 0.92 0.8006" size="0.56 0.008 0.0005" euler="0.0 0.0 3.141592653589793"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_2_0" type="box" material="ch_blue" pos="-0.74 0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 -2.356194490192345"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_3_0" type="box" material="ch_blue" pos="-0.92 0.4928 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 -1.5707963267948966"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_3_1" type="box" material="ch_blue" pos="-0.92 -0.4928 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 -1.5707963267948966"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_4_0" type="box" material="ch_blue" pos="-0.74 -0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 -0.7853981633974483"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_5_0" type="box" material="ch_blue" pos="-0.4928 -0.92 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 0.0"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_5_1" type="box" material="ch_blue" pos="0.4928 -0.92 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 0.0"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_6_0" type="box" material="ch_blue" pos="0.74 -0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 0.7853981633974483"/>
+      <geom class="visual" name="field__visual__launch_blue_paint_7_0" type="box" material="ch_blue" pos="0.92 0.0 0.8006" size="0.56 0.008 0.0005" euler="0.0 0.0 1.5707963267948966"/>
+    </body>
+    <body name="launch_station_blue" pos="-12.6305 6.2665 0">
+      <geom name="launch_station_1_1__visual" mesh="launch_station_1_1" type="mesh" material="visual_material_01" class="visual"/>
+      <geom name="launch_station_1_2__visual" mesh="launch_station_1_2" type="mesh" material="visual_material_02" class="visual"/>
+      <geom name="launch_station_1_3__visual" mesh="launch_station_1_3" type="mesh" material="visual_material_03" class="visual"/>
+      <geom name="launch_station_1_12__visual" mesh="launch_station_1_12" type="mesh" material="visual_material_12" class="visual"/>
+      <geom name="launch_station_1_13__visual" mesh="launch_station_1_13" type="mesh" material="visual_material_13" class="visual"/>
+      <geom name="launch_station_1_27__visual" mesh="launch_station_1_27" type="mesh" material="visual_material_27" class="visual"/>
+      <geom name="launch_station_1_30__visual" mesh="launch_station_1_30" type="mesh" material="visual_material_30" class="visual"/>
+      <geom name="launch_station_1_31__visual" mesh="launch_station_1_31" type="mesh" material="visual_material_31" class="visual"/>
+      <geom name="launch_station_1_32__visual" mesh="launch_station_1_32" type="mesh" material="visual_material_32" class="visual"/>
+      <geom name="launch_station_1_33__visual" mesh="launch_station_1_33" type="mesh" material="visual_material_33" class="visual"/>
+      <geom name="launch_station_1_34__visual" mesh="launch_station_1_34" type="mesh" material="visual_material_34" class="visual"/>
+      <geom name="field__collision__launch_station_blue_shell_000" type="mesh" mesh="launch_station_blue_shell_000" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_001" type="mesh" mesh="launch_station_blue_shell_001" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_002" type="mesh" mesh="launch_station_blue_shell_002" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_003" type="mesh" mesh="launch_station_blue_shell_003" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_004" type="mesh" mesh="launch_station_blue_shell_004" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_005" type="mesh" mesh="launch_station_blue_shell_005" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_006" type="mesh" mesh="launch_station_blue_shell_006" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_007" type="mesh" mesh="launch_station_blue_shell_007" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_008" type="mesh" mesh="launch_station_blue_shell_008" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_009" type="mesh" mesh="launch_station_blue_shell_009" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_010" type="mesh" mesh="launch_station_blue_shell_010" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_011" type="mesh" mesh="launch_station_blue_shell_011" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_012" type="mesh" mesh="launch_station_blue_shell_012" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_013" type="mesh" mesh="launch_station_blue_shell_013" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_014" type="mesh" mesh="launch_station_blue_shell_014" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_015" type="mesh" mesh="launch_station_blue_shell_015" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_016" type="mesh" mesh="launch_station_blue_shell_016" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_017" type="mesh" mesh="launch_station_blue_shell_017" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_018" type="mesh" mesh="launch_station_blue_shell_018" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_019" type="mesh" mesh="launch_station_blue_shell_019" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_020" type="mesh" mesh="launch_station_blue_shell_020" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_021" type="mesh" mesh="launch_station_blue_shell_021" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_022" type="mesh" mesh="launch_station_blue_shell_022" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_023" type="mesh" mesh="launch_station_blue_shell_023" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_024" type="mesh" mesh="launch_station_blue_shell_024" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_025" type="mesh" mesh="launch_station_blue_shell_025" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_026" type="mesh" mesh="launch_station_blue_shell_026" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_027" type="mesh" mesh="launch_station_blue_shell_027" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_028" type="mesh" mesh="launch_station_blue_shell_028" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_029" type="mesh" mesh="launch_station_blue_shell_029" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_030" type="mesh" mesh="launch_station_blue_shell_030" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_031" type="mesh" mesh="launch_station_blue_shell_031" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_032" type="mesh" mesh="launch_station_blue_shell_032" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_033" type="mesh" mesh="launch_station_blue_shell_033" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_034" type="mesh" mesh="launch_station_blue_shell_034" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_035" type="mesh" mesh="launch_station_blue_shell_035" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_036" type="mesh" mesh="launch_station_blue_shell_036" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_037" type="mesh" mesh="launch_station_blue_shell_037" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_038" type="mesh" mesh="launch_station_blue_shell_038" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_039" type="mesh" mesh="launch_station_blue_shell_039" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_040" type="mesh" mesh="launch_station_blue_shell_040" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_041" type="mesh" mesh="launch_station_blue_shell_041" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_042" type="mesh" mesh="launch_station_blue_shell_042" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_043" type="mesh" mesh="launch_station_blue_shell_043" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_044" type="mesh" mesh="launch_station_blue_shell_044" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_045" type="mesh" mesh="launch_station_blue_shell_045" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_046" type="mesh" mesh="launch_station_blue_shell_046" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_047" type="mesh" mesh="launch_station_blue_shell_047" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_048" type="mesh" mesh="launch_station_blue_shell_048" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_049" type="mesh" mesh="launch_station_blue_shell_049" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_050" type="mesh" mesh="launch_station_blue_shell_050" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_051" type="mesh" mesh="launch_station_blue_shell_051" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_052" type="mesh" mesh="launch_station_blue_shell_052" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_053" type="mesh" mesh="launch_station_blue_shell_053" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_054" type="mesh" mesh="launch_station_blue_shell_054" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_055" type="mesh" mesh="launch_station_blue_shell_055" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_056" type="mesh" mesh="launch_station_blue_shell_056" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_057" type="mesh" mesh="launch_station_blue_shell_057" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_058" type="mesh" mesh="launch_station_blue_shell_058" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_059" type="mesh" mesh="launch_station_blue_shell_059" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_060" type="mesh" mesh="launch_station_blue_shell_060" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_061" type="mesh" mesh="launch_station_blue_shell_061" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_062" type="mesh" mesh="launch_station_blue_shell_062" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_063" type="mesh" mesh="launch_station_blue_shell_063" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_064" type="mesh" mesh="launch_station_blue_shell_064" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_065" type="mesh" mesh="launch_station_blue_shell_065" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_066" type="mesh" mesh="launch_station_blue_shell_066" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_067" type="mesh" mesh="launch_station_blue_shell_067" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_068" type="mesh" mesh="launch_station_blue_shell_068" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_069" type="mesh" mesh="launch_station_blue_shell_069" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_070" type="mesh" mesh="launch_station_blue_shell_070" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_071" type="mesh" mesh="launch_station_blue_shell_071" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_072" type="mesh" mesh="launch_station_blue_shell_072" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_073" type="mesh" mesh="launch_station_blue_shell_073" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_074" type="mesh" mesh="launch_station_blue_shell_074" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_075" type="mesh" mesh="launch_station_blue_shell_075" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_076" type="mesh" mesh="launch_station_blue_shell_076" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_077" type="mesh" mesh="launch_station_blue_shell_077" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_078" type="mesh" mesh="launch_station_blue_shell_078" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_079" type="mesh" mesh="launch_station_blue_shell_079" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_080" type="mesh" mesh="launch_station_blue_shell_080" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_081" type="mesh" mesh="launch_station_blue_shell_081" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_082" type="mesh" mesh="launch_station_blue_shell_082" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_083" type="mesh" mesh="launch_station_blue_shell_083" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_084" type="mesh" mesh="launch_station_blue_shell_084" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_085" type="mesh" mesh="launch_station_blue_shell_085" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_086" type="mesh" mesh="launch_station_blue_shell_086" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_087" type="mesh" mesh="launch_station_blue_shell_087" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_088" type="mesh" mesh="launch_station_blue_shell_088" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_089" type="mesh" mesh="launch_station_blue_shell_089" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_090" type="mesh" mesh="launch_station_blue_shell_090" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_091" type="mesh" mesh="launch_station_blue_shell_091" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_092" type="mesh" mesh="launch_station_blue_shell_092" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_093" type="mesh" mesh="launch_station_blue_shell_093" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_094" type="mesh" mesh="launch_station_blue_shell_094" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_095" type="mesh" mesh="launch_station_blue_shell_095" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_096" type="mesh" mesh="launch_station_blue_shell_096" class="collision"/>
+      <geom name="field__collision__launch_station_blue_shell_097" type="mesh" mesh="launch_station_blue_shell_097" class="collision"/>
+    </body>
+    <body name="launch_highland_red" pos="12.5905 -3.85 0" euler="0 0 -1.5707963267948966">
+      <geom class="visual" name="field__visual__launch_red_platform" type="mesh" mesh="launch_platform_mesh" material="visual_material_38"/>
+      <geom class="collision" name="field__collision__launch_red_platform" type="mesh" mesh="launch_platform_mesh"/>
+      <geom class="visual" name="field__visual__launch_red_guard_0_0" type="mesh" mesh="launch_guard_0_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_guard_0_0" type="mesh" mesh="launch_guard_0_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_red_guard_1_0" type="mesh" mesh="launch_guard_1_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_guard_1_0" type="mesh" mesh="launch_guard_1_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_red_guard_2_0" type="mesh" mesh="launch_guard_2_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_guard_2_0" type="mesh" mesh="launch_guard_2_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_red_guard_4_0" type="mesh" mesh="launch_guard_4_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_guard_4_0" type="mesh" mesh="launch_guard_4_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_red_guard_6_0" type="mesh" mesh="launch_guard_6_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_guard_6_0" type="mesh" mesh="launch_guard_6_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_red_guard_7_0" type="mesh" mesh="launch_guard_7_0_mesh" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_guard_7_0" type="mesh" mesh="launch_guard_7_0_mesh"/>
+      <geom class="visual" name="field__visual__launch_red_west_step_1" type="box" pos="-1.75 0 0.1" size="0.15 0.6 0.1" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_west_step_1" type="box" pos="-1.75 0 0.1" size="0.15 0.6 0.1"/>
+      <geom class="visual" name="field__visual__launch_red_west_step_2" type="box" pos="-1.45 0 0.2" size="0.15 0.6 0.2" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_west_step_2" type="box" pos="-1.45 0 0.2" size="0.15 0.6 0.2"/>
+      <geom class="visual" name="field__visual__launch_red_west_step_3" type="box" pos="-1.15 0 0.3" size="0.15 0.6 0.3" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_west_step_3" type="box" pos="-1.15 0 0.3" size="0.15 0.6 0.3"/>
+      <geom class="visual" name="field__visual__launch_red_south_step_1" type="box" pos="0 -1.75 0.1" size="0.6 0.15 0.1" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_south_step_1" type="box" pos="0 -1.75 0.1" size="0.6 0.15 0.1"/>
+      <geom class="visual" name="field__visual__launch_red_south_step_2" type="box" pos="0 -1.45 0.2" size="0.6 0.15 0.2" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_south_step_2" type="box" pos="0 -1.45 0.2" size="0.6 0.15 0.2"/>
+      <geom class="visual" name="field__visual__launch_red_south_step_3" type="box" pos="0 -1.15 0.3" size="0.6 0.15 0.3" material="ch_concrete"/>
+      <geom class="collision" name="field__collision__launch_red_south_step_3" type="box" pos="0 -1.15 0.3" size="0.6 0.15 0.3"/>
+      <geom class="visual" name="field__visual__launch_red_paint_0_0" type="box" material="ch_red" pos="0.74 0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 2.356194490192345"/>
+      <geom class="visual" name="field__visual__launch_red_paint_1_0" type="box" material="ch_red" pos="0.0 0.92 0.8006" size="0.56 0.008 0.0005" euler="0.0 0.0 3.141592653589793"/>
+      <geom class="visual" name="field__visual__launch_red_paint_2_0" type="box" material="ch_red" pos="-0.74 0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 -2.356194490192345"/>
+      <geom class="visual" name="field__visual__launch_red_paint_3_0" type="box" material="ch_red" pos="-0.92 0.4928 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 -1.5707963267948966"/>
+      <geom class="visual" name="field__visual__launch_red_paint_3_1" type="box" material="ch_red" pos="-0.92 -0.4928 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 -1.5707963267948966"/>
+      <geom class="visual" name="field__visual__launch_red_paint_4_0" type="box" material="ch_red" pos="-0.74 -0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 -0.7853981633974483"/>
+      <geom class="visual" name="field__visual__launch_red_paint_5_0" type="box" material="ch_red" pos="-0.4928 -0.92 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 0.0"/>
+      <geom class="visual" name="field__visual__launch_red_paint_5_1" type="box" material="ch_red" pos="0.4928 -0.92 0.8006" size="0.0672 0.008 0.0005" euler="0.0 0.0 0.0"/>
+      <geom class="visual" name="field__visual__launch_red_paint_6_0" type="box" material="ch_red" pos="0.74 -0.74 0.8006" size="0.2545584 0.008 0.0005" euler="0.0 0.0 0.7853981633974483"/>
+      <geom class="visual" name="field__visual__launch_red_paint_7_0" type="box" material="ch_red" pos="0.92 0.0 0.8006" size="0.56 0.008 0.0005" euler="0.0 0.0 1.5707963267948966"/>
+    </body>
+    <body name="launch_station_red" pos="12.5905 -6.2265 0">
+      <geom name="launch_station_-1_3__visual" mesh="launch_station_-1_3" type="mesh" material="visual_material_03" class="visual"/>
+      <geom name="launch_station_-1_4__visual" mesh="launch_station_-1_4" type="mesh" material="visual_material_04" class="visual"/>
+      <geom name="launch_station_-1_5__visual" mesh="launch_station_-1_5" type="mesh" material="visual_material_05" class="visual"/>
+      <geom name="launch_station_-1_13__visual" mesh="launch_station_-1_13" type="mesh" material="visual_material_13" class="visual"/>
+      <geom name="launch_station_-1_14__visual" mesh="launch_station_-1_14" type="mesh" material="visual_material_14" class="visual"/>
+      <geom name="launch_station_-1_15__visual" mesh="launch_station_-1_15" type="mesh" material="visual_material_15" class="visual"/>
+      <geom name="launch_station_-1_27__visual" mesh="launch_station_-1_27" type="mesh" material="visual_material_27" class="visual"/>
+      <geom name="launch_station_-1_30__visual" mesh="launch_station_-1_30" type="mesh" material="visual_material_30" class="visual"/>
+      <geom name="launch_station_-1_31__visual" mesh="launch_station_-1_31" type="mesh" material="visual_material_31" class="visual"/>
+      <geom name="launch_station_-1_32__visual" mesh="launch_station_-1_32" type="mesh" material="visual_material_32" class="visual"/>
+      <geom name="launch_station_-1_33__visual" mesh="launch_station_-1_33" type="mesh" material="visual_material_33" class="visual"/>
+      <geom name="launch_station_-1_34__visual" mesh="launch_station_-1_34" type="mesh" material="visual_material_34" class="visual"/>
+      <geom name="field__collision__launch_station_red_shell_000" type="mesh" mesh="launch_station_red_shell_000" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_001" type="mesh" mesh="launch_station_red_shell_001" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_002" type="mesh" mesh="launch_station_red_shell_002" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_003" type="mesh" mesh="launch_station_red_shell_003" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_004" type="mesh" mesh="launch_station_red_shell_004" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_005" type="mesh" mesh="launch_station_red_shell_005" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_006" type="mesh" mesh="launch_station_red_shell_006" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_007" type="mesh" mesh="launch_station_red_shell_007" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_008" type="mesh" mesh="launch_station_red_shell_008" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_009" type="mesh" mesh="launch_station_red_shell_009" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_010" type="mesh" mesh="launch_station_red_shell_010" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_011" type="mesh" mesh="launch_station_red_shell_011" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_012" type="mesh" mesh="launch_station_red_shell_012" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_013" type="mesh" mesh="launch_station_red_shell_013" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_014" type="mesh" mesh="launch_station_red_shell_014" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_015" type="mesh" mesh="launch_station_red_shell_015" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_016" type="mesh" mesh="launch_station_red_shell_016" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_017" type="mesh" mesh="launch_station_red_shell_017" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_018" type="mesh" mesh="launch_station_red_shell_018" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_019" type="mesh" mesh="launch_station_red_shell_019" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_020" type="mesh" mesh="launch_station_red_shell_020" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_021" type="mesh" mesh="launch_station_red_shell_021" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_022" type="mesh" mesh="launch_station_red_shell_022" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_023" type="mesh" mesh="launch_station_red_shell_023" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_024" type="mesh" mesh="launch_station_red_shell_024" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_025" type="mesh" mesh="launch_station_red_shell_025" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_026" type="mesh" mesh="launch_station_red_shell_026" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_027" type="mesh" mesh="launch_station_red_shell_027" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_028" type="mesh" mesh="launch_station_red_shell_028" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_029" type="mesh" mesh="launch_station_red_shell_029" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_030" type="mesh" mesh="launch_station_red_shell_030" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_031" type="mesh" mesh="launch_station_red_shell_031" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_032" type="mesh" mesh="launch_station_red_shell_032" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_033" type="mesh" mesh="launch_station_red_shell_033" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_034" type="mesh" mesh="launch_station_red_shell_034" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_035" type="mesh" mesh="launch_station_red_shell_035" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_036" type="mesh" mesh="launch_station_red_shell_036" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_037" type="mesh" mesh="launch_station_red_shell_037" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_038" type="mesh" mesh="launch_station_red_shell_038" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_039" type="mesh" mesh="launch_station_red_shell_039" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_040" type="mesh" mesh="launch_station_red_shell_040" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_041" type="mesh" mesh="launch_station_red_shell_041" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_042" type="mesh" mesh="launch_station_red_shell_042" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_043" type="mesh" mesh="launch_station_red_shell_043" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_044" type="mesh" mesh="launch_station_red_shell_044" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_045" type="mesh" mesh="launch_station_red_shell_045" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_046" type="mesh" mesh="launch_station_red_shell_046" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_047" type="mesh" mesh="launch_station_red_shell_047" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_048" type="mesh" mesh="launch_station_red_shell_048" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_049" type="mesh" mesh="launch_station_red_shell_049" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_050" type="mesh" mesh="launch_station_red_shell_050" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_051" type="mesh" mesh="launch_station_red_shell_051" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_052" type="mesh" mesh="launch_station_red_shell_052" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_053" type="mesh" mesh="launch_station_red_shell_053" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_054" type="mesh" mesh="launch_station_red_shell_054" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_055" type="mesh" mesh="launch_station_red_shell_055" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_056" type="mesh" mesh="launch_station_red_shell_056" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_057" type="mesh" mesh="launch_station_red_shell_057" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_058" type="mesh" mesh="launch_station_red_shell_058" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_059" type="mesh" mesh="launch_station_red_shell_059" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_060" type="mesh" mesh="launch_station_red_shell_060" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_061" type="mesh" mesh="launch_station_red_shell_061" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_062" type="mesh" mesh="launch_station_red_shell_062" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_063" type="mesh" mesh="launch_station_red_shell_063" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_064" type="mesh" mesh="launch_station_red_shell_064" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_065" type="mesh" mesh="launch_station_red_shell_065" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_066" type="mesh" mesh="launch_station_red_shell_066" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_067" type="mesh" mesh="launch_station_red_shell_067" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_068" type="mesh" mesh="launch_station_red_shell_068" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_069" type="mesh" mesh="launch_station_red_shell_069" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_070" type="mesh" mesh="launch_station_red_shell_070" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_071" type="mesh" mesh="launch_station_red_shell_071" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_072" type="mesh" mesh="launch_station_red_shell_072" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_073" type="mesh" mesh="launch_station_red_shell_073" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_074" type="mesh" mesh="launch_station_red_shell_074" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_075" type="mesh" mesh="launch_station_red_shell_075" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_076" type="mesh" mesh="launch_station_red_shell_076" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_077" type="mesh" mesh="launch_station_red_shell_077" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_078" type="mesh" mesh="launch_station_red_shell_078" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_079" type="mesh" mesh="launch_station_red_shell_079" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_080" type="mesh" mesh="launch_station_red_shell_080" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_081" type="mesh" mesh="launch_station_red_shell_081" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_082" type="mesh" mesh="launch_station_red_shell_082" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_083" type="mesh" mesh="launch_station_red_shell_083" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_084" type="mesh" mesh="launch_station_red_shell_084" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_085" type="mesh" mesh="launch_station_red_shell_085" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_086" type="mesh" mesh="launch_station_red_shell_086" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_087" type="mesh" mesh="launch_station_red_shell_087" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_088" type="mesh" mesh="launch_station_red_shell_088" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_089" type="mesh" mesh="launch_station_red_shell_089" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_090" type="mesh" mesh="launch_station_red_shell_090" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_091" type="mesh" mesh="launch_station_red_shell_091" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_092" type="mesh" mesh="launch_station_red_shell_092" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_093" type="mesh" mesh="launch_station_red_shell_093" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_094" type="mesh" mesh="launch_station_red_shell_094" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_095" type="mesh" mesh="launch_station_red_shell_095" class="collision"/>
+      <geom name="field__collision__launch_station_red_shell_096" type="mesh" mesh="launch_station_red_shell_096" class="collision"/>
+    </body>
+    <body name="side_road_fill_blue">
+      <geom name="field__visual__side_road_blue_deck" class="visual" type="mesh" mesh="side_road_blue_deck" material="visual_material_38"/>
+      <geom name="field__collision__side_road_blue_deck" class="collision" type="mesh" mesh="side_road_blue_deck"/>
+      <geom name="field__visual__side_road_blue_ramp" class="visual" type="mesh" mesh="side_road_blue_ramp" material="visual_material_38"/>
+      <geom name="field__collision__side_road_blue_ramp" class="collision" type="mesh" mesh="side_road_blue_ramp"/>
+      <geom name="side_road_blue_line_bottom" type="box" pos="-9.4826 3.2199 0.2006" size="1.3826000000000003 0.02 0.0005" material="visual_material_52" class="visual"/>
+      <geom name="side_road_blue_line_left" type="box" pos="-10.8652 3.98495 0.2006" size="0.02 0.76505 0.0005" material="visual_material_52" class="visual"/>
+    </body>
+    <body name="side_road_fill_red">
+      <geom name="field__visual__side_road_red_deck" class="visual" type="mesh" mesh="side_road_red_deck" material="visual_material_38"/>
+      <geom name="field__collision__side_road_red_deck" class="collision" type="mesh" mesh="side_road_red_deck"/>
+      <geom name="field__visual__side_road_red_ramp" class="visual" type="mesh" mesh="side_road_red_ramp" material="visual_material_38"/>
+      <geom name="field__collision__side_road_red_ramp" class="collision" type="mesh" mesh="side_road_red_ramp"/>
+      <geom name="side_road_red_line_bottom" type="box" pos="9.4426 -3.1799 0.2006" size="1.3826000000000003 0.02 0.0005" material="visual_material_34" class="visual"/>
+      <geom name="side_road_red_line_left" type="box" pos="10.8252 -3.94495 0.2006" size="0.02 0.76505 0.0005" material="visual_material_34" class="visual"/>
+    </body>
+  </worldbody>
+</mujoco>
