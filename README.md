@@ -11,6 +11,11 @@ MJCF 实际引用的 mesh、纹理和必要的来源说明，不包含转换脚�
 | RM26 PNX WBR | `rm26_pnx_wbr_mjcf/mjmodel.xml` | `fudan_rl/assets/rm26_pnx_wbr_mjcf` |
 | RMUC 2026 赛场 | `rmuc2026_battlefield_mjcf/model.xml` | `CosmosMount/rmuc2026_battlefield_mjcf` commit `67c13270e213cf3f69da2619e349eed273432330` |
 | 过洞步兵（FGOW） | `infantry_mjcf/model.xml` | 本地 `infantry_mjcf` 运行时模型 |
+| RM27 新场地 | `rm27_battlefield_mjcf/model.xml` | 本地更新的 `rmuc2026_battlefield_mjcf` 场地模型 |
+| RM27 機庫 + 基地 | `rm27_drone_mjcf/hanger_base_mjcf/model.xml` | 本地 RM27 dock/base 組合場景 |
+| RM27 飛鏢區 + 基地 | `rm27_dart_mjcf/dart_base_mjcf/model.xml` | 本地飛鏢發射區、基地與停機庫組合場景 |
+| RM27 無人機 | `rm27_drone_mjcf/{visual,dynamic,dock}/model.xml` | 本地 RM27 visual/dynamic/dock 資產 |
+| RM27 飛鏢 | `rm27_dart_mjcf/model.xml` | 本地 `research/Darts` CAD 網格與 FPV 相機 |
 
 请将本仓库与 `unified_control` 放在同一父目录：
 

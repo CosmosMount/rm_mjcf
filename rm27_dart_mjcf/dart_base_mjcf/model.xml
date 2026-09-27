@@ -1,0 +1,309 @@
+<mujoco model="rm27_isolated_blue_base_red_dart">
+  <compiler angle="radian" />
+  <option timestep=".002" integrator="RK4" gravity="0 0 -9.81" />
+  <statistic center="0.3 -3.1 0.8" extent="28" />
+  <visual>
+    <global offwidth="1200" offheight="800" />
+    <headlight ambient=".4 .4 .4" diffuse=".7 .7 .7" />
+  </visual>
+  <default>
+    <default class="red_dart_collision">
+      <geom type="box" group="3" friction="0.8 0.01 0.001" solref="0.01 1" solimp="0.95 0.99 0.001" rgba="0 0 0 0" />
+    </default>
+    <default class="red_dart_visual">
+      <geom contype="0" conaffinity="0" group="2" />
+    </default>
+  </default>
+  <asset>
+    <texture name="sky" type="skybox" builtin="gradient" rgb1="0.18 0.28 0.40" rgb2="0.02 0.03 0.05" width="512" height="3072" />
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.25 0.25 0.25" rgb2="0.35 0.35 0.35" width="512" height="512" />
+    <material name="ground" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.08" />
+    <mesh name="isolated_field__visual__05" file="assets/v6_mesh_isolated_field__visual__05.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__06" file="assets/v6_mesh_isolated_field__visual__06.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__23" file="assets/v6_mesh_isolated_field__visual__23.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__24" file="assets/v6_mesh_isolated_field__visual__24.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__25" file="assets/v6_mesh_isolated_field__visual__25.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__28" file="assets/v6_mesh_isolated_field__visual__28.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__30" file="assets/v6_mesh_isolated_field__visual__30.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__33" file="assets/v6_mesh_isolated_field__visual__33.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__34" file="assets/v6_mesh_isolated_field__visual__34.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__35" file="assets/v6_mesh_isolated_field__visual__35.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__36" file="assets/v6_mesh_isolated_field__visual__36.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__37" file="assets/v6_mesh_isolated_field__visual__37.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__39" file="assets/v6_mesh_isolated_field__visual__39.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__40" file="assets/v6_mesh_isolated_field__visual__40.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__41" file="assets/v6_mesh_isolated_field__visual__41.obj" maxhullvert="4" />
+    <mesh name="rm27_dock_visual" file="assets/v6_mesh_rm27_dock_visual.obj" maxhullvert="4" />
+    <material name="visual_material_03" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_04" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_05" rgba="0.6 0.6 0.6 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_13" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_14" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_15" rgba="0.2 0.2 0.2 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_27" rgba="0.82745098 0.737254902 0.670588235 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_30" rgba="1 1 1 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_31" rgba="0.490196078 0.490196078 0.490196078 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_32" rgba="0.811764706 0.843137255 0.905882353 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_33" rgba="0.298039216 0.298039216 0.298039216 1" specular="0.2" shininess="0.25" />
+    <material name="visual_material_34" rgba="1 0 0 1" specular="0.2" shininess="0.25" />
+    <mesh name="launch_station_-1_3" file="assets/dart_mesh_launch_station_-1_3.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_4" file="assets/dart_mesh_launch_station_-1_4.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_5" file="assets/dart_mesh_launch_station_-1_5.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_13" file="assets/dart_mesh_launch_station_-1_13.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_14" file="assets/dart_mesh_launch_station_-1_14.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_15" file="assets/dart_mesh_launch_station_-1_15.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_27" file="assets/dart_mesh_launch_station_-1_27.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_30" file="assets/dart_mesh_launch_station_-1_30.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_31" file="assets/dart_mesh_launch_station_-1_31.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_32" file="assets/dart_mesh_launch_station_-1_32.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_33" file="assets/dart_mesh_launch_station_-1_33.msh" maxhullvert="4" />
+    <mesh name="launch_station_-1_34" file="assets/dart_mesh_launch_station_-1_34.msh" maxhullvert="4" />
+    <mesh name="launch_station_red_shell_000" file="assets/dart_mesh_launch_station_red_shell_000.msh" />
+    <mesh name="launch_station_red_shell_001" file="assets/dart_mesh_launch_station_red_shell_001.msh" />
+    <mesh name="launch_station_red_shell_002" file="assets/dart_mesh_launch_station_red_shell_002.msh" />
+    <mesh name="launch_station_red_shell_003" file="assets/dart_mesh_launch_station_red_shell_003.msh" />
+    <mesh name="launch_station_red_shell_004" file="assets/dart_mesh_launch_station_red_shell_004.msh" />
+    <mesh name="launch_station_red_shell_005" file="assets/dart_mesh_launch_station_red_shell_005.msh" />
+    <mesh name="launch_station_red_shell_006" file="assets/dart_mesh_launch_station_red_shell_006.msh" />
+    <mesh name="launch_station_red_shell_007" file="assets/dart_mesh_launch_station_red_shell_007.msh" />
+    <mesh name="launch_station_red_shell_008" file="assets/dart_mesh_launch_station_red_shell_008.msh" />
+    <mesh name="launch_station_red_shell_009" file="assets/dart_mesh_launch_station_red_shell_009.msh" />
+    <mesh name="launch_station_red_shell_010" file="assets/dart_mesh_launch_station_red_shell_010.msh" />
+    <mesh name="launch_station_red_shell_011" file="assets/dart_mesh_launch_station_red_shell_011.msh" />
+    <mesh name="launch_station_red_shell_012" file="assets/dart_mesh_launch_station_red_shell_012.msh" />
+    <mesh name="launch_station_red_shell_013" file="assets/dart_mesh_launch_station_red_shell_013.msh" />
+    <mesh name="launch_station_red_shell_014" file="assets/dart_mesh_launch_station_red_shell_014.msh" />
+    <mesh name="launch_station_red_shell_015" file="assets/dart_mesh_launch_station_red_shell_015.msh" />
+    <mesh name="launch_station_red_shell_016" file="assets/dart_mesh_launch_station_red_shell_016.msh" />
+    <mesh name="launch_station_red_shell_017" file="assets/dart_mesh_launch_station_red_shell_017.msh" />
+    <mesh name="launch_station_red_shell_018" file="assets/dart_mesh_launch_station_red_shell_018.msh" />
+    <mesh name="launch_station_red_shell_019" file="assets/dart_mesh_launch_station_red_shell_019.msh" />
+    <mesh name="launch_station_red_shell_020" file="assets/dart_mesh_launch_station_red_shell_020.msh" />
+    <mesh name="launch_station_red_shell_021" file="assets/dart_mesh_launch_station_red_shell_021.msh" />
+    <mesh name="launch_station_red_shell_022" file="assets/dart_mesh_launch_station_red_shell_022.msh" />
+    <mesh name="launch_station_red_shell_023" file="assets/dart_mesh_launch_station_red_shell_023.msh" />
+    <mesh name="launch_station_red_shell_024" file="assets/dart_mesh_launch_station_red_shell_024.msh" />
+    <mesh name="launch_station_red_shell_025" file="assets/dart_mesh_launch_station_red_shell_025.msh" />
+    <mesh name="launch_station_red_shell_026" file="assets/dart_mesh_launch_station_red_shell_026.msh" />
+    <mesh name="launch_station_red_shell_027" file="assets/dart_mesh_launch_station_red_shell_027.msh" />
+    <mesh name="launch_station_red_shell_028" file="assets/dart_mesh_launch_station_red_shell_028.msh" />
+    <mesh name="launch_station_red_shell_029" file="assets/dart_mesh_launch_station_red_shell_029.msh" />
+    <mesh name="launch_station_red_shell_030" file="assets/dart_mesh_launch_station_red_shell_030.msh" />
+    <mesh name="launch_station_red_shell_031" file="assets/dart_mesh_launch_station_red_shell_031.msh" />
+    <mesh name="launch_station_red_shell_032" file="assets/dart_mesh_launch_station_red_shell_032.msh" />
+    <mesh name="launch_station_red_shell_033" file="assets/dart_mesh_launch_station_red_shell_033.msh" />
+    <mesh name="launch_station_red_shell_034" file="assets/dart_mesh_launch_station_red_shell_034.msh" />
+    <mesh name="launch_station_red_shell_035" file="assets/dart_mesh_launch_station_red_shell_035.msh" />
+    <mesh name="launch_station_red_shell_036" file="assets/dart_mesh_launch_station_red_shell_036.msh" />
+    <mesh name="launch_station_red_shell_037" file="assets/dart_mesh_launch_station_red_shell_037.msh" />
+    <mesh name="launch_station_red_shell_038" file="assets/dart_mesh_launch_station_red_shell_038.msh" />
+    <mesh name="launch_station_red_shell_039" file="assets/dart_mesh_launch_station_red_shell_039.msh" />
+    <mesh name="launch_station_red_shell_040" file="assets/dart_mesh_launch_station_red_shell_040.msh" />
+    <mesh name="launch_station_red_shell_041" file="assets/dart_mesh_launch_station_red_shell_041.msh" />
+    <mesh name="launch_station_red_shell_042" file="assets/dart_mesh_launch_station_red_shell_042.msh" />
+    <mesh name="launch_station_red_shell_043" file="assets/dart_mesh_launch_station_red_shell_043.msh" />
+    <mesh name="launch_station_red_shell_044" file="assets/dart_mesh_launch_station_red_shell_044.msh" />
+    <mesh name="launch_station_red_shell_045" file="assets/dart_mesh_launch_station_red_shell_045.msh" />
+    <mesh name="launch_station_red_shell_046" file="assets/dart_mesh_launch_station_red_shell_046.msh" />
+    <mesh name="launch_station_red_shell_047" file="assets/dart_mesh_launch_station_red_shell_047.msh" />
+    <mesh name="launch_station_red_shell_048" file="assets/dart_mesh_launch_station_red_shell_048.msh" />
+    <mesh name="launch_station_red_shell_049" file="assets/dart_mesh_launch_station_red_shell_049.msh" />
+    <mesh name="launch_station_red_shell_050" file="assets/dart_mesh_launch_station_red_shell_050.msh" />
+    <mesh name="launch_station_red_shell_051" file="assets/dart_mesh_launch_station_red_shell_051.msh" />
+    <mesh name="launch_station_red_shell_052" file="assets/dart_mesh_launch_station_red_shell_052.msh" />
+    <mesh name="launch_station_red_shell_053" file="assets/dart_mesh_launch_station_red_shell_053.msh" />
+    <mesh name="launch_station_red_shell_054" file="assets/dart_mesh_launch_station_red_shell_054.msh" />
+    <mesh name="launch_station_red_shell_055" file="assets/dart_mesh_launch_station_red_shell_055.msh" />
+    <mesh name="launch_station_red_shell_056" file="assets/dart_mesh_launch_station_red_shell_056.msh" />
+    <mesh name="launch_station_red_shell_057" file="assets/dart_mesh_launch_station_red_shell_057.msh" />
+    <mesh name="launch_station_red_shell_058" file="assets/dart_mesh_launch_station_red_shell_058.msh" />
+    <mesh name="launch_station_red_shell_059" file="assets/dart_mesh_launch_station_red_shell_059.msh" />
+    <mesh name="launch_station_red_shell_060" file="assets/dart_mesh_launch_station_red_shell_060.msh" />
+    <mesh name="launch_station_red_shell_061" file="assets/dart_mesh_launch_station_red_shell_061.msh" />
+    <mesh name="launch_station_red_shell_062" file="assets/dart_mesh_launch_station_red_shell_062.msh" />
+    <mesh name="launch_station_red_shell_063" file="assets/dart_mesh_launch_station_red_shell_063.msh" />
+    <mesh name="launch_station_red_shell_064" file="assets/dart_mesh_launch_station_red_shell_064.msh" />
+    <mesh name="launch_station_red_shell_065" file="assets/dart_mesh_launch_station_red_shell_065.msh" />
+    <mesh name="launch_station_red_shell_066" file="assets/dart_mesh_launch_station_red_shell_066.msh" />
+    <mesh name="launch_station_red_shell_067" file="assets/dart_mesh_launch_station_red_shell_067.msh" />
+    <mesh name="launch_station_red_shell_068" file="assets/dart_mesh_launch_station_red_shell_068.msh" />
+    <mesh name="launch_station_red_shell_069" file="assets/dart_mesh_launch_station_red_shell_069.msh" />
+    <mesh name="launch_station_red_shell_070" file="assets/dart_mesh_launch_station_red_shell_070.msh" />
+    <mesh name="launch_station_red_shell_071" file="assets/dart_mesh_launch_station_red_shell_071.msh" />
+    <mesh name="launch_station_red_shell_072" file="assets/dart_mesh_launch_station_red_shell_072.msh" />
+    <mesh name="launch_station_red_shell_073" file="assets/dart_mesh_launch_station_red_shell_073.msh" />
+    <mesh name="launch_station_red_shell_074" file="assets/dart_mesh_launch_station_red_shell_074.msh" />
+    <mesh name="launch_station_red_shell_075" file="assets/dart_mesh_launch_station_red_shell_075.msh" />
+    <mesh name="launch_station_red_shell_076" file="assets/dart_mesh_launch_station_red_shell_076.msh" />
+    <mesh name="launch_station_red_shell_077" file="assets/dart_mesh_launch_station_red_shell_077.msh" />
+    <mesh name="launch_station_red_shell_078" file="assets/dart_mesh_launch_station_red_shell_078.msh" />
+    <mesh name="launch_station_red_shell_079" file="assets/dart_mesh_launch_station_red_shell_079.msh" />
+    <mesh name="launch_station_red_shell_080" file="assets/dart_mesh_launch_station_red_shell_080.msh" />
+    <mesh name="launch_station_red_shell_081" file="assets/dart_mesh_launch_station_red_shell_081.msh" />
+    <mesh name="launch_station_red_shell_082" file="assets/dart_mesh_launch_station_red_shell_082.msh" />
+    <mesh name="launch_station_red_shell_083" file="assets/dart_mesh_launch_station_red_shell_083.msh" />
+    <mesh name="launch_station_red_shell_084" file="assets/dart_mesh_launch_station_red_shell_084.msh" />
+    <mesh name="launch_station_red_shell_085" file="assets/dart_mesh_launch_station_red_shell_085.msh" />
+    <mesh name="launch_station_red_shell_086" file="assets/dart_mesh_launch_station_red_shell_086.msh" />
+    <mesh name="launch_station_red_shell_087" file="assets/dart_mesh_launch_station_red_shell_087.msh" />
+    <mesh name="launch_station_red_shell_088" file="assets/dart_mesh_launch_station_red_shell_088.msh" />
+    <mesh name="launch_station_red_shell_089" file="assets/dart_mesh_launch_station_red_shell_089.msh" />
+    <mesh name="launch_station_red_shell_090" file="assets/dart_mesh_launch_station_red_shell_090.msh" />
+    <mesh name="launch_station_red_shell_091" file="assets/dart_mesh_launch_station_red_shell_091.msh" />
+    <mesh name="launch_station_red_shell_092" file="assets/dart_mesh_launch_station_red_shell_092.msh" />
+    <mesh name="launch_station_red_shell_093" file="assets/dart_mesh_launch_station_red_shell_093.msh" />
+    <mesh name="launch_station_red_shell_094" file="assets/dart_mesh_launch_station_red_shell_094.msh" />
+    <mesh name="launch_station_red_shell_095" file="assets/dart_mesh_launch_station_red_shell_095.msh" />
+    <mesh name="launch_station_red_shell_096" file="assets/dart_mesh_launch_station_red_shell_096.msh" />
+  </asset>
+  <worldbody>
+    <light pos="-5 0 8" directional="true" dir="0 0 -1" />
+    <geom name="test_floor" type="plane" size="20 10 .1" material="ground" />
+    <geom name="isolated_field__visual__05" type="mesh" mesh="isolated_field__visual__05" rgba="0.6000000238418579 0.6000000238418579 0.6000000238418579 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__06" type="mesh" mesh="isolated_field__visual__06" rgba="0.6000000238418579 0.6000000238418579 0.6000000238418579 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__23" type="mesh" mesh="isolated_field__visual__23" rgba="0.4000000059604645 0.4000000059604645 0.4000000059604645 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__24" type="mesh" mesh="isolated_field__visual__24" rgba="0.4000000059604645 0.4000000059604645 0.4000000059604645 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__25" type="mesh" mesh="isolated_field__visual__25" rgba="0.4000000059604645 0.4000000059604645 0.4000000059604645 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__28" type="mesh" mesh="isolated_field__visual__28" rgba="0.22745098173618317 0.5411764979362488 0.5568627715110779 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__30" type="mesh" mesh="isolated_field__visual__30" rgba="1.0 1.0 1.0 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__33" type="mesh" mesh="isolated_field__visual__33" rgba="0.2980392277240753 0.2980392277240753 0.2980392277240753 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__34" type="mesh" mesh="isolated_field__visual__34" rgba="1.0 0.0 0.0 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__35" type="mesh" mesh="isolated_field__visual__35" rgba="1.0 0.9372549057006836 0.6627451181411743 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__36" type="mesh" mesh="isolated_field__visual__36" rgba="0.2509803771972656 0.21568627655506134 0.1921568661928177 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__37" type="mesh" mesh="isolated_field__visual__37" rgba="0.2509803771972656 0.21568627655506134 0.1921568661928177 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__39" type="mesh" mesh="isolated_field__visual__39" rgba="0.0 0.4000000059604645 0.6000000238418579 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__40" type="mesh" mesh="isolated_field__visual__40" rgba="0.0470588244497776 0.0470588244497776 0.0470588244497776 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__41" type="mesh" mesh="isolated_field__visual__41" rgba="0.0 1.0 1.0 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="rm27_dock_visual" type="mesh" mesh="rm27_dock_visual" rgba="0.30000001192092896 0.36000001430511475 0.41999998688697815 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="rm27_dock_collision_bottom" type="box" pos="0.651751442 1.186726189 1.6600000000000001" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.15 0.15 0.08" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_west" type="box" pos="0.5474531917749843 1.0824279387749842 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.0025 0.15 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_east" type="box" pos="0.7560496922250157 1.2910244392250159 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.0025 0.15 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_south" type="box" pos="0.7560496922250157 1.0824279387749842 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.145 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_north" type="box" pos="0.5474531917749843 1.2910244392250159 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.145 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_divider_x" type="box" pos="0.651751442 1.186726189 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.0025 0.145 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_divider_y_w" type="box" pos="0.5996023168874921 1.1345770638874921 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.07125 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_divider_y_e" type="box" pos="0.7039005671125079 1.238875314112508 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.07125 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <site name="dock_frame" pos="0.651751442 1.186726189 1.58" size=".001" rgba="0 0 0 0" />
+    <site name="slot_1" pos="0.651751442 1.0824279387749842 1.74" size=".001" rgba="0 0 0 0" />
+    <site name="slot_2" pos="0.5474531917749843 1.186726189 1.74" size=".001" rgba="0 0 0 0" />
+    <site name="slot_3" pos="0.7560496922250157 1.186726189 1.74" size=".001" rgba="0 0 0 0" />
+    <site name="slot_4" pos="0.651751442 1.2910244392250159 1.74" size=".001" rgba="0 0 0 0" />
+    <body name="rm27_base_frame">
+      <geom name="rm27_base_armor" type="box" pos="-11.469385144401516 0.02 1.0731389146975434" quat="0.6868457676495124 0.16805621518394342 0.16805621518394342 0.6868457676495126" size="0.045 0.0275 0.003" rgba="0.02 0.45 0.95 1" group="0" contype="1" conaffinity="1" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <site name="rm27_base_armor_center" pos="-11.468 0.02 1.0758" quat="0.6868457676495124 0.16805621518394342 0.16805621518394342 0.6868457676495126" size=".002" rgba="0 0 0 0" />
+      <site name="rm27_base_marker_center" pos="-11.515 0.02 1.17" size=".002" rgba="0 0 0 0" />
+      <geom name="rm27_base_marker" type="cylinder" pos="-11.515 0.02 1.17" zaxis="1.0 0.0 0.0" size="0.0275 0.002" rgba="0.02 1 0.03 1" contype="0" conaffinity="0" group="0" />
+    </body>
+    <body name="launch_station_red" pos="12.5905 -6.2265 0">
+      <geom name="launch_station_-1_3__visual" mesh="launch_station_-1_3" type="mesh" material="visual_material_03" class="red_dart_visual" />
+      <geom name="launch_station_-1_4__visual" mesh="launch_station_-1_4" type="mesh" material="visual_material_04" class="red_dart_visual" />
+      <geom name="launch_station_-1_5__visual" mesh="launch_station_-1_5" type="mesh" material="visual_material_05" class="red_dart_visual" />
+      <geom name="launch_station_-1_13__visual" mesh="launch_station_-1_13" type="mesh" material="visual_material_13" class="red_dart_visual" />
+      <geom name="launch_station_-1_14__visual" mesh="launch_station_-1_14" type="mesh" material="visual_material_14" class="red_dart_visual" />
+      <geom name="launch_station_-1_15__visual" mesh="launch_station_-1_15" type="mesh" material="visual_material_15" class="red_dart_visual" />
+      <geom name="launch_station_-1_27__visual" mesh="launch_station_-1_27" type="mesh" material="visual_material_27" class="red_dart_visual" />
+      <geom name="launch_station_-1_30__visual" mesh="launch_station_-1_30" type="mesh" material="visual_material_30" class="red_dart_visual" />
+      <geom name="launch_station_-1_31__visual" mesh="launch_station_-1_31" type="mesh" material="visual_material_31" class="red_dart_visual" />
+      <geom name="launch_station_-1_32__visual" mesh="launch_station_-1_32" type="mesh" material="visual_material_32" class="red_dart_visual" />
+      <geom name="launch_station_-1_33__visual" mesh="launch_station_-1_33" type="mesh" material="visual_material_33" class="red_dart_visual" />
+      <geom name="launch_station_-1_34__visual" mesh="launch_station_-1_34" type="mesh" material="visual_material_34" class="red_dart_visual" />
+      <geom name="field__collision__launch_station_red_shell_000" type="mesh" mesh="launch_station_red_shell_000" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_001" type="mesh" mesh="launch_station_red_shell_001" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_002" type="mesh" mesh="launch_station_red_shell_002" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_003" type="mesh" mesh="launch_station_red_shell_003" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_004" type="mesh" mesh="launch_station_red_shell_004" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_005" type="mesh" mesh="launch_station_red_shell_005" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_006" type="mesh" mesh="launch_station_red_shell_006" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_007" type="mesh" mesh="launch_station_red_shell_007" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_008" type="mesh" mesh="launch_station_red_shell_008" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_009" type="mesh" mesh="launch_station_red_shell_009" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_010" type="mesh" mesh="launch_station_red_shell_010" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_011" type="mesh" mesh="launch_station_red_shell_011" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_012" type="mesh" mesh="launch_station_red_shell_012" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_013" type="mesh" mesh="launch_station_red_shell_013" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_014" type="mesh" mesh="launch_station_red_shell_014" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_015" type="mesh" mesh="launch_station_red_shell_015" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_016" type="mesh" mesh="launch_station_red_shell_016" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_017" type="mesh" mesh="launch_station_red_shell_017" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_018" type="mesh" mesh="launch_station_red_shell_018" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_019" type="mesh" mesh="launch_station_red_shell_019" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_020" type="mesh" mesh="launch_station_red_shell_020" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_021" type="mesh" mesh="launch_station_red_shell_021" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_022" type="mesh" mesh="launch_station_red_shell_022" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_023" type="mesh" mesh="launch_station_red_shell_023" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_024" type="mesh" mesh="launch_station_red_shell_024" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_025" type="mesh" mesh="launch_station_red_shell_025" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_026" type="mesh" mesh="launch_station_red_shell_026" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_027" type="mesh" mesh="launch_station_red_shell_027" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_028" type="mesh" mesh="launch_station_red_shell_028" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_029" type="mesh" mesh="launch_station_red_shell_029" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_030" type="mesh" mesh="launch_station_red_shell_030" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_031" type="mesh" mesh="launch_station_red_shell_031" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_032" type="mesh" mesh="launch_station_red_shell_032" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_033" type="mesh" mesh="launch_station_red_shell_033" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_034" type="mesh" mesh="launch_station_red_shell_034" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_035" type="mesh" mesh="launch_station_red_shell_035" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_036" type="mesh" mesh="launch_station_red_shell_036" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_037" type="mesh" mesh="launch_station_red_shell_037" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_038" type="mesh" mesh="launch_station_red_shell_038" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_039" type="mesh" mesh="launch_station_red_shell_039" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_040" type="mesh" mesh="launch_station_red_shell_040" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_041" type="mesh" mesh="launch_station_red_shell_041" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_042" type="mesh" mesh="launch_station_red_shell_042" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_043" type="mesh" mesh="launch_station_red_shell_043" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_044" type="mesh" mesh="launch_station_red_shell_044" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_045" type="mesh" mesh="launch_station_red_shell_045" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_046" type="mesh" mesh="launch_station_red_shell_046" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_047" type="mesh" mesh="launch_station_red_shell_047" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_048" type="mesh" mesh="launch_station_red_shell_048" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_049" type="mesh" mesh="launch_station_red_shell_049" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_050" type="mesh" mesh="launch_station_red_shell_050" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_051" type="mesh" mesh="launch_station_red_shell_051" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_052" type="mesh" mesh="launch_station_red_shell_052" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_053" type="mesh" mesh="launch_station_red_shell_053" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_054" type="mesh" mesh="launch_station_red_shell_054" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_055" type="mesh" mesh="launch_station_red_shell_055" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_056" type="mesh" mesh="launch_station_red_shell_056" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_057" type="mesh" mesh="launch_station_red_shell_057" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_058" type="mesh" mesh="launch_station_red_shell_058" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_059" type="mesh" mesh="launch_station_red_shell_059" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_060" type="mesh" mesh="launch_station_red_shell_060" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_061" type="mesh" mesh="launch_station_red_shell_061" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_062" type="mesh" mesh="launch_station_red_shell_062" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_063" type="mesh" mesh="launch_station_red_shell_063" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_064" type="mesh" mesh="launch_station_red_shell_064" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_065" type="mesh" mesh="launch_station_red_shell_065" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_066" type="mesh" mesh="launch_station_red_shell_066" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_067" type="mesh" mesh="launch_station_red_shell_067" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_068" type="mesh" mesh="launch_station_red_shell_068" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_069" type="mesh" mesh="launch_station_red_shell_069" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_070" type="mesh" mesh="launch_station_red_shell_070" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_071" type="mesh" mesh="launch_station_red_shell_071" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_072" type="mesh" mesh="launch_station_red_shell_072" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_073" type="mesh" mesh="launch_station_red_shell_073" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_074" type="mesh" mesh="launch_station_red_shell_074" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_075" type="mesh" mesh="launch_station_red_shell_075" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_076" type="mesh" mesh="launch_station_red_shell_076" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_077" type="mesh" mesh="launch_station_red_shell_077" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_078" type="mesh" mesh="launch_station_red_shell_078" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_079" type="mesh" mesh="launch_station_red_shell_079" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_080" type="mesh" mesh="launch_station_red_shell_080" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_081" type="mesh" mesh="launch_station_red_shell_081" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_082" type="mesh" mesh="launch_station_red_shell_082" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_083" type="mesh" mesh="launch_station_red_shell_083" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_084" type="mesh" mesh="launch_station_red_shell_084" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_085" type="mesh" mesh="launch_station_red_shell_085" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_086" type="mesh" mesh="launch_station_red_shell_086" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_087" type="mesh" mesh="launch_station_red_shell_087" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_088" type="mesh" mesh="launch_station_red_shell_088" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_089" type="mesh" mesh="launch_station_red_shell_089" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_090" type="mesh" mesh="launch_station_red_shell_090" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_091" type="mesh" mesh="launch_station_red_shell_091" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_092" type="mesh" mesh="launch_station_red_shell_092" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_093" type="mesh" mesh="launch_station_red_shell_093" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_094" type="mesh" mesh="launch_station_red_shell_094" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_095" type="mesh" mesh="launch_station_red_shell_095" class="red_dart_collision" />
+      <geom name="field__collision__launch_station_red_shell_096" type="mesh" mesh="launch_station_red_shell_096" class="red_dart_collision" />
+    </body>
+  </worldbody>
+</mujoco>

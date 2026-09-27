@@ -1,0 +1,25 @@
+<mujoco model="rm27_drone_dock">
+  <compiler angle="radian" />
+  <option timestep=".002" integrator="RK4" gravity="0 0 -9.81" />
+  <asset>
+    <mesh name="rm27_dock_visual" file="assets/rm27_dock_visual.obj" maxhullvert="4" />
+  </asset>
+  <worldbody>
+    <body name="rm27_dock" pos="0 0 0" quat="1 0 0 0">
+      <geom name="rm27_dock_visual" type="mesh" mesh="rm27_dock_visual" contype="0" conaffinity="0" group="2" rgba="0.3 0.36 0.42 1" />
+      <geom name="rm27_dock_collision_bottom" type="box" pos="0 0 0.08" size="0.15 0.15 0.08" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <geom name="rm27_dock_collision_west" type="box" pos="-0.1475 0 0.18" size="0.0025 0.15 0.02" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <geom name="rm27_dock_collision_east" type="box" pos="0.1475 0 0.18" size="0.0025 0.15 0.02" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <geom name="rm27_dock_collision_south" type="box" pos="0 -0.1475 0.18" size="0.145 0.0025 0.02" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <geom name="rm27_dock_collision_north" type="box" pos="0 0.1475 0.18" size="0.145 0.0025 0.02" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <geom name="rm27_dock_collision_divider_x" type="box" pos="0 0 0.18" size="0.0025 0.145 0.02" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <geom name="rm27_dock_collision_divider_y_w" type="box" pos="-0.07375 0 0.18" size="0.07125 0.0025 0.02" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <geom name="rm27_dock_collision_divider_y_e" type="box" pos="0.07375 0 0.18" size="0.07125 0.0025 0.02" contype="1" conaffinity="1" group="3" rgba="0 .8 .4 0" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <site name="dock_frame" size=".002" rgba="1 1 0 1" />
+      <site name="slot_1" pos="-0.07375 -0.07375 0.16" type="box" size=".055 .055 .0005" rgba=".1 .8 .3 .6" />
+      <site name="slot_2" pos="-0.07375 0.07375 0.16" type="box" size=".055 .055 .0005" rgba=".1 .8 .3 .6" />
+      <site name="slot_3" pos="0.07375 -0.07375 0.16" type="box" size=".055 .055 .0005" rgba=".1 .8 .3 .6" />
+      <site name="slot_4" pos="0.07375 0.07375 0.16" type="box" size=".055 .055 .0005" rgba=".1 .8 .3 .6" />
+    </body>
+  </worldbody>
+</mujoco>

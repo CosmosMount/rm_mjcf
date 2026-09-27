@@ -1,0 +1,82 @@
+<mujoco model="rm27_isolated_dock_base">
+  <compiler angle="radian" />
+  <option timestep=".002" integrator="RK4" gravity="0 0 -9.81" />
+  <statistic center="-5.5 0.6 0.8" extent="15" />
+  <visual>
+    <global offwidth="1200" offheight="800" />
+    <headlight ambient=".4 .4 .4" diffuse=".7 .7 .7" />
+  </visual>
+  <asset>
+    <texture name="sky" type="skybox" builtin="gradient" rgb1="0.18 0.28 0.40" rgb2="0.02 0.03 0.05" width="512" height="3072" />
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.25 0.25 0.25" rgb2="0.35 0.35 0.35" width="512" height="512" />
+    <material name="ground" texture="grid" texrepeat="1 1" texuniform="true" reflectance="0.08" />
+    <mesh name="isolated_field__visual__05" file="assets/isolated_field__visual__05.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__06" file="assets/isolated_field__visual__06.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__23" file="assets/isolated_field__visual__23.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__24" file="assets/isolated_field__visual__24.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__25" file="assets/isolated_field__visual__25.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__28" file="assets/isolated_field__visual__28.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__30" file="assets/isolated_field__visual__30.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__33" file="assets/isolated_field__visual__33.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__34" file="assets/isolated_field__visual__34.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__35" file="assets/isolated_field__visual__35.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__36" file="assets/isolated_field__visual__36.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__37" file="assets/isolated_field__visual__37.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__39" file="assets/isolated_field__visual__39.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__40" file="assets/isolated_field__visual__40.obj" maxhullvert="4" />
+    <mesh name="isolated_field__visual__41" file="assets/isolated_field__visual__41.obj" maxhullvert="4" />
+    <mesh name="rm27_dock_visual" file="assets/rm27_dock_visual.obj" maxhullvert="4" />
+  </asset>
+  <worldbody>
+    <light pos="-5 0 8" directional="true" dir="0 0 -1" />
+    <geom name="test_floor" type="plane" size="20 10 .1" material="ground" />
+    <geom name="isolated_field__visual__05" type="mesh" mesh="isolated_field__visual__05" rgba="0.6000000238418579 0.6000000238418579 0.6000000238418579 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__06" type="mesh" mesh="isolated_field__visual__06" rgba="0.6000000238418579 0.6000000238418579 0.6000000238418579 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__23" type="mesh" mesh="isolated_field__visual__23" rgba="0.4000000059604645 0.4000000059604645 0.4000000059604645 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__24" type="mesh" mesh="isolated_field__visual__24" rgba="0.4000000059604645 0.4000000059604645 0.4000000059604645 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__25" type="mesh" mesh="isolated_field__visual__25" rgba="0.4000000059604645 0.4000000059604645 0.4000000059604645 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__28" type="mesh" mesh="isolated_field__visual__28" rgba="0.22745098173618317 0.5411764979362488 0.5568627715110779 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__30" type="mesh" mesh="isolated_field__visual__30" rgba="1.0 1.0 1.0 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__33" type="mesh" mesh="isolated_field__visual__33" rgba="0.2980392277240753 0.2980392277240753 0.2980392277240753 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__34" type="mesh" mesh="isolated_field__visual__34" rgba="1.0 0.0 0.0 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__35" type="mesh" mesh="isolated_field__visual__35" rgba="1.0 0.9372549057006836 0.6627451181411743 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__36" type="mesh" mesh="isolated_field__visual__36" rgba="0.2509803771972656 0.21568627655506134 0.1921568661928177 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__37" type="mesh" mesh="isolated_field__visual__37" rgba="0.2509803771972656 0.21568627655506134 0.1921568661928177 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__39" type="mesh" mesh="isolated_field__visual__39" rgba="0.0 0.4000000059604645 0.6000000238418579 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__40" type="mesh" mesh="isolated_field__visual__40" rgba="0.0470588244497776 0.0470588244497776 0.0470588244497776 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="isolated_field__visual__41" type="mesh" mesh="isolated_field__visual__41" rgba="0.0 1.0 1.0 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="field__visual__hangar_red_column" type="box" pos="0.651751442 1.186726189 0.97" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.2 0.2 0.57" rgba="0.47999998927116394 0.47999998927116394 0.41999998688697815 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__collision__hangar_red_column" type="box" pos="0.651751442 1.186726189 0.97" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.2 0.2 0.57" rgba="0.0 0.0 0.0 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_top_plate" type="box" pos="0.651751442 1.186726189 1.56" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.2 0.2 0.02" rgba="0.5699999928474426 0.5699999928474426 0.5 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__collision__hangar_red_top_plate" type="box" pos="0.651751442 1.186726189 1.56" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.2 0.2 0.02" rgba="0.0 0.0 0.0 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_landing_panel" type="box" pos="0.651751442 1.186726189 1.5805000000000002" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.16 0.16 0.0005" rgba="0.2800000011920929 0.2800000011920929 0.2800000011920929 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_border_x_-1" type="box" pos="0.5428569976972717 1.0778317446972716 1.5812" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.006 0.16 0.0005" rgba="0.8500000238418579 0.014999999664723873 0.014999999664723873 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_border_y_-1" type="box" pos="0.7606458863027283 1.0778317446972718 1.5812" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.148 0.006 0.0005" rgba="0.8500000238418579 0.014999999664723873 0.014999999664723873 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_H_leg_-1" type="box" pos="0.6022539673169417 1.1372287143169417 1.5823999999999998" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.015 0.1 0.0005" rgba="1.0 1.0 1.0 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_border_x_1" type="box" pos="0.7606458863027283 1.2956206333027285 1.5812" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.006 0.16 0.0005" rgba="0.8500000238418579 0.014999999664723873 0.014999999664723873 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_border_y_1" type="box" pos="0.5428569976972717 1.2956206333027283 1.5812" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.148 0.006 0.0005" rgba="0.8500000238418579 0.014999999664723873 0.014999999664723873 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_H_leg_1" type="box" pos="0.7012489166830583 1.2362236636830584 1.5823999999999998" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.015 0.1 0.0005" rgba="1.0 1.0 1.0 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="field__visual__hangar_red_H_cross" type="box" pos="0.651751442 1.186726189 1.5823999999999998" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.055 0.015 0.0005" rgba="1.0 1.0 1.0 1.0" group="2" contype="0" conaffinity="0" friction="1.0 0.005 0.0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="rm27_dock_visual" type="mesh" mesh="rm27_dock_visual" rgba="0.30000001192092896 0.36000001430511475 0.41999998688697815 1.0" contype="0" conaffinity="0" group="2" />
+    <geom name="rm27_dock_collision_bottom" type="box" pos="0.651751442 1.186726189 1.6600000000000001" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.15 0.15 0.08" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_west" type="box" pos="0.5474531917749843 1.0824279387749842 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.0025 0.15 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_east" type="box" pos="0.7560496922250157 1.2910244392250159 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.0025 0.15 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_south" type="box" pos="0.7560496922250157 1.0824279387749842 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.145 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_north" type="box" pos="0.5474531917749843 1.2910244392250159 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.145 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_divider_x" type="box" pos="0.651751442 1.186726189 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.0025 0.145 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_divider_y_w" type="box" pos="0.5996023168874921 1.1345770638874921 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.07125 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="rm27_dock_collision_divider_y_e" type="box" pos="0.7039005671125079 1.238875314112508 1.76" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.07125 0.0025 0.02" rgba="0.0 0.800000011920929 0.4000000059604645 0.0" group="3" contype="1" conaffinity="1" friction="0.8 0.01 0.001" solref="0.01 1.0" solimp="0.95 0.99 0.001 0.5 2.0" />
+    <geom name="test_column_footing" type="box" pos="0.651751442 1.186726189 0.2" quat="0.9238795325112867 0.0 0.0 0.3826834323650898" size="0.2 0.2 0.2" rgba=".48 .48 .42 1" />
+    <site name="dock_frame" pos="0.651751442 1.186726189 1.58" size=".001" rgba="0 0 0 0" />
+    <site name="slot_1" pos="0.651751442 1.0824279387749842 1.74" size=".001" rgba="0 0 0 0" />
+    <site name="slot_2" pos="0.5474531917749843 1.186726189 1.74" size=".001" rgba="0 0 0 0" />
+    <site name="slot_3" pos="0.7560496922250157 1.186726189 1.74" size=".001" rgba="0 0 0 0" />
+    <site name="slot_4" pos="0.651751442 1.2910244392250159 1.74" size=".001" rgba="0 0 0 0" />
+    <body name="rm27_base_frame">
+      <geom name="rm27_base_armor" type="box" pos="-11.469385144401516 0.02 1.0731389146975434" quat="0.6868457676495124 0.16805621518394342 0.16805621518394342 0.6868457676495126" size="0.045 0.0275 0.003" rgba="0.02 0.45 0.95 1" group="0" contype="1" conaffinity="1" friction=".8 .01 .001" solref=".01 1" solimp=".95 .99 .001" />
+      <site name="rm27_base_armor_center" pos="-11.468 0.02 1.0758" quat="0.6868457676495124 0.16805621518394342 0.16805621518394342 0.6868457676495126" size=".002" rgba="0 0 0 0" />
+      <site name="rm27_base_marker_center" pos="-11.515 0.02 1.17" size=".002" rgba="0 0 0 0" />
+      <geom name="rm27_base_marker" type="cylinder" pos="-11.515 0.02 1.17" zaxis="1.0 0.0 0.0" size="0.0275 0.002" rgba="0.02 1 0.03 1" contype="0" conaffinity="0" group="0" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,41 @@
+<mujoco model="rm27_drone_dynamic">
+  <compiler angle="radian" />
+  <option timestep=".002" integrator="RK4" gravity="0 0 -9.81" />
+  <worldbody>
+    <body name="rm27_drone" pos="0 0 0" quat="1 0 0 0">
+      <freejoint name="rm27_drone_free" />
+      <inertial pos="0 0 0" mass="0.18" diaginertia="4.483333333333333e-05 5.346666666666667e-05 8.843333333333333e-05" />
+      <geom name="rm27_drone_fuselage" type="box" size=".02 .015 .01" rgba=".2 .25 .3 1" />
+      <geom name="rm27_drone_guard_0" type="capsule" size="0.002" fromto="-0.057999999999999996 -0.057999999999999996 -0.018 0.057999999999999996 -0.057999999999999996 -0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_1" type="capsule" size="0.002" fromto="-0.057999999999999996 0.057999999999999996 -0.018 0.057999999999999996 0.057999999999999996 -0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_2" type="capsule" size="0.002" fromto="-0.057999999999999996 -0.057999999999999996 -0.018 -0.057999999999999996 0.057999999999999996 -0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_3" type="capsule" size="0.002" fromto="0.057999999999999996 -0.057999999999999996 -0.018 0.057999999999999996 0.057999999999999996 -0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_4" type="capsule" size="0.002" fromto="-0.057999999999999996 -0.057999999999999996 0.018 0.057999999999999996 -0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_5" type="capsule" size="0.002" fromto="-0.057999999999999996 0.057999999999999996 0.018 0.057999999999999996 0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_6" type="capsule" size="0.002" fromto="-0.057999999999999996 -0.057999999999999996 0.018 -0.057999999999999996 0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_7" type="capsule" size="0.002" fromto="0.057999999999999996 -0.057999999999999996 0.018 0.057999999999999996 0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_8" type="capsule" size="0.002" fromto="-0.057999999999999996 -0.057999999999999996 -0.018 -0.057999999999999996 -0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_9" type="capsule" size="0.002" fromto="-0.057999999999999996 0.057999999999999996 -0.018 -0.057999999999999996 0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_10" type="capsule" size="0.002" fromto="0.057999999999999996 -0.057999999999999996 -0.018 0.057999999999999996 -0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_guard_11" type="capsule" size="0.002" fromto="0.057999999999999996 0.057999999999999996 -0.018 0.057999999999999996 0.057999999999999996 0.018" rgba=".8 .65 .15 1" />
+      <geom name="rm27_drone_arm_0" type="capsule" size=".002" fromto="0 0 0 0.03 0.03 0" rgba=".2 .2 .2 1" />
+      <geom name="rm27_drone_prop_0" type="cylinder" size="0.0254 .001" pos="0.03 0.03 .008" contype="0" conaffinity="0" rgba=".2 .5 .8 .8" />
+      <site name="rm27_drone_rotor_0" pos="0.03 0.03 .008" size=".001" />
+      <geom name="rm27_drone_arm_1" type="capsule" size=".002" fromto="0 0 0 0.03 -0.03 0" rgba=".2 .2 .2 1" />
+      <geom name="rm27_drone_prop_1" type="cylinder" size="0.0254 .001" pos="0.03 -0.03 .008" contype="0" conaffinity="0" rgba=".2 .5 .8 .8" />
+      <site name="rm27_drone_rotor_1" pos="0.03 -0.03 .008" size=".001" />
+      <geom name="rm27_drone_arm_2" type="capsule" size=".002" fromto="0 0 0 -0.03 -0.03 0" rgba=".2 .2 .2 1" />
+      <geom name="rm27_drone_prop_2" type="cylinder" size="0.0254 .001" pos="-0.03 -0.03 .008" contype="0" conaffinity="0" rgba=".2 .5 .8 .8" />
+      <site name="rm27_drone_rotor_2" pos="-0.03 -0.03 .008" size=".001" />
+      <geom name="rm27_drone_arm_3" type="capsule" size=".002" fromto="0 0 0 -0.03 0.03 0" rgba=".2 .2 .2 1" />
+      <geom name="rm27_drone_prop_3" type="cylinder" size="0.0254 .001" pos="-0.03 0.03 .008" contype="0" conaffinity="0" rgba=".2 .5 .8 .8" />
+      <site name="rm27_drone_rotor_3" pos="-0.03 0.03 .008" size=".001" />
+    </body>
+  </worldbody>
+  <actuator>
+    <general name="rm27_drone_motor_0" site="rm27_drone_rotor_0" gear="0 0 1 0 0 0.018" ctrlrange="0 1.103625" dyntype="filterexact" dynprm="0.04" />
+    <general name="rm27_drone_motor_1" site="rm27_drone_rotor_1" gear="0 0 1 0 0 -0.018" ctrlrange="0 1.103625" dyntype="filterexact" dynprm="0.04" />
+    <general name="rm27_drone_motor_2" site="rm27_drone_rotor_2" gear="0 0 1 0 0 0.018" ctrlrange="0 1.103625" dyntype="filterexact" dynprm="0.04" />
+    <general name="rm27_drone_motor_3" site="rm27_drone_rotor_3" gear="0 0 1 0 0 -0.018" ctrlrange="0 1.103625" dyntype="filterexact" dynprm="0.04" />
+  </actuator>
+</mujoco>

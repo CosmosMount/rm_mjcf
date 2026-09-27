@@ -1,0 +1,25 @@
+{
+  "package": "rm27_drone_mjcf",
+  "source_repository": "rm27_drones",
+  "components": {
+    "visual": {
+      "source": "artifacts/cad-drone-dock-20260916-v3/drone.xml",
+      "source_cad": "references/cad_raw/2627drone_ver1.STEP",
+      "semantics": "CAD visual-only"
+    },
+    "dynamic": {
+      "generator": "rm27/integration/drone.py",
+      "parameters": [
+        "configs/drone.json",
+        "configs/dynamics_provisional.json"
+      ],
+      "semantics": "180 g provisional dynamic proxy"
+    },
+    "dock": {
+      "generator": "rm27/integration/dock.py",
+      "visual_source": "references/cad_raw/dock.STEP",
+      "semantics": "static dock visual mesh plus primitive collision"
+    }
+  },
+  "status": "local candidate; not committed or pushed"
+}

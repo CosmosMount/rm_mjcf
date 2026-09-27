@@ -1,0 +1,21 @@
+<mujoco model="rm27_dart">
+  <compiler angle="radian" />
+  <option timestep=".002" gravity="0 0 -9.81" />
+  <visual>
+    <global offwidth="1280" offheight="720" />
+  </visual>
+  <asset>
+    <mesh name="rm27_dart_visual" file="assets/dart_visual.obj" maxhullvert="4" />
+  </asset>
+  <worldbody>
+    <!-- The body origin is the dart front-face center; local +X points forward. -->
+    <body name="darts_projectile" mocap="true">
+      <geom name="darts_visual" type="mesh" mesh="rm27_dart_visual"
+            contype="0" conaffinity="0" group="2" rgba=".9 .45 .08 1" />
+      <site name="darts_front" pos="0 0 0" size=".003" rgba="1 1 1 1" />
+      <!-- MuJoCo camera frame is right, up, backward; this maps dart +X to optical forward. -->
+      <camera name="darts_fpv" pos="0 0 0" quat="-.5 -.5 .5 .5"
+              fovy="60" ipd="0" />
+    </body>
+  </worldbody>
+</mujoco>

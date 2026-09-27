@@ -1,0 +1,17 @@
+{
+  "package": "rm27_dart_mjcf",
+  "status": "local candidate; not committed or pushed",
+  "source_repository": "rm27_drones",
+  "source_cad": "research/Darts/mech_darts.STEP",
+  "source_cad_sha256": "18c530bf2ec6dc860d9cfde36e0d66a678a8e7e0a4a9f482cd9fed96d57766fb",
+  "mesh_source": "research/Darts/artifacts/flight-04-apex-5m/dart_visual.obj",
+  "mesh_sha256": "6d462dce8befdfe092868bf4a104ebd7f8ec21ff9bb996c30f0fd2b0ea3b9d1c",
+  "mesh_generation": "STEP export followed by the reviewed CAD frame transform in research/Darts/experiment.py",
+  "frame": {
+    "origin": "front-face center",
+    "forward_axis": "+X",
+    "units": "metres"
+  },
+  "semantics": "visual-only mocap dart with synthetic FPV camera; no collision or aerodynamic certification",
+  "license_status": "unclear; source CAD and generated mesh carry the source repository's rights"
+}

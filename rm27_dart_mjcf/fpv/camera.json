@@ -1,0 +1,27 @@
+{
+  "camera_name": "darts_fpv",
+  "parent_body": "darts_projectile",
+  "mount_position_m": [0.0, 0.0, 0.0],
+  "mount_quaternion_wxyz": [-0.5, -0.5, 0.5, 0.5],
+  "dart_frame": {
+    "origin": "front-face center",
+    "forward_axis": "+X",
+    "image_up_axis": "+Z"
+  },
+  "default_vertical_fov_degrees": 60.0,
+  "near_clip_m": 0.001,
+  "recommended_capture": {
+    "width_px": 1280,
+    "height_px": 720,
+    "fps": 60.0,
+    "camera_model": "ideal pinhole",
+    "distortion_coefficients": [0.0, 0.0, 0.0, 0.0, 0.0]
+  },
+  "pose_convention": "p_world = R_world_from_camera @ p_camera + position_world_m",
+  "pixel_convention": "top-left pixel center is (0, 0); u right, v down",
+  "limitations": [
+    "This is a synthetic ideal camera definition, not a calibrated physical camera.",
+    "The dart attitude must be supplied by the caller, for example from mocap pose.",
+    "No lens distortion, exposure, motion blur, rolling shutter, vibration or sensor noise is modeled."
+  ]
+}
