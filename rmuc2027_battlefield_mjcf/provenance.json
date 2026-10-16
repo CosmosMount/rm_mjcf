@@ -37,9 +37,23 @@
     ],
     "limitations": "Bounds and occurrence counts come from STEPControl_Reader placement inventory; no field labels or collision semantics were inferred."
   },
+  "collision_proxy": {
+    "method": "one axis-aligned bounding box per placed STEP solid",
+    "geom_count": 629,
+    "contype": 1,
+    "conaffinity": 1,
+    "certification": "engineering approximation only; not a certified field collision model",
+    "visual_collision_separation": "visual mesh uses contype=0/conaffinity=0; collision proxies are separate box geoms",
+    "validation_probe": {
+      "initial_position_m": [13.0, 0.0, 0.0],
+      "geom": "0.1 m cube",
+      "steps": 1000,
+      "result": "contact with rmuc2027_collision_aabb_0000 at the CAD floor; final probe center z=-1.590389 m"
+    }
+  },
   "semantics": {
     "visual": "PASS: static visual mesh is represented by model.xml",
-    "collision": "NOT_RUN: official CAD provides no certified collision surface; model.xml disables contact",
+    "collision": "PASS: 629 static AABB proxy geoms compile and a dynamic probe contacts the field floor; proxy fidelity is not certified",
     "targets": "NOT_RUN: no target or gameplay semantics are present in the source CAD",
     "runtime": "PASS: model.xml loaded and stepped from a clean copied component path; relative mesh resolved"
   }
