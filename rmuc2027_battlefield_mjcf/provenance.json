@@ -1,0 +1,46 @@
+{
+  "source": {
+    "repository": "https://github.com/shiuhou/scene",
+    "commit": "a4f31da5e724a0dc7bd6ecef59221c838833975c",
+    "commit_date": "2026-10-16T21:45:56+08:00",
+    "subject": "Add RMUC2027 V1 CAD model",
+    "files": {
+      "RMUC2027_V1.step": {
+        "sha256": "a04b6c9e7b337071ba06c9e0a81792d17369d721c7b593b638de2b04cc24333e",
+        "size_bytes": 659052845
+      },
+      "RMUC2027_V1.SLDASM": {
+        "sha256": "91d362f1572f28fcd1581236914d9a17402f79b7c0b0809c2b2fa4a85d59d658",
+        "size_bytes": 347161849
+      }
+    },
+    "license": "No license file was present in the source repository; preserve upstream ownership and verify permission before redistribution."
+  },
+  "conversion": {
+    "reader": "OpenCascade STEPControl_Reader",
+    "cad_units": "millimetres",
+    "runtime_units": "metres",
+    "cad_axes": "preserved",
+    "linear_deflection_mm": 5.0,
+    "angular_deflection_rad": 0.5,
+    "tessellated_triangles": 3530619,
+    "quadric_decimation_ratio": 0.2,
+    "runtime_triangles": 706123,
+    "visual_mesh_sha256": "97ba9629c94a9ae7d0bbea66bc99a842d8246f3096bba21536f70a35391bfe72"
+  },
+  "cad_audit": {
+    "placed_solid_occurrences": 629,
+    "faces_outside_solids": 57888,
+    "bounds_mm": [
+      [-13999.988846843245, -6377.22189523, -1941.343676495],
+      [14000.003260053249, 9625.90924823, 1857.343670365489]
+    ],
+    "limitations": "Bounds and occurrence counts come from STEPControl_Reader placement inventory; no field labels or collision semantics were inferred."
+  },
+  "semantics": {
+    "visual": "PASS: static visual mesh is represented by model.xml",
+    "collision": "NOT_RUN: official CAD provides no certified collision surface; model.xml disables contact",
+    "targets": "NOT_RUN: no target or gameplay semantics are present in the source CAD",
+    "runtime": "PASS: model.xml loaded and stepped from a clean copied component path; relative mesh resolved"
+  }
+}
