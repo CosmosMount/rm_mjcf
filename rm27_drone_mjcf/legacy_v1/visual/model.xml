@@ -1,0 +1,22 @@
+<mujoco model="2627drone_ver1_CAD">
+  <compiler angle="radian" />
+  <visual>
+    <headlight ambient=".5 .5 .5" diffuse=".7 .7 .7" />
+  </visual>
+  <asset>
+    <mesh name="cad_drone_electronics" file="assets/electronics.obj" maxhullvert="4" />
+    <mesh name="cad_drone_center_mount" file="assets/center_mount.obj" maxhullvert="4" />
+    <mesh name="cad_drone_rotor_units" file="assets/rotor_units.obj" maxhullvert="4" />
+    <mesh name="cad_drone_frame_and_camera" file="assets/frame_and_camera.obj" maxhullvert="4" />
+  </asset>
+  <worldbody>
+    <light pos=".2 -.2 .4" dir="-.2 .2 -.4" directional="true" />
+    <body name="cad_drone_1">
+      <geom name="cad_drone_electronics" type="mesh" mesh="cad_drone_electronics" rgba="0.12 0.36 0.27 1" contype="0" conaffinity="0" group="2" />
+      <geom name="cad_drone_center_mount" type="mesh" mesh="cad_drone_center_mount" rgba="0.25 0.27 0.3 1" contype="0" conaffinity="0" group="2" />
+      <geom name="cad_drone_rotor_units" type="mesh" mesh="cad_drone_rotor_units" rgba="0.55 0.58 0.62 1" contype="0" conaffinity="0" group="2" />
+      <geom name="cad_drone_frame_and_camera" type="mesh" mesh="cad_drone_frame_and_camera" rgba="0.25 0.3 0.36 1" contype="0" conaffinity="0" group="2" />
+    </body>
+  </worldbody>
+  <statistic center="0 0 0.02095808794678351" extent=".18" />
+</mujoco>

@@ -1,0 +1,7 @@
+<mujoco model="Ver2_ground_scene">
+  <include file="model.xml" />
+  <worldbody>
+    <light pos="1 -1 2" dir="-1 1 -2" />
+    <geom name="ground" type="plane" size="2 2 .1" rgba=".22 .25 .29 1" friction=".6 .005 .0001" />
+  </worldbody>
+</mujoco>

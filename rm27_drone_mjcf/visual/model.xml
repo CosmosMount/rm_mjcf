@@ -1,22 +1,33 @@
-<mujoco model="2627drone_ver1_CAD">
-  <compiler angle="radian" />
+<mujoco model="26droneVer2_frame5_150g">
+  <compiler angle="radian" autolimits="true" />
+  <option timestep=".002" integrator="implicitfast" />
   <visual>
-    <headlight ambient=".5 .5 .5" diffuse=".7 .7 .7" />
+    <global offwidth="1000" offheight="800" />
+    <headlight ambient=".5 .5 .5" diffuse=".6 .6 .6" />
   </visual>
   <asset>
-    <mesh name="cad_drone_electronics" file="assets/electronics.obj" maxhullvert="4" />
-    <mesh name="cad_drone_center_mount" file="assets/center_mount.obj" maxhullvert="4" />
-    <mesh name="cad_drone_rotor_units" file="assets/rotor_units.obj" maxhullvert="4" />
-    <mesh name="cad_drone_frame_and_camera" file="assets/frame_and_camera.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_frame" file="../assets/frame.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_supports" file="../assets/supports.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_motor" file="../assets/motor.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_fc" file="../assets/fc.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_battery" file="../assets/battery.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_top" file="../assets/top.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_camera" file="../assets/camera.obj" maxhullvert="4" />
+    <mesh name="rm27_drone_visual_core_board" file="../assets/core_board.obj" maxhullvert="4" />
   </asset>
   <worldbody>
-    <light pos=".2 -.2 .4" dir="-.2 .2 -.4" directional="true" />
-    <body name="cad_drone_1">
-      <geom name="cad_drone_electronics" type="mesh" mesh="cad_drone_electronics" rgba="0.12 0.36 0.27 1" contype="0" conaffinity="0" group="2" />
-      <geom name="cad_drone_center_mount" type="mesh" mesh="cad_drone_center_mount" rgba="0.25 0.27 0.3 1" contype="0" conaffinity="0" group="2" />
-      <geom name="cad_drone_rotor_units" type="mesh" mesh="cad_drone_rotor_units" rgba="0.55 0.58 0.62 1" contype="0" conaffinity="0" group="2" />
-      <geom name="cad_drone_frame_and_camera" type="mesh" mesh="cad_drone_frame_and_camera" rgba="0.25 0.3 0.36 1" contype="0" conaffinity="0" group="2" />
+    <body name="rm27_drone" pos="0 0 0">
+      <geom name="rm27_drone_visual_frame" type="mesh" mesh="rm27_drone_visual_frame" rgba="0.32 0.39 0.48 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="rm27_drone_visual_supports" type="mesh" mesh="rm27_drone_visual_supports" rgba="0.76 0.78 0.81 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="rm27_drone_visual_motor" type="mesh" mesh="rm27_drone_visual_motor" rgba="0.2 0.63 0.86 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="rm27_drone_visual_fc" type="mesh" mesh="rm27_drone_visual_fc" rgba="0.12 0.63 0.36 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="rm27_drone_visual_battery" type="mesh" mesh="rm27_drone_visual_battery" rgba="0.96 0.59 0.14 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="rm27_drone_visual_top" type="mesh" mesh="rm27_drone_visual_top" rgba="0.52 0.36 0.72 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="rm27_drone_visual_camera" type="mesh" mesh="rm27_drone_visual_camera" rgba="0.86 0.28 0.29 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <geom name="rm27_drone_visual_core_board" type="mesh" mesh="rm27_drone_visual_core_board" rgba="0.1 0.72 0.65 1" contype="0" conaffinity="0" group="2" mass="0" />
+      <site name="rm27_drone_imu" pos="0 0 0" size=".001" rgba="0 0 0 0" />
+      <site name="rm27_drone_bottom" pos="0 0 -0.0225" size=".001" rgba="0 0 0 0" />
     </body>
   </worldbody>
-  <statistic center="0 0 0.02095808794678351" extent=".18" />
+  <statistic center="0 0 0" extent=".25" />
 </mujoco>

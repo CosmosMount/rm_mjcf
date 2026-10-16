@@ -3,23 +3,50 @@
   "source_repository": "rm27_drones",
   "components": {
     "visual": {
-      "source": "artifacts/cad-drone-dock-20260916-v3/drone.xml",
-      "source_cad": "references/cad_raw/2627drone_ver1.STEP",
-      "semantics": "CAD visual-only"
+      "source_cad": "references/cad_raw/26droneVer2.STEP",
+      "source_sha256": "7023e12af43b98575ebd4b8abb5972f13204e6fbe727c5fd5ed787e59bc88787",
+      "semantics": "30 reviewed CAD occurrences: frame5 pair plus 30 x 65 x 5 mm core board; visual-only"
     },
     "dynamic": {
-      "generator": "rm27/integration/drone.py",
+      "generator": "rm27/integration/drone_v2.py",
       "parameters": [
-        "configs/drone.json",
-        "configs/dynamics_provisional.json"
+        "configs/drone_v2.json"
       ],
-      "semantics": "180 g provisional dynamic proxy"
+      "semantics": "150 g user-reported mass; assumed inertia, COM, propulsion and rigid collision proxies; 6 DOF and 4 filtered thrust actuators"
     },
     "dock": {
       "generator": "rm27/integration/dock.py",
       "visual_source": "references/cad_raw/dock.STEP",
       "semantics": "static dock visual mesh plus primitive collision"
+    },
+    "legacy_v1": {
+      "semantics": "Previous visual and 180 g dynamic entries preserved byte-for-byte",
+      "entries": [
+        "legacy_v1/visual/model.xml",
+        "legacy_v1/dynamic/model.xml"
+      ]
     }
   },
-  "status": "local candidate; not committed or pushed"
+  "status": "local candidate; not committed or pushed",
+  "model_revision": "26droneVer2_frame5_150g_20261013",
+  "validation": {
+    "mode": "headless MuJoCo truth-feedback; no SITL",
+    "passed": true,
+    "root_report": "artifacts/drone-v2-installed-check-20261013-01/summary.json"
+  },
+  "runtime_sha256": {
+    "visual/model.xml": "2bc25ad24c67aa288c0713f86e661b02837e817c0ec1846c9e60a631260cb1a4",
+    "dynamic/model.xml": "3fcaed164254eee1c18258a29d63089ec8e349f5dd0ce4ab23cf9f34aea8cb78",
+    "dynamic/scene.xml": "2cb6e593df05bb9098ae83b3aeaf31836ed00a47eb0fb7484fcb4c9c26912b7a",
+    "assets/battery.obj": "d8689140866dd77217b600efa9ce8320aa49a9241f54999dd5c3ed3ff029c4b0",
+    "assets/camera.obj": "93c3972e5cd4be7a6d86f0fb6de671de202e7526fb67cc630dd710f358ae8c34",
+    "assets/core_board.obj": "832860c03dcffc589771c15e22ae6d30aa84e4fc292592a414379be97b1c03cb",
+    "assets/fc.obj": "d24bdf4dbec96700b9c2f6ef03877bc8ab71e3d0f35442886c3d7fe575d03514",
+    "assets/frame.obj": "89259a59078bceaa7a8919a8c394e6916211f8bd5e5a8757f4f82d5a8daaa078",
+    "assets/motor.obj": "ced5253631e29e934f11e62d7380ef5599b9b1a66f1da2ad0a15a42fe9707bfd",
+    "assets/supports.obj": "a3ce6e36b915d206019e5df8693cd9881c8da4059a2a8be6fd7a73167c818081",
+    "assets/top.obj": "d11e9f599062de99dc9be705b3b1d3250f46017a89aa83f9b0d75c8a6a912f89"
+  },
+  "generator_sha256": "8efd022dcfb74b43afa84dc1dc879fa2d483dcca00180bff8f7c93aa2729e40d",
+  "config_sha256": "e971e7899ce14a58010f9dd944c9e3aa32eec3c3ae5d6b07a02ee50dfea70ea0"
 }
