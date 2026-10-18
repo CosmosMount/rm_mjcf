@@ -14,11 +14,10 @@
       <geom contype="1" conaffinity="1" group="3" rgba="0 0.8 0.2 0" friction="0.8 0.01 0.001" solref="0.01 1" solimp="0.95 0.99 0.001"/>
     </default>
   </default>
-  <asset>
-    <mesh name="rmuc2027_scene_visual" file="assets/rmuc2027_scene_visual.msh"/>
-  </asset>
+  <include file="visual_assets.xml"/>
   <worldbody>
-    <geom name="rmuc2027_scene_visual" type="mesh" mesh="rmuc2027_scene_visual" class="visual"/>
+    <light name="rmuc2027_key" pos="0 0 12" dir="0 0 -1" directional="true" diffuse=".6 .6 .6" specular=".15 .15 .15" castshadow="true"/>
+    <include file="visual_geoms.xml"/>
     <body name="rmuc2027_collision_proxy">
       <!-- AABB proxies from placed STEP solids; separate from visual geometry and not certified field collision. -->
       <geom name="rmuc2027_collision_aabb_0000" type="box" pos="7.206605e-06 1.62434368 -1.79084368" size="13.9999957 8.00156557 0.150500001" class="collision"/>
