@@ -45,29 +45,11 @@
     ],
     "limitations": "Bounds and occurrence counts come from STEPControl_Reader placement inventory; no field labels or collision semantics were inferred."
   },
-  "collision_proxy": {
-    "method": "one axis-aligned bounding box per placed STEP solid",
-    "geom_count": 629,
-    "contype": 1,
-    "conaffinity": 1,
-    "certification": "engineering approximation only; not a certified field collision model",
-    "visual_collision_separation": "131 colored visual mesh geoms use contype=0/conaffinity=0; the original 629 box proxies remain separate and unchanged",
-    "validation_probe": {
-      "initial_position_m": [
-        13.0,
-        0.0,
-        0.0
-      ],
-      "geom": "0.1 m cube",
-      "steps": 1000,
-      "result": "contact with rmuc2027_collision_aabb_0000 at the CAD floor; final probe center z=-1.590389 m"
-    }
-  },
   "semantics": {
-    "visual": "PASS: 131 colored static visual meshes compile from relative assets and render red/blue lines, white markings, raised platforms and central assembly",
-    "collision": "PASS: 629 static AABB proxy geoms compile and a dynamic probe contacts the field floor; proxy fidelity is not certified",
+    "visual": "PASS: 133 visual geoms (131 field plus two docks) retain identical compiled mesh data, poses and RGBA; EGL image differs by at most one 8-bit channel level.",
+    "collision": "PASS: partitioned surface collision replaces the invalid AABBs; acceptance covers sampled top/side geometry, reproduced free-space points, 1 m sphere drops and 5 m/s normal sphere impacts. Approximation limits and residual ray errors are recorded in collision_model.",
     "targets": "NOT_RUN: no target or gameplay semantics are present in the source CAD",
-    "runtime": "PASS: model.xml loaded, mj_forward and mj_step completed with 131 visual meshes and 629 collision boxes"
+    "runtime": "PASS: clean component copy resolves all mesh references and includes; mj_forward and mj_step complete on MuJoCo 3.12.0."
   },
   "visual_update": {
     "source_package": "RMUC2027_MuJoCo_V1.zip (user supplied)",
@@ -739,12 +721,365 @@
     "runtime_xml": [
       "model.xml",
       "visual_assets.xml",
-      "visual_geoms.xml"
+      "visual_geoms.xml",
+      "collision_assets.xml",
+      "collision_geoms.xml"
     ],
     "output_sha256": {
-      "model.xml": "69ba5fc8ebb4580ea7c2b73acc62ab882c90594c3d38945b327e63e34a1e864b",
-      "visual_assets.xml": "59019bc85e8269778c5f625c8d28c39a79c8c64d29dd4ae7f42bdaaa6d18452e",
-      "visual_geoms.xml": "595546a5814861e4a386cfe3998d1daba95ad55693313ab540ed423470b26277"
+      "model.xml": "727b8f7f5a4ac02985059c5873dc23a7ee601f1f282aa88ca741b4c42d4df51f",
+      "visual_assets.xml": "16d054075c05d5b1e59205e9f090521cb5a419436865901ece7004a37fd78720",
+      "visual_geoms.xml": "595546a5814861e4a386cfe3998d1daba95ad55693313ab540ed423470b26277",
+      "collision_assets.xml": "cb773199d54c4d6b1bc0c0dd2ea2ad4934f513bdc71a038cc22b9f6b4f0a3b77",
+      "collision_geoms.xml": "73626059542eda9560796a8467c1c801388aeaa3b131b1ed45266d745923ca5e"
     }
+  },
+  "dock_addition": {
+    "source_entry": "rm27_drone_mjcf/dock/model.xml",
+    "source_entry_sha256": "e4c00ba27ae729d3ebd20608cae9885f4e82a318e258e0732c5765bc7a0c1bba",
+    "source_mesh": "rm27_drone_mjcf/dock/assets/rm27_dock_visual.obj",
+    "source_mesh_sha256": "2011f0f380ca0a830d83444a1d179b2a1e986ae571de38934d0bcfb018771a47",
+    "mesh_transform": "v_local = Rz(-45 degrees) * (v_source - [0.651751442,1.186726189,1.58]); metres",
+    "mesh_sha256": "19cfabe5cff3db427a56836eb78598707833492295e9116376f62cb14290d648",
+    "placement": "Two H-marked CAD platform centers measured from visual_020 vertices at z=1.6 m; XY = +/-(1.03237595,1.03237595); yaw=45 degrees",
+    "count": 2,
+    "collision_geoms_per_dock": 8,
+    "semantics": "Reuse legacy four-slot dock approximation; not an official CAD structure or certified contact model",
+    "validation": {
+      "mujoco_version": "3.12.0",
+      "clean_copy_load_forward_step": "PASS",
+      "egl_platform_alignment": "PASS",
+      "slot_contact_probes": 8,
+      "probe_radius_m": 0.015,
+      "steps": 1000,
+      "probe_settled_z_m": 1.7748256324590832,
+      "all_probes_contact_dock_bottom": true
+    }
+  },
+  "retired_collision_baseline": {
+    "method": "one axis-aligned bounding box per placed STEP solid",
+    "geom_count": 629,
+    "model_sha256": "1c30272c080445cc8237cfff3f280d58010695fb1a0f7f6855c5d6a1c1dcd46d",
+    "surface_audit": {
+      "load_seconds": 0.8917157249525189,
+      "ngeom": 788,
+      "top_samples": 11200,
+      "top_valid_samples": 11200,
+      "top_above_2cm": 10250,
+      "top_below_2cm": 180,
+      "top_p95_error_m": 0.5335134858894018,
+      "top_max_error_m": 2.7923528927114836,
+      "side_rays": 15400,
+      "side_visual_hits": 3726,
+      "side_missing_hits": 270,
+      "side_extra_hits": 732,
+      "side_over_2cm": 2854,
+      "side_p95_error_m": 11.05843947619281
+    },
+    "reason": "Whole-solid AABBs filled free space and omitted faces; replaced by convex partitions of actual visual surfaces."
+  },
+  "collision_model": {
+    "method": "convex partitions of bounded-error surface planes; finite centered shells",
+    "minimum_patch_area_m2": 0.001,
+    "maximum_plane_displacement_m": 0.001,
+    "shell_thickness_m": 0.005,
+    "outline_simplification_m": 0.002,
+    "minimum_hole_width_m": 0.01,
+    "collision_geoms": 41371,
+    "unique_collision_meshes": 27133,
+    "mesh_sharing_grid_m": 1e-05,
+    "box_fit_tolerance_m": 0.0001,
+    "outputs": {
+      "collision_assets.xml": "cb773199d54c4d6b1bc0c0dd2ea2ad4934f513bdc71a038cc22b9f6b4f0a3b77",
+      "collision_geoms.xml": "73626059542eda9560796a8467c1c801388aeaa3b131b1ed45266d745923ca5e"
+    },
+    "contact_priority": 1,
+    "contact_solref": [
+      0.004,
+      1
+    ],
+    "source_layer": "visual_update.mesh_files, placed according to visual_geoms.xml; dock additions excluded",
+    "field_box_geoms": 3257,
+    "field_mesh_geoms": 38114,
+    "total_field_and_dock_geoms": 41387,
+    "contype": 1,
+    "conaffinity": 1,
+    "regenerator": "rm_uav_mujoco: python -m rm27_sim.simulation.field_collision MODEL OUTPUT",
+    "limits": "Minimum planar patches below 0.001 m^2 and some curved details omitted; small fastener holes filled; finite shell and silhouette effects remain. No exact CAD, whole-field certification or flight claim.",
+    "validation": {
+      "date": "2026-10-22",
+      "mode": "headless sphere contact and geometry audits; EGL appearance comparison",
+      "mujoco_version": "3.12.0",
+      "clean_directory_copy": true,
+      "timestep_s": 0.002,
+      "probe_radius_m": 0.015,
+      "drop_height_m": 1.0,
+      "drop_steps": 1000,
+      "normal_impact_speed_mps": 5.0,
+      "normal_impact_steps": 100,
+      "load_seconds": 156.41271270997822,
+      "ngeom": 41530,
+      "top_samples": 11200,
+      "top_valid_samples": 11200,
+      "top_above_2cm": 232,
+      "top_below_2cm": 13,
+      "top_p95_error_m": 0.0028822675793134245,
+      "top_max_error_m": 0.8678120225305568,
+      "side_rays": 15400,
+      "side_visual_hits": 3726,
+      "side_missing_hits": 8,
+      "side_extra_hits": 174,
+      "side_over_2cm": 375,
+      "side_p95_error_m": 0.09550393277659983,
+      "free_space": [
+        {
+          "point": [
+            5,
+            0,
+            0.1
+          ],
+          "contacts": 0
+        },
+        {
+          "point": [
+            -0.1,
+            0.5,
+            1.5
+          ],
+          "contacts": 0
+        }
+      ],
+      "ten_probe_1000_steps_seconds": 0.9404628840275109,
+      "drops": [
+        {
+          "position": [
+            5,
+            0,
+            -0.0010000039949744632
+          ],
+          "final_z": 0.013665789194921644,
+          "height_error": -0.00033420681010389204,
+          "contacts": 1
+        },
+        {
+          "position": [
+            13,
+            0,
+            -0.0008445487982058353
+          ],
+          "final_z": 0.009851076914723512,
+          "height_error": -0.004304374287070652,
+          "contacts": 1
+        },
+        {
+          "position": [
+            1.03237595,
+            0.9280776997749842,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        },
+        {
+          "position": [
+            0.9280776997749842,
+            1.03237595,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        },
+        {
+          "position": [
+            1.1366742002250159,
+            1.03237595,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        },
+        {
+          "position": [
+            1.03237595,
+            1.1366742002250159,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        },
+        {
+          "position": [
+            -1.03237595,
+            -1.1366742002250159,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        },
+        {
+          "position": [
+            -1.1366742002250159,
+            -1.03237595,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        },
+        {
+          "position": [
+            -0.9280776997749842,
+            -1.03237595,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        },
+        {
+          "position": [
+            -1.03237595,
+            -0.9280776997749842,
+            1.76
+          ],
+          "final_z": 1.7748256324557412,
+          "height_error": -0.0001743675442587994,
+          "contacts": 1
+        }
+      ],
+      "side_impacts": [
+        {
+          "origin": [
+            15,
+            0,
+            0.3
+          ],
+          "target": [
+            12.111450148385789,
+            0.0,
+            0.3
+          ],
+          "impact_direction": [
+            -0.962858249057166,
+            0.0009023515778318506,
+            -0.2700058850917855
+          ],
+          "contacts": 7,
+          "past_surface_m": -0.18576849410823734
+        },
+        {
+          "origin": [
+            -15,
+            0,
+            0.3
+          ],
+          "target": [
+            -12.113055195053589,
+            0.0,
+            0.3
+          ],
+          "impact_direction": [
+            0.9628582541929622,
+            -0.0009020111209497497,
+            -0.27000586791478903
+          ],
+          "contacts": 7,
+          "past_surface_m": -0.18576776314983937
+        },
+        {
+          "origin": [
+            0,
+            9,
+            0.3
+          ],
+          "target": [
+            0.0,
+            1.646169457630939,
+            0.3
+          ],
+          "impact_direction": [
+            -0.06496538711482988,
+            -0.2317656743291156,
+            -0.9705999024725845
+          ],
+          "contacts": 4,
+          "past_surface_m": -0.18578488420735867
+        },
+        {
+          "origin": [
+            0,
+            -9,
+            0.3
+          ],
+          "target": [
+            0.0,
+            -1.6461750137130897,
+            0.3
+          ],
+          "impact_direction": [
+            0.06496497484772212,
+            0.2317611031649131,
+            -0.9706010215855007
+          ],
+          "contacts": 4,
+          "past_surface_m": -0.18578756490130144
+        },
+        {
+          "origin": [
+            0,
+            9,
+            0.1
+          ],
+          "target": [
+            0.0,
+            7.501831462806762,
+            0.1
+          ],
+          "impact_direction": [
+            -9.84309546314673e-07,
+            -0.9996572953476758,
+            0.026178079708050986
+          ],
+          "contacts": 4,
+          "past_surface_m": -0.18578285917829662
+        },
+        {
+          "origin": [
+            0,
+            -9,
+            0.1
+          ],
+          "target": [
+            0.0,
+            -7.501831538741555,
+            0.1
+          ],
+          "impact_direction": [
+            -7.65794224144575e-08,
+            0.9996573284876347,
+            0.026176814186594545
+          ],
+          "contacts": 4,
+          "past_surface_m": -0.18578683391594197
+        }
+      ],
+      "side_improved": true,
+      "passed": true
+    },
+    "appearance_validation": {
+      "renderer": "EGL",
+      "visible_pixels_identical": false,
+      "max_channel_difference": 1,
+      "identical_visual_geoms": 133,
+      "geometry_pose_color_identical": true,
+      "render_tolerance_channels": 1,
+      "passed": true
+    },
+    "converter_tests": "6 passed; includes concavity, touching holes, transformed surfaces, shared reflected shells and thin-shell drop/impact",
+    "simulator_suite": "161 passed in 83.46 seconds; no flight benchmark claim"
   }
 }
