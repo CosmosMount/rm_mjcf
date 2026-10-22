@@ -132,5 +132,6 @@
 <mesh name="visual_128" file="assets/visual_128.msh" maxhullvert="64" inertia="shell" />
 <mesh name="visual_129" file="assets/visual_129.msh" maxhullvert="64" inertia="shell" />
 <mesh name="visual_130" file="assets/visual_130.msh" maxhullvert="64" inertia="shell" />
+    <mesh name="rmuc2027_dock_mesh" file="assets/rm27_dock_visual.obj" maxhullvert="4"/>
   </asset>
 </mujocoinclude>
