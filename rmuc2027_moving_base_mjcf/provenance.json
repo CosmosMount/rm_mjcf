@@ -1,5 +1,12 @@
 {
   "source": {
+    "official_release": {
+      "url": "https://bbs.robomaster.com/article/1970956?source=1",
+      "author": "RoboMaster 高校赛务",
+      "title": "RMU 2027场地图纸&可移动道具开源",
+      "drawing": "RMUC2027_V1.0.0.stp",
+      "article_license": "CC BY-NC-SA 4.0; confirm applicability to the downloadable drawing and derived assets before redistribution or commercial use."
+    },
     "repository": "https://github.com/shiuhou/scene",
     "commit": "a4f31da5e724a0dc7bd6ecef59221c838833975c",
     "commit_date": "2026-10-16T21:45:56+08:00",
@@ -46,10 +53,10 @@
     "limitations": "Bounds and occurrence counts come from STEPControl_Reader placement inventory; no field labels or collision semantics were inferred."
   },
   "semantics": {
-    "visual": "UNCHANGED: all visual assets, poses and colors retain their pre-correction inputs; prior EGL comparison is recorded under appearance_validation.",
-    "collision": "PASS for recorded sampling: full-field top/side rays, free-space points, ground/dock drops, wall impacts, and both base lamps/field-facing armor patches. See explicit residual limits and finite-step overlap in collision_model.",
+    "visual": "PASS: original field meshes unchanged; 118 explicit user-requested side closure pieces added. Visual openings are sealed while robot tunnels remain open in sampled passage checks.",
+    "collision": "PASS within declared sampled 6 mm tolerance: dense source-face centroids, top/four-side rays, repair hull surface samples, all 18303 repair contact probes; 224 bounded tunnel rays unchanged. See collision_model.validation and limits.",
     "targets": "NOT_RUN: no target or gameplay semantics are present in the source CAD",
-    "runtime": "PASS: clean component copy resolves all mesh references and includes; mj_forward and mj_step complete on MuJoCo 3.12.0."
+    "runtime": "PASS: standalone directory compiled and ten dynamic spheres stepped at 2 ms on MuJoCo 3.15.0; static fusion preserves all geom/site world transforms."
   },
   "visual_update": {
     "source_package": "RMUC2027_MuJoCo_V1.zip (user supplied)",
@@ -777,20 +784,20 @@
     },
     "reason": "Whole-solid AABBs filled free space and omitted faces; replaced by convex partitions of actual visual surfaces."
   },
-  "collision_model": {
-    "method": "Convex surface partitions; centered shells except source-pinned inward armor skins; separate nearly convex base lenses",
+  "collision_model_baseline": {
+    "method": "convex partitions of bounded-error surface planes; finite centered shells",
     "minimum_patch_area_m2": 0.001,
     "maximum_plane_displacement_m": 0.001,
     "shell_thickness_m": 0.005,
     "outline_simplification_m": 0.002,
     "minimum_hole_width_m": 0.01,
-    "collision_geoms": 41373,
-    "unique_collision_meshes": 27135,
+    "collision_geoms": 41371,
+    "unique_collision_meshes": 27133,
     "mesh_sharing_grid_m": 1e-05,
     "box_fit_tolerance_m": 0.0001,
     "outputs": {
-      "collision_assets.xml": "ae7f891f0d25b69b825773ee6a8d3e5ae184992d5c75fc57679f933066ffb10e",
-      "collision_geoms.xml": "cd90fe3491c6b6c2fb8bd4e98e2bbd907b0519ff8c8223be745f10b700a2a49c"
+      "collision_assets.xml": "cb773199d54c4d6b1bc0c0dd2ea2ad4934f513bdc71a038cc22b9f6b4f0a3b77",
+      "collision_geoms.xml": "73626059542eda9560796a8467c1c801388aeaa3b131b1ed45266d745923ca5e"
     },
     "contact_priority": 1,
     "contact_solref": [
@@ -799,15 +806,15 @@
     ],
     "source_layer": "visual_update.mesh_files, placed according to visual_geoms.xml; dock additions excluded",
     "field_box_geoms": 3257,
-    "field_mesh_geoms": 38116,
-    "total_field_and_dock_geoms": 41389,
+    "field_mesh_geoms": 38114,
+    "total_field_and_dock_geoms": 41387,
     "contype": 1,
     "conaffinity": 1,
     "regenerator": "rm_uav_mujoco: python -m rm27_sim.simulation.field_collision MODEL OUTPUT",
-    "limits": "Minimum planar patches below 0.001 m^2 and some curved details omitted except the source-pinned base lenses; small fastener holes filled; finite shells and silhouette effects remain. Only the two lamps and field-facing armor skin/rim receive the base detail correction. At 2 ms, 5 m/s impacts can briefly overlap by about 5 mm with the 15 mm probe; not continuous collision detection, exact CAD, whole-field certification or a flight claim.",
+    "limits": "Minimum planar patches below 0.001 m^2 and some curved details omitted; small fastener holes filled; finite shell and silhouette effects remain. No exact CAD, whole-field certification or flight claim.",
     "validation": {
       "date": "2026-10-22",
-      "mode": "Headless sphere contact and geometry audits in a standalone directory copy",
+      "mode": "headless sphere contact and geometry audits; EGL appearance comparison",
       "mujoco_version": "3.12.0",
       "clean_directory_copy": true,
       "timestep_s": 0.002,
@@ -816,8 +823,8 @@
       "drop_steps": 1000,
       "normal_impact_speed_mps": 5.0,
       "normal_impact_steps": 100,
-      "load_seconds": 172.9120662260102,
-      "ngeom": 41532,
+      "load_seconds": 156.41271270997822,
+      "ngeom": 41530,
       "top_samples": 11200,
       "top_valid_samples": 11200,
       "top_above_2cm": 232,
@@ -848,7 +855,7 @@
           "contacts": 0
         }
       ],
-      "ten_probe_1000_steps_seconds": 0.9076992489863187,
+      "ten_probe_1000_steps_seconds": 0.9404628840275109,
       "drops": [
         {
           "position": [
@@ -1077,161 +1084,562 @@
       "identical_visual_geoms": 133,
       "geometry_pose_color_identical": true,
       "render_tolerance_channels": 1,
-      "passed": true,
-      "scope_note": "Prior EGL result retained as baseline evidence; this correction changes no visual mesh, pose, color or visual include. No new EGL image comparison was run."
+      "passed": true
     },
-    "converter_tests": "10 passed; includes small disconnected lenses, rejection of recessed convex candidates, source hash guard and inward-facing shell alignment",
-    "simulator_suite": "165 passed in 81.74 seconds; no flight benchmark claim",
-    "detail_policy": {
-      "description": "Source-pinned blue/red base guidance lamps and field-facing armor skin/rim. Lamp hulls close only the lens back and must differ from every input triangle by <=0.2 mm. Selected armor shells extend 5 mm behind their visual skin instead of 2.5 mm outside it. The plane/radius selectors are measured in the supplied visual mesh frame; source changes require review. Other field surfaces retain centered shells.",
-      "sources": {
-        "visual_116": {
-          "sha256": "60a6eb8a755f09744bd993e1e858f3ec8857260e562a1067cfdd1f182eefe1e3",
-          "mode": "convex",
-          "maximum_surface_error_m": 0.0002
+    "converter_tests": "6 passed; includes concavity, touching holes, transformed surfaces, shared reflected shells and thin-shell drop/impact",
+    "simulator_suite": "161 passed in 83.46 seconds; no flight benchmark claim"
+  },
+  "collision_model": {
+    "method": "Retained partitioned shells, exact side closures, sampled ripple height fields, and source-face-derived convex patches; static bodies fused at compilation",
+    "collision_geoms": 56898,
+    "mesh_geoms": 53951,
+    "box_geoms": 2945,
+    "hfield_geoms": 2,
+    "visual_only_geoms": 251,
+    "contact_priority": 1,
+    "contact_solref": [
+      0.004,
+      1
+    ],
+    "outputs": {
+      "model.xml": "ff4198945debfa6bea55efb1e0f1bcc27e9b1b9cda423afe1ba5670136785f84",
+      "collision_assets.xml": "182fe16daf9693a557509a32615628a7157166e90e10044fd0d2342c1ae7d3b5",
+      "collision_geoms.xml": "e249beb7b228857c0f7d896767879f4a9a3033657e064764dce1612e15b704d1",
+      "closure_assets.xml": "57fe7e7ac5c1b1bcbe3eee7cce38c0bf6b1f4af7604f5a8249ce8a9e3c1f105b",
+      "closure_geoms.xml": "3780cf5b58769e8c76c1dc06366fb93c85508301eee17a10edf8cb6cddd47579",
+      "surface_repair_assets.xml": "6cd0853872ac5841216064217e830607e80e9e020852216df3f0fd0c6047c0d4",
+      "surface_repair_geoms.xml": "27ac29f4a67da6f0ed90767e3a281a50adce2e5962bb9e7c9815a41cebfe5b92",
+      "surface_repair_sources.json": "bea02b9013b7fa2273310ef7acdcb65c5cf3b3aaf8cbb860c2abe9f6bc784a95",
+      "assets/rmuc2027_ripple_positive.bin": "160d0336aa40da6d83a129191dfeb8867015f646e20682f4f6bebe492357b028",
+      "assets/rmuc2027_ripple_negative.bin": "e819b85521306c1c27202fe9b8418f3bf7688c73467db9dff9b7a68c85fdcf31"
+    },
+    "validation": {
+      "mujoco_version": "3.15.0",
+      "date": "2026-10-23",
+      "standalone_component": true,
+      "timestep_s": 0.002,
+      "surface_face_centroids": {
+        "area_threshold_m2": 1e-05,
+        "tested": 546343,
+        "outward_exposed": 364044,
+        "normal_ray_candidates": 58660,
+        "true_missing_over_6mm": 0,
+        "classification": "Exact nearest triangle distance for normal-ray outliers; source faces buried inside user-approved closures excluded."
+      },
+      "top_and_side_rays": {
+        "top": {
+          "hit_rays": 10500,
+          "raw_first_hit_over_2cm": 58,
+          "raw_first_hit_max_m": 2.566000010586221,
+          "checked_nearest_surface": 167,
+          "false_void_over_6mm": 0,
+          "false_solid_over_6mm": 0,
+          "max_checked_visual_to_collision_m": 0.005058535044348391,
+          "max_checked_collision_to_visual_m": 0.002743706738599087
         },
-        "visual_124": {
-          "sha256": "fe849c2b36ce8283e27a3aed8294d4db6a5de39c1c2c1203c76b195c8ca9d333",
-          "mode": "convex",
-          "maximum_surface_error_m": 0.0002
-        },
-        "visual_115": {
-          "sha256": "b17bc880f01a6b22a2776408b2e90c2bb7e10442d6370af4ab3d1058686d9a65",
-          "mode": "surface",
-          "backed_planes": [
-            {
-              "point_m": [
-                11.4561,
-                0.0003,
-                1.079
-              ],
-              "outward": [
-                -0.4617,
-                0,
-                0.887
-              ],
-              "radius_m": 0.12,
-              "plane_range_m": [
-                -0.0001,
-                0.003
-              ]
-            }
-          ]
-        },
-        "visual_123": {
-          "sha256": "4729c5e39b35d26e8f29cd1230e9dfd92a4903a72d88c30765acfc4f9d430bf4",
-          "mode": "surface",
-          "backed_planes": [
-            {
-              "point_m": [
-                -11.4577,
-                -0.0003,
-                1.079
-              ],
-              "outward": [
-                0.4617,
-                0,
-                0.887
-              ],
-              "radius_m": 0.12,
-              "plane_range_m": [
-                -0.0001,
-                0.003
-              ]
-            }
-          ]
+        "sides": {
+          "hit_rays": 4510,
+          "raw_first_hit_over_2cm": 420,
+          "raw_first_hit_max_m": 24.29999940974032,
+          "checked_nearest_surface": 620,
+          "false_void_over_6mm": 0,
+          "false_solid_over_6mm": 0,
+          "max_checked_visual_to_collision_m": 0.005670612612348562,
+          "max_checked_collision_to_visual_m": 0.002942549586815643
         }
+      },
+      "repair_hull_samples": {
+        "patches": 18303,
+        "hull_surface_samples": 1251628,
+        "max_distance_m": 0.003786838765571236,
+        "over_6mm": []
+      },
+      "tunnels": {
+        "ray_count": 224,
+        "cutoff_m": 3,
+        "max_change_m": 0
+      },
+      "contact_and_performance": {
+        "version": "3.15.0",
+        "clean_component_probe_compile_s": 6.5881431200105,
+        "new_patch_contacts_tested": 18303,
+        "contact_failures": [],
+        "before": {
+          "median_step_ms": 0.9774885038495995,
+          "p95_step_ms": 1.0122305029653944,
+          "rtf": 2.0488287759440356,
+          "median_contacts": 10.0,
+          "p95_contacts": 11.0,
+          "max_contacts": 12
+        },
+        "after": {
+          "median_step_ms": 0.690531000145711,
+          "p95_step_ms": 0.7162350528233219,
+          "rtf": 2.8922750465031943,
+          "median_contacts": 10.0,
+          "p95_contacts": 10.0,
+          "max_contacts": 12
+        }
+      },
+      "static_fusion": {
+        "geoms": 57149,
+        "sites": 10,
+        "bodies_before": 6,
+        "bodies_after": 1,
+        "max_transform_error_m": 0
+      },
+      "ripple_validation": {
+        "samples": 2000,
+        "p95_m": 0.0032976129039316237,
+        "max_m": 0.0034383213887634323,
+        "over_6mm": 0,
+        "over_2cm": 0
       }
     },
-    "detail_policy_sha256": "adc805ecf1724d5f0decc4841ed7768550db0624748d13763c8375fb5b4046a5",
-    "regenerator_commit": "rm_uav_mujoco c142fbf",
-    "base_detail_validation": {
-      "mode": "Headless full field from standalone copy; same compiled model as the full-field audit",
-      "mujoco_version": "3.12.0",
-      "timestep_s": 0.002,
-      "probe_radius_m": 0.015,
-      "impact_speeds_m_s": [
-        1,
-        5
+    "limits": "6 mm is a sampled geometric acceptance tolerance, not an everywhere or robot-motion guarantee. Faces <= 1e-5 m^2 are not exhaustively tested. Finite shell silhouettes can alter distant first-ray hits; record both raw ray discrepancy and nearest-surface distance. Legacy docks remain approximations. No controller, wheel traversal or high-speed impact certification."
+  },
+  "terrain_repair": {
+    "date": "2026-10-23",
+    "rules_reference": {
+      "filename": "UTF-8__RoboMaster 2027 机甲大师超级对抗赛比赛规则手册V1.0.0（20261015）.pdf",
+      "sha256": "9e2eed9295536c6fd547b62d634df1d5e70a2e1e2250e5dff3521d557e5d54be",
+      "sections": [
+        "4.1 field slope and recovery slots",
+        "4.3.1 trapezoidal highland",
+        "4.4.1 ripple road",
+        "4.4.2 traversable tunnel"
+      ]
+    },
+    "authorization": "User requested all black side openings closed; explicitly preserve traversable robot tunnels. This is a simulation alteration to official field geometry.",
+    "source_meshes": "All 131 original .msh files retain their visual_update manifest hashes. Source license/provenance unchanged.",
+    "closure_geometry": {
+      "convex_grille_covers": 14,
+      "radial_expansion_m": 0.001,
+      "side_plates": 4,
+      "plate_thickness_m": 0.005,
+      "plate_outline_factor": 1.003,
+      "wall_skirts": 100,
+      "skirt_thickness_m": 0.005,
+      "source_gap_height_range_m": [
+        0.012,
+        0.075
       ],
-      "passed": true,
-      "source_details": [
+      "local_ground_equation": "z = -0.001 - abs(y) * tan(1.5 degrees)",
+      "visual_collision_pairing": "Same mesh asset and same transform, separate geom roles; no colliding visual geom.",
+      "locations": [
         {
-          "source": "visual_115",
-          "sha256": "b17bc880f01a6b22a2776408b2e90c2bb7e10442d6370af4ab3d1058686d9a65",
-          "source_triangles": 53163,
-          "parts": 930,
-          "max_plane_displacement_m": 0.0009997322532644404,
-          "backed_surface_parts": 17
+          "name": "rmuc2027_side_closure_00",
+          "center_m": [
+            3.81183981012415,
+            -2.29603162518254,
+            0.068211169982398
+          ],
+          "source": "visual_001.msh"
         },
         {
-          "source": "visual_116",
-          "sha256": "60a6eb8a755f09744bd993e1e858f3ec8857260e562a1067cfdd1f182eefe1e3",
-          "source_triangles": 242,
-          "parts": 1,
-          "max_plane_displacement_m": 0.0,
-          "convex_surface_error_m": 0.0001552477600985291,
-          "mode": "convex"
+          "name": "rmuc2027_side_closure_01",
+          "center_m": [
+            -3.81183981012415,
+            2.29603162518254,
+            0.068211169982398
+          ],
+          "source": "visual_001.msh"
         },
         {
-          "source": "visual_123",
-          "sha256": "4729c5e39b35d26e8f29cd1230e9dfd92a4903a72d88c30765acfc4f9d430bf4",
-          "source_triangles": 53015,
-          "parts": 964,
-          "max_plane_displacement_m": 0.0009999801273119502,
-          "backed_surface_parts": 16
+          "name": "rmuc2027_side_closure_02",
+          "center_m": [
+            3.7521635736737933,
+            4.496749210357666,
+            0.0012063455368791307
+          ],
+          "source": "visual_001.msh"
         },
         {
-          "source": "visual_124",
-          "sha256": "fe849c2b36ce8283e27a3aed8294d4db6a5de39c1c2c1203c76b195c8ca9d333",
-          "source_triangles": 242,
-          "parts": 1,
-          "max_plane_displacement_m": 0.0,
-          "convex_surface_error_m": 0.00015525210607380928,
-          "mode": "convex"
+          "name": "rmuc2027_side_closure_03",
+          "center_m": [
+            -3.7521635736737933,
+            -4.496749210357666,
+            0.0012063455368791307
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_04",
+          "center_m": [
+            13.727535355854505,
+            -2.5290252434209064,
+            0.11013773639727696
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_05",
+          "center_m": [
+            11.27476180006818,
+            -2.7821686954033082,
+            0.10350251638489526
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_06",
+          "center_m": [
+            -13.727535355854505,
+            2.5290252457698577,
+            0.11013773604860447
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_07",
+          "center_m": [
+            -11.27476180006818,
+            2.7821686954033082,
+            0.10350251638489526
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_08",
+          "center_m": [
+            7.696561350611043,
+            3.4346917521190172,
+            0.08489299398557894
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_09",
+          "center_m": [
+            7.2623556155784454,
+            3.509977839974796,
+            0.10002094713204047
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_10",
+          "center_m": [
+            -7.696561350611043,
+            -3.4346917521190172,
+            0.08489299398557894
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_11",
+          "center_m": [
+            -7.2623556155784454,
+            -3.509977839974796,
+            0.10002094713204047
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_12",
+          "center_m": [
+            13.890611495649765,
+            3.4042234239698965,
+            0.09101109477378946
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_13",
+          "center_m": [
+            -13.893145044310755,
+            -3.4078748707009963,
+            0.09145699069686547
+          ],
+          "source": "visual_001.msh"
+        },
+        {
+          "name": "rmuc2027_side_closure_14",
+          "center_m": [
+            11.1484956741333,
+            -2.784124195575714,
+            0.10615683626383543
+          ],
+          "source": "visual_004.msh side aperture"
+        },
+        {
+          "name": "rmuc2027_side_closure_15",
+          "center_m": [
+            -11.1484956741333,
+            2.784124195575714,
+            0.10615683626383543
+          ],
+          "source": "visual_004.msh side aperture"
+        },
+        {
+          "name": "rmuc2027_side_closure_16",
+          "center_m": [
+            7.824100971221924,
+            3.4371291995048523,
+            0.0890573039650917
+          ],
+          "source": "visual_004.msh side aperture"
+        },
+        {
+          "name": "rmuc2027_side_closure_17",
+          "center_m": [
+            -7.824100971221924,
+            -3.4371291995048523,
+            0.0890573039650917
+          ],
+          "source": "visual_004.msh side aperture"
         }
-      ],
-      "regions": {
-        "blue_armor": {
-          "rays": 441,
-          "visual_hits": 441,
-          "missing_collision_rays": 0,
-          "maximum_ray_error_m": 9.115007071069936e-07,
-          "p95_absolute_ray_error_m": 8.045707834414273e-07,
-          "impacts": 10,
-          "all_impacts_contact": true,
-          "minimum_probe_center_distance_m": 0.009999999999998371
-        },
-        "blue_lamp": {
-          "rays": 313,
-          "visual_hits": 313,
-          "missing_collision_rays": 0,
-          "maximum_ray_error_m": 5.730366336093029e-05,
-          "p95_absolute_ray_error_m": 1.2321899732170552e-05,
-          "impacts": 6,
-          "all_impacts_contact": true,
-          "minimum_probe_center_distance_m": 0.009999999999996855
-        },
-        "red_armor": {
-          "rays": 441,
-          "visual_hits": 441,
-          "missing_collision_rays": 0,
-          "maximum_ray_error_m": 9.401053739921394e-07,
-          "p95_absolute_ray_error_m": 8.32620624197089e-07,
-          "impacts": 10,
-          "all_impacts_contact": true,
-          "minimum_probe_center_distance_m": 0.009999999999997653
-        },
-        "red_lamp": {
-          "rays": 313,
-          "visual_hits": 313,
-          "missing_collision_rays": 0,
-          "maximum_ray_error_m": 5.742136342176685e-05,
-          "p95_absolute_ray_error_m": 1.2320717282915376e-05,
-          "impacts": 6,
-          "all_impacts_contact": true,
-          "minimum_probe_center_distance_m": 0.00999999999999211
-        }
+      ]
+    },
+    "ripple_regions": [
+      {
+        "name": "rmuc2027_ripple_positive",
+        "bounds": [
+          6.3,
+          8.75,
+          5.56,
+          7.49
+        ],
+        "height_range": [
+          0.0029359959411687786,
+          0.12341534529086817
+        ],
+        "rows": 40,
+        "cols": 491
+      },
+      {
+        "name": "rmuc2027_ripple_negative",
+        "bounds": [
+          -8.75,
+          -6.3,
+          -7.49,
+          -5.56
+        ],
+        "height_range": [
+          0.002935998068127166,
+          0.12341536493827965
+        ],
+        "rows": 40,
+        "cols": 491
+      }
+    ],
+    "removed_collision_geoms": 2912,
+    "removed_unused_collision_mesh_assets": 1441,
+    "render_check": "EGL: visual, collision-only and overlay inspected; highland, platform, central and reverse views checked. Preview artifacts remain outside runtime asset repository.",
+    "output_hashes": {
+      "model.xml": "a20f1c5ac27897dc039e08f01ca6048bacf8e1cdf961c235e6b18f5e69d1f962",
+      "collision_assets.xml": "182fe16daf9693a557509a32615628a7157166e90e10044fd0d2342c1ae7d3b5",
+      "collision_geoms.xml": "e249beb7b228857c0f7d896767879f4a9a3033657e064764dce1612e15b704d1",
+      "closure_assets.xml": "57fe7e7ac5c1b1bcbe3eee7cce38c0bf6b1f4af7604f5a8249ce8a9e3c1f105b",
+      "closure_geoms.xml": "3780cf5b58769e8c76c1dc06366fb93c85508301eee17a10edf8cb6cddd47579",
+      "assets/rmuc2027_ripple_positive.bin": "160d0336aa40da6d83a129191dfeb8867015f646e20682f4f6bebe492357b028",
+      "assets/rmuc2027_ripple_negative.bin": "e819b85521306c1c27202fe9b8418f3bf7688c73467db9dff9b7a68c85fdcf31"
+    }
+  },
+  "side_closure_collision_baseline": {
+    "method": "Retained partitioned surface shells, exact convex side closures, and sampled ripple height fields",
+    "collision_geoms": 38595,
+    "mesh_geoms": 35648,
+    "box_geoms": 2945,
+    "hfield_geoms": 2,
+    "contact_priority": 1,
+    "contact_solref": [
+      0.004,
+      1
+    ],
+    "outputs": {
+      "model.xml": "a20f1c5ac27897dc039e08f01ca6048bacf8e1cdf961c235e6b18f5e69d1f962",
+      "collision_assets.xml": "182fe16daf9693a557509a32615628a7157166e90e10044fd0d2342c1ae7d3b5",
+      "collision_geoms.xml": "e249beb7b228857c0f7d896767879f4a9a3033657e064764dce1612e15b704d1",
+      "closure_assets.xml": "57fe7e7ac5c1b1bcbe3eee7cce38c0bf6b1f4af7604f5a8249ce8a9e3c1f105b",
+      "closure_geoms.xml": "3780cf5b58769e8c76c1dc06366fb93c85508301eee17a10edf8cb6cddd47579",
+      "assets/rmuc2027_ripple_positive.bin": "160d0336aa40da6d83a129191dfeb8867015f646e20682f4f6bebe492357b028",
+      "assets/rmuc2027_ripple_negative.bin": "e819b85521306c1c27202fe9b8418f3bf7688c73467db9dff9b7a68c85fdcf31"
+    },
+    "validation": {
+      "mujoco_version": "3.15.0",
+      "standalone_compile_s": 3.490863266008091,
+      "ngeom_before": 41520,
+      "ngeom_after": 38846,
+      "ripple_before": {
+        "samples": 2000,
+        "p95_m": 0.0033607437907617545,
+        "max_m": 0.2684272529910732,
+        "over_6mm": 79,
+        "over_2cm": 79
+      },
+      "ripple_after": {
+        "samples": 2000,
+        "p95_m": 0.0032976129039316237,
+        "max_m": 0.0034383213887634323,
+        "over_6mm": 0,
+        "over_2cm": 0
+      },
+      "global_top_before": {
+        "samples": 10500,
+        "p95_m": 0.002686962521481928,
+        "max_m": 2.566000010586221,
+        "over_6mm": 181,
+        "over_2cm": 73
+      },
+      "global_top_after": {
+        "samples": 10500,
+        "p95_m": 0.0026869578955205143,
+        "max_m": 2.566000010586221,
+        "over_6mm": 175,
+        "over_2cm": 67
+      },
+      "exact_visual_collision_pairs": 118,
+      "tunnel_rays": 54,
+      "tunnel_visual_max_change_m": 0.0,
+      "tunnel_collision_max_change_m": 0.0,
+      "dynamics_before": {
+        "step_median_ms": 1.0444684958201833,
+        "step_p95_ms": 1.0790652508148924,
+        "rtf": 1.9153756001489208,
+        "contacts_median": 15.0,
+        "contacts_p95": 16.0,
+        "contacts_max": 17
+      },
+      "dynamics_after": {
+        "step_median_ms": 0.9997715023928322,
+        "step_p95_ms": 1.058366293727886,
+        "rtf": 1.989664599506224,
+        "contacts_median": 10.0,
+        "contacts_p95": 12.0,
+        "contacts_max": 15
+      },
+      "collision_types_after": {
+        "mjtGeom.mjGEOM_HFIELD": 2,
+        "mjtGeom.mjGEOM_BOX": 2945,
+        "mjtGeom.mjGEOM_MESH": 35648
+      },
+      "moving_support_probes": {
+        "before": [
+          {
+            "start": [
+              6.5,
+              6.2,
+              0.2
+            ],
+            "min_clearance_m": -0.26737026809093156,
+            "sunk_samples": 649
+          },
+          {
+            "start": [
+              6.5,
+              6.6,
+              0.2
+            ],
+            "min_clearance_m": -0.2500134272625933,
+            "sunk_samples": 649
+          },
+          {
+            "start": [
+              -6.5,
+              -6.2,
+              0.2
+            ],
+            "min_clearance_m": 0.0020585534638290284,
+            "sunk_samples": 0
+          },
+          {
+            "start": [
+              -6.5,
+              -6.6,
+              0.2
+            ],
+            "min_clearance_m": -0.2704962349215276,
+            "sunk_samples": 649
+          }
+        ],
+        "after": [
+          {
+            "start": [
+              6.5,
+              6.2,
+              0.2
+            ],
+            "min_clearance_m": 0.002017722985486893,
+            "sunk_samples": 0
+          },
+          {
+            "start": [
+              6.5,
+              6.6,
+              0.2
+            ],
+            "min_clearance_m": 0.0021448438725792177,
+            "sunk_samples": 0
+          },
+          {
+            "start": [
+              -6.5,
+              -6.2,
+              0.2
+            ],
+            "min_clearance_m": 0.0015099354534197779,
+            "sunk_samples": 0
+          },
+          {
+            "start": [
+              -6.5,
+              -6.6,
+              0.2
+            ],
+            "min_clearance_m": 0.0021094131496464594,
+            "sunk_samples": 0
+          }
+        ],
+        "additional_tunnel_rays": 224,
+        "additional_tunnel_max_change_m": 0,
+        "additional_tunnel_ray_cutoff_m": 3,
+        "distal_ray_note": "Unbounded rays also reach the modified ripple road; those remote hits are excluded from the 3 m tunnel segment."
+      },
+      "individual_seal_contacts": {
+        "tested": 118,
+        "passed": 118,
+        "sphere_radius_m": 0.015,
+        "penetration_m": 0.001
+      }
+    },
+    "limits": "Sampled terrain validation only. Global top grid retains 67/10500 first-hit differences >20 mm and a 2.566 m maximum around silhouettes/central mechanisms. No full-field exactness, robot/controller/flight or high-speed impact claim. Historical generator alone does not regenerate the user-requested repair."
+  },
+  "surface_alignment_repair": {
+    "date": "2026-10-23",
+    "source": "Unmodified visual_update.mesh_files; source-face indices in surface_repair_sources.json",
+    "patch_count": 18303,
+    "source_triangles": 51109,
+    "source_mesh_count": 69,
+    "source_area_m2": 3.370182915745446,
+    "inward_extrusion_m": 0.002,
+    "merging": {
+      "edge_connected": true,
+      "maximum_seed_normal_angle_degrees": 30,
+      "maximum_seed_plane_displacement_m": 0.0015,
+      "convex_projected_footprint_area_relative_tolerance": 0.0001,
+      "convex_projected_footprint_area_absolute_tolerance_m2": 1e-09,
+      "note": "Merge only convex projected footprints; no broad bounding-box filling. Hull samples separately verified against referenced source triangles."
+    },
+    "roles": "All added patches collision-only, group 3, contype=conaffinity=1; original visual geometry unchanged. Previously approved 118 side closures retained.",
+    "static_fusion": "compiler fusestatic=true eliminates static body bookkeeping; all geom and site names/world transforms preserved. Static body IDs/names are not retained in the compiled model.",
+    "benchmark_baseline": "Previous approved closure/ripple version: no surface repair includes, fusestatic=false; same probes, timestep, solver and MuJoCo version. Additional fused-baseline timing available below.",
+    "fused_baseline_comparison": {
+      "before": {
+        "median_step_ms": 0.46086400107014924,
+        "p95_step_ms": 0.4824425508559216,
+        "rtf": 4.3014806253848965,
+        "median_contacts": 10.0,
+        "p95_contacts": 11.0,
+        "max_contacts": 12
+      },
+      "after": {
+        "median_step_ms": 0.6370960036292672,
+        "p95_step_ms": 0.6658066988165955,
+        "rtf": 3.131988922316578,
+        "median_contacts": 10.0,
+        "p95_contacts": 10.0,
+        "max_contacts": 12
       }
     }
   }
