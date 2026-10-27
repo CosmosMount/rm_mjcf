@@ -13,6 +13,7 @@ MJCF 实际引用的 mesh、纹理和必要的来源说明，不包含转换脚�
 | 过洞步兵（FGOW） | `infantry_mjcf/model.xml` | 本地 `infantry_mjcf` 运行时模型 |
 | RM27 新场地 | `rm27_battlefield_mjcf/model.xml` | 本地更新的 `rmuc2026_battlefield_mjcf` 场地模型 |
 | RMUC2027 官方場地（視覺 + 近似碰撞） | `rmuc2027_battlefield_mjcf/model.xml` | [`shiuhou/scene`](https://github.com/shiuhou/scene) commit `a4f31da5e724a0dc7bd6ecef59221c838833975c` |
+| RMUC2027 完整場地（藍方基地可動） | `rmuc2027_moving_base_mjcf/model.xml` | 上述場地衍生；綠燈、上裝甲及支架沿導軌移動，見該目錄 README |
 | RM27 機庫 + 基地 | `rm27_drone_mjcf/hanger_base_mjcf/model.xml` | 本地 RM27 dock/base 組合場景 |
 | RM27 飛鏢區 + 基地 | `rm27_dart_mjcf/dart_base_mjcf/model.xml` | 本地飛鏢發射區、基地與停機庫組合場景 |
 | RM27 無人機 | `rm27_drone_mjcf/{visual,dynamic,dock}/model.xml` | 本地 RM27 visual/dynamic/dock 資產 |
