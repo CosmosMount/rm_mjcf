@@ -46,8 +46,8 @@
     "limitations": "Bounds and occurrence counts come from STEPControl_Reader placement inventory; no field labels or collision semantics were inferred."
   },
   "semantics": {
-    "visual": "PASS: 133 visual geoms (131 field plus two docks) retain identical compiled mesh data, poses and RGBA; EGL image differs by at most one 8-bit channel level.",
-    "collision": "PASS: partitioned surface collision replaces the invalid AABBs; acceptance covers sampled top/side geometry, reproduced free-space points, 1 m sphere drops and 5 m/s normal sphere impacts. Approximation limits and residual ray errors are recorded in collision_model.",
+    "visual": "UNCHANGED: all visual assets, poses and colors retain their pre-correction inputs; prior EGL comparison is recorded under appearance_validation.",
+    "collision": "PASS for recorded sampling: full-field top/side rays, free-space points, ground/dock drops, wall impacts, and both base lamps/field-facing armor patches. See explicit residual limits and finite-step overlap in collision_model.",
     "targets": "NOT_RUN: no target or gameplay semantics are present in the source CAD",
     "runtime": "PASS: clean component copy resolves all mesh references and includes; mj_forward and mj_step complete on MuJoCo 3.12.0."
   },
@@ -778,19 +778,19 @@
     "reason": "Whole-solid AABBs filled free space and omitted faces; replaced by convex partitions of actual visual surfaces."
   },
   "collision_model": {
-    "method": "convex partitions of bounded-error surface planes; finite centered shells",
+    "method": "Convex surface partitions; centered shells except source-pinned inward armor skins; separate nearly convex base lenses",
     "minimum_patch_area_m2": 0.001,
     "maximum_plane_displacement_m": 0.001,
     "shell_thickness_m": 0.005,
     "outline_simplification_m": 0.002,
     "minimum_hole_width_m": 0.01,
-    "collision_geoms": 41371,
-    "unique_collision_meshes": 27133,
+    "collision_geoms": 41373,
+    "unique_collision_meshes": 27135,
     "mesh_sharing_grid_m": 1e-05,
     "box_fit_tolerance_m": 0.0001,
     "outputs": {
-      "collision_assets.xml": "cb773199d54c4d6b1bc0c0dd2ea2ad4934f513bdc71a038cc22b9f6b4f0a3b77",
-      "collision_geoms.xml": "73626059542eda9560796a8467c1c801388aeaa3b131b1ed45266d745923ca5e"
+      "collision_assets.xml": "ae7f891f0d25b69b825773ee6a8d3e5ae184992d5c75fc57679f933066ffb10e",
+      "collision_geoms.xml": "cd90fe3491c6b6c2fb8bd4e98e2bbd907b0519ff8c8223be745f10b700a2a49c"
     },
     "contact_priority": 1,
     "contact_solref": [
@@ -799,15 +799,15 @@
     ],
     "source_layer": "visual_update.mesh_files, placed according to visual_geoms.xml; dock additions excluded",
     "field_box_geoms": 3257,
-    "field_mesh_geoms": 38114,
-    "total_field_and_dock_geoms": 41387,
+    "field_mesh_geoms": 38116,
+    "total_field_and_dock_geoms": 41389,
     "contype": 1,
     "conaffinity": 1,
     "regenerator": "rm_uav_mujoco: python -m rm27_sim.simulation.field_collision MODEL OUTPUT",
-    "limits": "Minimum planar patches below 0.001 m^2 and some curved details omitted; small fastener holes filled; finite shell and silhouette effects remain. No exact CAD, whole-field certification or flight claim.",
+    "limits": "Minimum planar patches below 0.001 m^2 and some curved details omitted except the source-pinned base lenses; small fastener holes filled; finite shells and silhouette effects remain. Only the two lamps and field-facing armor skin/rim receive the base detail correction. At 2 ms, 5 m/s impacts can briefly overlap by about 5 mm with the 15 mm probe; not continuous collision detection, exact CAD, whole-field certification or a flight claim.",
     "validation": {
       "date": "2026-10-22",
-      "mode": "headless sphere contact and geometry audits; EGL appearance comparison",
+      "mode": "Headless sphere contact and geometry audits in a standalone directory copy",
       "mujoco_version": "3.12.0",
       "clean_directory_copy": true,
       "timestep_s": 0.002,
@@ -816,8 +816,8 @@
       "drop_steps": 1000,
       "normal_impact_speed_mps": 5.0,
       "normal_impact_steps": 100,
-      "load_seconds": 156.41271270997822,
-      "ngeom": 41530,
+      "load_seconds": 172.9120662260102,
+      "ngeom": 41532,
       "top_samples": 11200,
       "top_valid_samples": 11200,
       "top_above_2cm": 232,
@@ -848,7 +848,7 @@
           "contacts": 0
         }
       ],
-      "ten_probe_1000_steps_seconds": 0.9404628840275109,
+      "ten_probe_1000_steps_seconds": 0.9076992489863187,
       "drops": [
         {
           "position": [
@@ -1077,9 +1077,162 @@
       "identical_visual_geoms": 133,
       "geometry_pose_color_identical": true,
       "render_tolerance_channels": 1,
-      "passed": true
+      "passed": true,
+      "scope_note": "Prior EGL result retained as baseline evidence; this correction changes no visual mesh, pose, color or visual include. No new EGL image comparison was run."
     },
-    "converter_tests": "6 passed; includes concavity, touching holes, transformed surfaces, shared reflected shells and thin-shell drop/impact",
-    "simulator_suite": "161 passed in 83.46 seconds; no flight benchmark claim"
+    "converter_tests": "10 passed; includes small disconnected lenses, rejection of recessed convex candidates, source hash guard and inward-facing shell alignment",
+    "simulator_suite": "165 passed in 81.74 seconds; no flight benchmark claim",
+    "detail_policy": {
+      "description": "Source-pinned blue/red base guidance lamps and field-facing armor skin/rim. Lamp hulls close only the lens back and must differ from every input triangle by <=0.2 mm. Selected armor shells extend 5 mm behind their visual skin instead of 2.5 mm outside it. The plane/radius selectors are measured in the supplied visual mesh frame; source changes require review. Other field surfaces retain centered shells.",
+      "sources": {
+        "visual_116": {
+          "sha256": "60a6eb8a755f09744bd993e1e858f3ec8857260e562a1067cfdd1f182eefe1e3",
+          "mode": "convex",
+          "maximum_surface_error_m": 0.0002
+        },
+        "visual_124": {
+          "sha256": "fe849c2b36ce8283e27a3aed8294d4db6a5de39c1c2c1203c76b195c8ca9d333",
+          "mode": "convex",
+          "maximum_surface_error_m": 0.0002
+        },
+        "visual_115": {
+          "sha256": "b17bc880f01a6b22a2776408b2e90c2bb7e10442d6370af4ab3d1058686d9a65",
+          "mode": "surface",
+          "backed_planes": [
+            {
+              "point_m": [
+                11.4561,
+                0.0003,
+                1.079
+              ],
+              "outward": [
+                -0.4617,
+                0,
+                0.887
+              ],
+              "radius_m": 0.12,
+              "plane_range_m": [
+                -0.0001,
+                0.003
+              ]
+            }
+          ]
+        },
+        "visual_123": {
+          "sha256": "4729c5e39b35d26e8f29cd1230e9dfd92a4903a72d88c30765acfc4f9d430bf4",
+          "mode": "surface",
+          "backed_planes": [
+            {
+              "point_m": [
+                -11.4577,
+                -0.0003,
+                1.079
+              ],
+              "outward": [
+                0.4617,
+                0,
+                0.887
+              ],
+              "radius_m": 0.12,
+              "plane_range_m": [
+                -0.0001,
+                0.003
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "detail_policy_sha256": "adc805ecf1724d5f0decc4841ed7768550db0624748d13763c8375fb5b4046a5",
+    "regenerator_commit": "rm_uav_mujoco c142fbf",
+    "base_detail_validation": {
+      "mode": "Headless full field from standalone copy; same compiled model as the full-field audit",
+      "mujoco_version": "3.12.0",
+      "timestep_s": 0.002,
+      "probe_radius_m": 0.015,
+      "impact_speeds_m_s": [
+        1,
+        5
+      ],
+      "passed": true,
+      "source_details": [
+        {
+          "source": "visual_115",
+          "sha256": "b17bc880f01a6b22a2776408b2e90c2bb7e10442d6370af4ab3d1058686d9a65",
+          "source_triangles": 53163,
+          "parts": 930,
+          "max_plane_displacement_m": 0.0009997322532644404,
+          "backed_surface_parts": 17
+        },
+        {
+          "source": "visual_116",
+          "sha256": "60a6eb8a755f09744bd993e1e858f3ec8857260e562a1067cfdd1f182eefe1e3",
+          "source_triangles": 242,
+          "parts": 1,
+          "max_plane_displacement_m": 0.0,
+          "convex_surface_error_m": 0.0001552477600985291,
+          "mode": "convex"
+        },
+        {
+          "source": "visual_123",
+          "sha256": "4729c5e39b35d26e8f29cd1230e9dfd92a4903a72d88c30765acfc4f9d430bf4",
+          "source_triangles": 53015,
+          "parts": 964,
+          "max_plane_displacement_m": 0.0009999801273119502,
+          "backed_surface_parts": 16
+        },
+        {
+          "source": "visual_124",
+          "sha256": "fe849c2b36ce8283e27a3aed8294d4db6a5de39c1c2c1203c76b195c8ca9d333",
+          "source_triangles": 242,
+          "parts": 1,
+          "max_plane_displacement_m": 0.0,
+          "convex_surface_error_m": 0.00015525210607380928,
+          "mode": "convex"
+        }
+      ],
+      "regions": {
+        "blue_armor": {
+          "rays": 441,
+          "visual_hits": 441,
+          "missing_collision_rays": 0,
+          "maximum_ray_error_m": 9.115007071069936e-07,
+          "p95_absolute_ray_error_m": 8.045707834414273e-07,
+          "impacts": 10,
+          "all_impacts_contact": true,
+          "minimum_probe_center_distance_m": 0.009999999999998371
+        },
+        "blue_lamp": {
+          "rays": 313,
+          "visual_hits": 313,
+          "missing_collision_rays": 0,
+          "maximum_ray_error_m": 5.730366336093029e-05,
+          "p95_absolute_ray_error_m": 1.2321899732170552e-05,
+          "impacts": 6,
+          "all_impacts_contact": true,
+          "minimum_probe_center_distance_m": 0.009999999999996855
+        },
+        "red_armor": {
+          "rays": 441,
+          "visual_hits": 441,
+          "missing_collision_rays": 0,
+          "maximum_ray_error_m": 9.401053739921394e-07,
+          "p95_absolute_ray_error_m": 8.32620624197089e-07,
+          "impacts": 10,
+          "all_impacts_contact": true,
+          "minimum_probe_center_distance_m": 0.009999999999997653
+        },
+        "red_lamp": {
+          "rays": 313,
+          "visual_hits": 313,
+          "missing_collision_rays": 0,
+          "maximum_ray_error_m": 5.742136342176685e-05,
+          "p95_absolute_ray_error_m": 1.2320717282915376e-05,
+          "impacts": 6,
+          "all_impacts_contact": true,
+          "minimum_probe_center_distance_m": 0.00999999999999211
+        }
+      }
+    }
   }
 }
