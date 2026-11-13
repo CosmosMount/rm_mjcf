@@ -1,0 +1,61 @@
+{
+  "description": "Source-pinned blue/red base guidance lamps and field-facing armor skin/rim. Lamp hulls close only the lens back and must differ from every input triangle by <=0.2 mm. Selected armor shells extend 5 mm behind their visual skin instead of 2.5 mm outside it. The plane/radius selectors are measured in the supplied visual mesh frame; source changes require review. Other field surfaces retain centered shells.",
+  "sources": {
+    "visual_116": {
+      "sha256": "60a6eb8a755f09744bd993e1e858f3ec8857260e562a1067cfdd1f182eefe1e3",
+      "mode": "convex",
+      "maximum_surface_error_m": 0.0002
+    },
+    "visual_124": {
+      "sha256": "fe849c2b36ce8283e27a3aed8294d4db6a5de39c1c2c1203c76b195c8ca9d333",
+      "mode": "convex",
+      "maximum_surface_error_m": 0.0002
+    },
+    "visual_115": {
+      "sha256": "b17bc880f01a6b22a2776408b2e90c2bb7e10442d6370af4ab3d1058686d9a65",
+      "mode": "surface",
+      "backed_planes": [
+        {
+          "point_m": [
+            11.4561,
+            0.0003,
+            1.079
+          ],
+          "outward": [
+            -0.4617,
+            0,
+            0.887
+          ],
+          "radius_m": 0.12,
+          "plane_range_m": [
+            -0.0001,
+            0.003
+          ]
+        }
+      ]
+    },
+    "visual_123": {
+      "sha256": "4729c5e39b35d26e8f29cd1230e9dfd92a4903a72d88c30765acfc4f9d430bf4",
+      "mode": "surface",
+      "backed_planes": [
+        {
+          "point_m": [
+            -11.4577,
+            -0.0003,
+            1.079
+          ],
+          "outward": [
+            0.4617,
+            0,
+            0.887
+          ],
+          "radius_m": 0.12,
+          "plane_range_m": [
+            -0.0001,
+            0.003
+          ]
+        }
+      ]
+    }
+  }
+}
